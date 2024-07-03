@@ -1,0 +1,74 @@
+.accordion {
+    width: 100%;
+
+    .accordion-tab {
+        width: 100%;
+
+        label {
+            background: $white;
+            border: 1px solid $gray-300;
+            border-radius: .3rem;
+            padding: .8rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            position: relative;
+            z-index: 99;
+            transition: all 0.3s ease;
+            font-weight: $weight-strong;
+
+            &:hover {
+                border-color: $gray-800;
+            }
+        }
+
+        input:checked ~ label {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-width: 1px;
+            border-color: $gray-800;
+
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        .content {
+            max-height: 0px;
+            overflow: hidden;
+            background: $white;
+            border-radius: 0 0 .3rem .3rem;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        input:checked ~ .content {
+            max-height: 100vh;
+            border: 1px solid $gray-400;
+            border-top: 0;
+            border-color: $gray-800;
+            padding: .5rem;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .accordion-#{$color} {
+        .accordion-tab {
+            label:hover,
+            input:checked ~ label,
+            input:checked ~ .content {
+                border-color: $value;
+            }
+
+
+        }
+    }
+}

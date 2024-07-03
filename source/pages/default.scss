@@ -1,0 +1,332 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+
+  .app {
+    width: calc(100% - 240px);
+    position: absolute;
+    top: 0;
+    left: 240px;
+  }
+}
+
+@media (max-width: 42em) {
+  .wrapper {
+    .app {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+/* Content App Box */
+.content_app_box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 92px;
+}
+
+@media (max-width: 42em) {
+  .content_app_box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Content App Sidebar */
+.box_sidebar {
+  nav {
+    display: flex;
+    gap: .5rem;
+
+    a {
+      display: block;
+      font-size: $font-small;
+      padding: 10px;
+      font-weight: bold;
+      color: #555555;
+      border-radius: .3rem;
+      border: 1px solid transparent;
+      transition: background-color 0.2s;
+    }
+
+    .active,
+    a:hover {
+      background: $white;
+      border: 1px solid $gray-300;
+    }
+  }
+}
+
+@media (max-width: 42em) {
+  .box_sidebar {
+    overflow-y: auto !important;
+    white-space: nowrap !important;
+
+    nav {
+      display: flex !important;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+
+      a {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
+        height: 60px !important;
+        padding: 0 !important;
+        text-align: center;
+        border: 1px solid $gray-300 !important;
+        font-weight: normal;
+        font-size: 0;
+
+        i {
+          font-size: 2rem;
+          margin-bottom: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+/* Box Content */
+.box_content_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 42em) {
+  .box_content_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* ACTIVITIES */
+.notecontainer {
+  .card_body {
+    .note_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+
+      .note_header_thumb {
+        border-radius: 50%;
+
+        img {
+          object-fit: fill;
+          aspect-ratio: 1 / 1;
+        }
+      }
+
+      .note_header_thumb,
+      & img {
+        width: 52px;
+        height: 48px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.activity_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .activity_header_data {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .data_thumb {
+      border-radius: 50%;
+
+      img {
+        object-fit: fill;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    .data_thumb,
+    & img {
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+    }
+  }
+}
+
+/**
+SIGNATURE
+ */
+.signature_navbar {
+    background: #FFF;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 40px;
+    }
+}
+
+.signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .signature_container {
+        max-width: 1280px;
+        margin: 2rem 0;
+
+        header {
+            h1 {
+                font-size: 3rem;
+                font-weight: normal;
+                text-align: center;
+
+                strong {
+                    color: $primary;
+                }
+            }
+
+            h2 {
+                font-weight: normal;
+                text-align: center;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            .prices {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .price {
+                    width: 200px;
+                    height: 100px;
+                    position: relative;
+
+                    input[type="radio"] {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background-color: white;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: .5rem;
+                        position: absolute;
+                        cursor: pointer;
+                        outline: none;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            height: 22px;
+                            width: 22px;
+                            background-color: #f9fafd;
+                            border: 1px solid #e2e6f3;
+                            border-radius: 50%;
+                            top: 16px;
+                            right: 16px;
+                        }
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            height: 22px;
+                            width: 22px;
+                            background-color: transparent;
+                            border-radius: 50%;
+                            top: 17px;
+                            right: 17px;
+                        }
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        &:checked {
+                            border: 3px solid $primary;
+
+                            &:after {
+                                background-color: $primary;
+                            }
+                        }
+                    }
+
+                    label {
+                        position: absolute;
+                        margin-left: 16px;
+                        margin-top: 5px;
+                        cursor: pointer;
+
+                        h5 {
+                            font-weight: 600;
+                            font-size: 1rem;
+                            margin: 15px 0 14px 0;
+                        }
+
+                        h2 {
+                            font-size: 1.5rem;
+
+                            span{
+                                font-weight: 400;
+                                font-size: 1rem;
+                                color: #7b7b93;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .list {
+                .list_item {
+                    background: none;
+
+                    .infors {
+                        .infors_body {
+                            .body_data {
+                                p {
+                                    color: $gray-800;
+                                    strong {
+                                        i {
+                                            color: $primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}

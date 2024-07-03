@@ -1,0 +1,14 @@
+{
+  "name": "ebenezer-aura-styles",
+  "version": "1.0.0",
+  "description": "Business Management System",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w source/app.scss dist/app.css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

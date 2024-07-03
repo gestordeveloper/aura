@@ -1,0 +1,41 @@
+.message {
+    padding: .5rem;
+    // background: $white;
+    border: 1px solid $gray-300;
+    border-radius: .3rem;
+    text-align: center;
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: .2rem;
+    }
+
+    .body {
+        a {
+            text-decoration: none;
+            font-weight: $font-weight-bold;
+            color: $gray-700;
+            transition: all .2s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//Backgrounds
+@each $color, $value in $theme-colors {
+    .message-#{$color} {
+        border-color: $value !important;
+        color: $value !important;
+
+        .body {
+            color: $value !important;
+
+            a {
+                color: $value !important;
+            }
+        }
+    }
+}

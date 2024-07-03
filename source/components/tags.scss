@@ -1,0 +1,16 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .2rem;
+    align-items: center;
+}
+
+.tags .tag {
+    font-size: .6rem;
+    font-weight: 700;
+    padding: .24rem;
+    border: 1px solid #999;
+    border-radius: .24rem;
+    background: transparent !important;
+    color: #999;
+}

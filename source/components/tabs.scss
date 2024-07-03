@@ -1,0 +1,109 @@
+.tabs {
+  width: 100%;
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    label {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      color: $gray-600;
+      font-size: 17px;
+      border-radius: 0.3rem;
+      border: 1px solid $gray-300;
+      transition: border, color 0.3s ease;
+
+      &:hover {
+        border-color: $gray-800;
+        color: $gray-800;
+      }
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  section {
+    .tabs-content {
+      display: none;
+      background: $white;
+      border: 1px solid $gray-300;
+      border-radius: .3rem;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  #tab-1:checked ~ nav label.tab-1,
+  #tab-2:checked ~ nav label.tab-2,
+  #tab-3:checked ~ nav label.tab-3,
+  #tab-4:checked ~ nav label.tab-4,
+  #tab-5:checked ~ nav label.tab-5,
+  #tab-6:checked ~ nav label.tab-6,
+  #tab-7:checked ~ nav label.tab-7 {
+    color: $white;
+    background: $gray-600;
+    border-color: $gray-800;
+  }
+
+  #tab-1:checked ~ section .content-1,
+  #tab-2:checked ~ section .content-2,
+  #tab-3:checked ~ section .content-3,
+  #tab-4:checked ~ section .content-4,
+  #tab-5:checked ~ section .content-5,
+  #tab-6:checked ~ section .content-6,
+  #tab-7:checked ~ section .content-7 {
+    display: block !important;
+  }
+}
+
+@media (max-width: 42em) {
+  .tabs {
+    nav {
+      flex-direction: column;
+      gap: 0.3rem;
+
+      label {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .tabs-#{$color} {
+    nav {
+      label {
+        color: $value;
+        border-color: $value;
+
+        &:hover {
+          border-color: shade-color($value, 30%);
+          color: shade-color($value, 30%);
+        }
+      }
+    }
+
+    #tab-1:checked ~ nav label.tab-1,
+    #tab-2:checked ~ nav label.tab-2,
+    #tab-3:checked ~ nav label.tab-3,
+    #tab-4:checked ~ nav label.tab-4,
+    #tab-5:checked ~ nav label.tab-5,
+    #tab-6:checked ~ nav label.tab-6,
+    #tab-7:checked ~ nav label.tab-7 {
+      color: $white;
+      background: $value;
+      border-color: shade-color($value, 30%);
+    }
+  }
+}

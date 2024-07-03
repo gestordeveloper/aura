@@ -1,0 +1,150 @@
+.fullcalendar_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-bottom: .5rem;
+
+    .header_actions {
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: .3rem;
+
+            span {
+                width: 32px;
+                height: 32px;
+                border: 1px solid $gray-400;
+                border-bottom-width: 2px;
+                border-radius: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                color: $gray-400;
+                transition: all .2s;
+
+                &:hover {
+                    color: $gray-900;
+                    border-color: $gray-900;
+                }
+            }
+        }
+    }
+}
+
+.fullcalendar {
+    background: $white;
+    padding-top: 60px;
+
+    .calendar_data {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+    
+            li {
+                width: calc(100% / 7);
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        }
+
+        .data_week {
+            li {
+                font-weight: $weight-strong;
+                font-size: .8rem;
+                color: $gray-600;
+                text-align: center;
+                padding: .3rem 0;
+                border: 1px solid $gray-400;
+                border-bottom: 0;
+            }
+        }
+
+        .data_days {
+            li {
+                text-align: center;
+                padding: .3rem;
+                border: 1px solid $gray-400;
+                height: 115px;
+                transition: all .2s;
+                font-size: .8rem;
+                font-weight: $weight-strong;
+                overflow: hidden;
+
+                &:hover {
+                    border-color: $primary;
+                }
+
+                &.active {
+                    color: $primary;
+                }
+
+                &.inactive {
+                    color: $gray-400;
+                }
+
+                .day_header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .button_add {
+                    width: 16px;
+                    height: 16px;
+                    font-size: .5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $gray-200;
+                    color: $gray-500;
+                    border-radius: 8px;
+                    transition: all .2s;
+
+                    &:hover {
+                        background: $primary;
+                        color: $white;
+                    }
+                }
+
+                .events {
+                    margin-top: .2rem;
+
+                    span {
+                        text-align: left;
+                        border: 0;
+                        border-radius: .3rem;
+                        width: 100%;
+                        display: block;
+                        font-size: .6rem;
+                        font-weight: $weight-normal;
+                        background: $gray-200;
+                        border: 1px solid $gray-400;
+                        border-bottom-width: 2px;
+                        height: auto;
+                        padding: .2rem .2rem;
+                        margin-bottom: .1rem;
+                        color: $dark;
+                        transition: all .2s;
+
+                        &:hover {
+                            background: $gray-400;
+                        }
+                    }
+
+                    .more {
+                        background: transparent;
+                        font-weight: $weight-strong;
+                        border: 0;
+
+                        &:hover {
+                            background: $gray-200;
+                            color: $dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
