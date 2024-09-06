@@ -9,146 +9,148 @@
 </head>
 <body>
 
-<!--Navbar-->
-<div class="navbar">
-    <div class="container">
-        <div class="navbar_title"></div>
-        <div class="navbar_actions">
-            <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
-            <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
-        </div>
-    </div>
-</div>
-
-<!--Sidebar-->
-<div class="sidebar">
-    <div class="sidebar_logo">
-        <h1 class="text-primary">Aura</h1>
-    </div>
-
-    <ul class="sidebar_navbar">
-        <li class="navbar_li active"><a href="./index.html"><i class="fa-solid fa-house"></i> Components</a></li>
-        <li class="navbar_li"><a href="./profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
-    </ul>
-</div>
-
-<!--Content-->
-<main class="app">
-    <div class="container">
-        <div class="app_box">
-            <div class="box_sidebar">
-                <nav>
-                    <a href="index.html" class="active"><i class="fa-solid fa-text-slash"></i> Forms</a>
-                    <a href="cards.html"><i class="fa-solid fa-square"></i> Cards</a>
-                    <a href="lists.html"><i class="fa-solid fa-list"></i> Lists</a>
-                    <a href="tables.html"><i class="fa-solid fa-table"></i> Tables</a>
-                    <a href="elements.html"><i class="fa-solid fa-umbrella"></i> Elements</a>
-                </nav>
-            </div>
-
-            <div class="box_content">
-                <div class="box_header my-4">
-                    <header>
-                        <h2 class="header_title"><i class="fa-solid fa-text-slash"></i> Forms</h2>
-                    </header>
-                </div>
-
-                <div class="row">
-                    <div class="span-3 span-sm-6 span-md-6">
-                        <form action="" class="app_form column spacing-4">
-                            <div class="row">
-                                <div class="label span-3 span-sm-6">
-                                    <span class="legend">Nome:</span>
-                                    <input type="text" placeholder="">
-                                </div>
-
-                                <div class="label span-3 span-sm-6">
-                                    <span class="legend">Sobrenome:</span>
-                                    <input type="text" placeholder="">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="label span-3 span-sm-6">
-                                    <span class="legend">Data vencimento:</span>
-                                    <input type="date">
-                                </div>
-
-                                <div class="label span-3 span-sm-6">
-                                    <span class="legend">Tipo de pessoa:</span>
-                                    <div class="row">
-                                        <label for="type1" class="span-sm-3 span-3">
-                                            <input type="radio" checked name="type" id="type1">
-                                            <u></u><span>Física</span>
-                                        </label>
-
-                                        <label for="type2" class="span-sm-3 span-3">
-                                            <input type="radio" name="type" id="type2">
-                                            <u></u><span>Jurídica</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="label span-3 span-sm-6">
-                                    <span class="legend">O que você domina?</span>
-                                    <div class="column spacing-1">
-                                        <label for="check1">
-                                            <input type="checkbox" checked name="type" id="check1">
-                                            <u></u><span>PHP</span>
-                                        </label>
-
-                                        <label for="check2">
-                                            <input type="checkbox" name="type" id="check2">
-                                            <u></u><span>JavaScript</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label class="label">
-                                <span class="legend">Foto de perfil: (600x600px)</span>
-                                <input type="file" name="file" />
-                            </label>
-                        </form>
-                    </div>
-
-                    <div class="span-3 span-sm-6 span-md-6">
-                        <form action="" class="app_form column spacing-4">
-                            <label class="label">
-                                <span class="legend">Nome de usuário:</span>
-                                <div class="group">
-                                    <span>https://linnk.space/</span>
-                                    <input type="text" >
-                                </div>
-                            </label>
-
-                            <label class="label">
-                                <div class="group">
-                                    <span>Nome:</span>
-                                    <input type="text" >
-                                </div>
-                            </label>
-
-                            <label class="label">
-                                <div class="group">
-                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    <input type="text" >
-                                </div>
-                            </label>
-                        </form>
-
-                        <form action="" class="app_form_search mt-4">
-                            <input type="text" placeholder="Pesquisar...">
-                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                </div>
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar_title"></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
             </div>
         </div>
     </div>
-</main>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+
+        <ul class="sidebar_navbar">
+            <li class="navbar_li active"><a href="./index.html"><i class="fa-solid fa-house"></i> Components</a></li>
+            <li class="navbar_li"><a href="./profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+        </ul>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <div class="box_sidebar">
+                    <nav>
+                        <a href="index.html" class="active"><i class="fa-solid fa-text-slash"></i> Forms</a>
+                        <a href="cards.html"><i class="fa-solid fa-square"></i> Cards</a>
+                        <a href="lists.html"><i class="fa-solid fa-list"></i> Lists</a>
+                        <a href="tables.html"><i class="fa-solid fa-table"></i> Tables</a>
+                        <a href="elements.html"><i class="fa-solid fa-umbrella"></i> Elements</a>
+                    </nav>
+                </div>
+
+                <div class="box_content">
+                    <div class="box_header my-4">
+                        <header>
+                            <h2 class="header_title"><i class="fa-solid fa-text-slash"></i> Forms</h2>
+                        </header>
+                    </div>
+
+                    <div class="row">
+                        <div class="span-3 span-sm-6 span-md-6">
+                            <form action="" class="app_form column spacing-4">
+                                <div class="row">
+                                    <div class="label span-3 span-sm-6">
+                                        <span class="legend">Nome:</span>
+                                        <input type="text" placeholder="">
+                                    </div>
+
+                                    <div class="label span-3 span-sm-6">
+                                        <span class="legend">Sobrenome:</span>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label span-3 span-sm-6">
+                                        <span class="legend">Data vencimento:</span>
+                                        <input type="date">
+                                    </div>
+
+                                    <div class="label span-3 span-sm-6">
+                                        <span class="legend">Tipo de pessoa:</span>
+                                        <div class="row">
+                                            <label for="type1" class="span-sm-3 span-3">
+                                                <input type="radio" checked name="type" id="type1">
+                                                <u></u><span>Física</span>
+                                            </label>
+
+                                            <label for="type2" class="span-sm-3 span-3">
+                                                <input type="radio" name="type" id="type2">
+                                                <u></u><span>Jurídica</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label span-3 span-sm-6">
+                                        <span class="legend">O que você domina?</span>
+                                        <div class="column spacing-1">
+                                            <label for="check1">
+                                                <input type="checkbox" checked name="type" id="check1">
+                                                <u></u><span>PHP</span>
+                                            </label>
+
+                                            <label for="check2">
+                                                <input type="checkbox" name="type" id="check2">
+                                                <u></u><span>JavaScript</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="label">
+                                    <span class="legend">Foto de perfil: (600x600px)</span>
+                                    <input type="file" name="file" />
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="span-3 span-sm-6 span-md-6">
+                            <form action="" class="app_form column spacing-4">
+                                <label class="label">
+                                    <span class="legend">Nome de usuário:</span>
+                                    <div class="group">
+                                        <span>https://linnk.space/</span>
+                                        <input type="text" >
+                                    </div>
+                                </label>
+
+                                <label class="label">
+                                    <div class="group">
+                                        <span>Nome:</span>
+                                        <input type="text" >
+                                    </div>
+                                </label>
+
+                                <label class="label">
+                                    <div class="group">
+                                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input type="text" >
+                                    </div>
+                                </label>
+                            </form>
+
+                            <form action="" class="app_form_search mt-4">
+                                <input type="text" placeholder="Pesquisar...">
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
 
 <script src="https://kit.fontawesome.com/cc3d171406.js" crossorigin="anonymous"></script>
 <script>

@@ -7,10 +7,13 @@
 
 // Aplique o tema escuro como padrão
 body {
-  height: 100vh;
   background-color: var(--background);
   color: var(--text);
   overflow-x: hidden;
+}
+
+.wrapper {
+  height: 100vh;
 
   display: grid;
   grid-template-columns: 240px 1fr;
