@@ -1,5 +1,5 @@
 .login {
-  background: $tertiary;
+  background: $aura-600;
   color: $white;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
 
     .hl {
       text-align: center;
-      font-size: $font-max;
+      font-size: fontSize("3xl");
     }
 
     form {
@@ -29,7 +29,7 @@
 
         .field {
           display: block;
-          font-size: $font-small;
+          font-size: fontSize("sm");
           font-weight: bold;
           color: $gray-800;
         }
@@ -41,28 +41,28 @@
           display: block;
           width: 100%;
           padding: 10px 0;
-          font-size: $font-normal;
+          font-size: fontSize("md");
         }
       }
     }
 
     footer {
       text-align: center;
-      font-size: $font-min;
+      font-size: fontSize("xs");
       font-weight: 300;
-      color: $dark;
+      color: $gray-900;
 
       a {
         display: inline-block;
-        font-size: $font-min;
-        color: $primary;
+        font-size: fontSize("xs");
+        color: $aura-500;
         text-decoration: none;
         font-weight: bold;
         margin-top: 5px;
         transition: all .3s ease;
 
         &:hover {
-          color: lighten($primary, 15%) !important;
+          color: lighten($aura-500, 15%) !important;
           text-decoration: underline !important;
         }
       }

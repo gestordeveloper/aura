@@ -1,31 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@300;400;900&display=swap");
+
 //ROOT
-@import "boot/functions";
 @import "boot/variables";
+@import "boot/functions";
+@import "boot/mixins";
+@import "boot/theme";
+@import "boot/grid";
 @import "boot/reset";
 
 //COMPONENTSS
-@import "components/button";
-@import "components/form";
 @import "components/sidebar";
 @import "components/navbar";
+@import "components/button";
+@import "components/form";
 @import "components/card";
-@import "components/table";
 @import "components/list";
+@import "components/table";
 @import "components/message";
 @import "components/modal";
-@import "components/modal_right";
 @import "components/paginator";
 @import "components/calendar";
 @import "components/toast";
-@import "components/slider";
 @import "components/loader";
 @import "components/tabs";
 @import "components/tags";
 @import "components/accordion";
 @import "components/funnel";
-@import "components/visitcard";
 @import "components/fullcalendar";
 
 //PAGES
 @import "pages/default";
+@import "pages/profile";
 @import "pages/login";
+@import "pages/visitcard";

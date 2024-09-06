@@ -5,26 +5,27 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: spacing("1");
 
     label {
-      display: flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
+      display: block;
+      font-size: fontSize("md");
+      padding: spacing("2") spacing("3");
+      font-weight: fontWeight("medium");
+      color: var(--text);
+      border: 1px solid var(--gray-200);
+      border-radius: radius("sm");
+      background: transparent;
+      transition: background-color 0.2s;
       cursor: pointer;
-      color: $gray-600;
-      font-size: 17px;
-      border-radius: 0.3rem;
-      border: 1px solid $gray-300;
-      transition: border, color 0.3s ease;
 
       &:hover {
-        border-color: $gray-800;
-        color: $gray-800;
+        background: var(--gray-200);
+        color: var(--text);
       }
 
       i {
-        margin-right: 0.5rem;
+        margin-right: spacing("1");
       }
     }
   }
@@ -32,11 +33,6 @@
   section {
     .tabs-content {
       display: none;
-      background: $white;
-      border: 1px solid $gray-300;
-      border-radius: .3rem;
-      padding: 1rem;
-      overflow-y: auto;
     }
   }
 
@@ -51,9 +47,8 @@
   #tab-5:checked ~ nav label.tab-5,
   #tab-6:checked ~ nav label.tab-6,
   #tab-7:checked ~ nav label.tab-7 {
-    color: $white;
-    background: $gray-600;
-    border-color: $gray-800;
+    background: var(--gray-200);
+    color: var(--text);
   }
 
   #tab-1:checked ~ section .content-1,
@@ -67,20 +62,7 @@
   }
 }
 
-@media (max-width: 42em) {
-  .tabs {
-    nav {
-      flex-direction: column;
-      gap: 0.3rem;
-
-      label {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@each $color, $value in $theme-colors {
+@each $color, $value in $colors {
   .tabs-#{$color} {
     nav {
       label {

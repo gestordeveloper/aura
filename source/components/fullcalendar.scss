@@ -51,7 +51,7 @@
 
         .data_week {
             li {
-                font-weight: $weight-strong;
+                font-weight: fontWeight("bold");
                 font-size: .8rem;
                 color: $gray-600;
                 text-align: center;
@@ -69,15 +69,15 @@
                 height: 115px;
                 transition: all .2s;
                 font-size: .8rem;
-                font-weight: $weight-strong;
+                font-weight: fontWeight("bold");
                 overflow: hidden;
 
                 &:hover {
-                    border-color: $primary;
+                    border-color: $aura-500;
                 }
 
                 &.active {
-                    color: $primary;
+                    color: $aura-500;
                 }
 
                 &.inactive {
@@ -98,12 +98,12 @@
                     align-items: center;
                     justify-content: center;
                     background: $gray-200;
-                    color: $gray-500;
+                    color: $gray-600;
                     border-radius: 8px;
                     transition: all .2s;
 
                     &:hover {
-                        background: $primary;
+                        background: $aura-500;
                         color: $white;
                     }
                 }
@@ -113,19 +113,18 @@
 
                     span {
                         text-align: left;
-                        border: 0;
                         border-radius: .3rem;
                         width: 100%;
                         display: block;
                         font-size: .6rem;
-                        font-weight: $weight-normal;
+                        font-weight: fontWeight("regular");
                         background: $gray-200;
                         border: 1px solid $gray-400;
                         border-bottom-width: 2px;
                         height: auto;
                         padding: .2rem .2rem;
                         margin-bottom: .1rem;
-                        color: $dark;
+                        color: $gray-900;
                         transition: all .2s;
 
                         &:hover {
@@ -135,12 +134,12 @@
 
                     .more {
                         background: transparent;
-                        font-weight: $weight-strong;
+                        font-weight: fontWeight("bold");
                         border: 0;
 
                         &:hover {
                             background: $gray-200;
-                            color: $dark;
+                            color: $gray-900;
                         }
                     }
                 }

@@ -8,3 +8,28 @@
 @function shade-color($color, $weight) {
 	@return mix(black, $color, $weight);
 }
+
+//Return fonts
+@function fontSize($size) {
+	@return map-get($fontSizes, $size);
+}
+
+@function fontWeight($weight) {
+	@return map-get($fontWeights, $weight);
+}
+
+//Return Radius
+@function radius($radiu) {
+	@return map-get($radius, $radiu);
+}
+
+//Return spaces
+@function spacing($space) {
+	@return map-get($spaces, $space);
+}
+
+// Função para calcular o tamanho da coluna
+@function calculate-column-width($columns) {
+	$width: ($columns / $grid-columns) * 100%;
+	@return $width;
+}

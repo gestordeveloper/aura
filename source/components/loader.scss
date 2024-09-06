@@ -13,7 +13,7 @@
         margin: auto;
         text-align: center;
         color: #ffffff;
-        font-weight: $weight-bold;
+        font-weight: fontWeight("bold");
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
         .ajax_load_box_loader {
@@ -24,7 +24,7 @@
 
         .ajax_load_box_title {
             margin-top: 15px;
-            font-weight: $weight-strong;
+            font-weight: fontWeight("bold");
         }
     }
 }

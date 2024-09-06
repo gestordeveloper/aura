@@ -19,13 +19,13 @@
         transition: all .2s;
 
         &:hover {
-            color: $primary;
+            color: $aura-500;
         }
     }
 
     span {
-        background: $primary;
-        border: 1px solid shade-color($primary, 15%);
+        background: $aura-500;
+        border: 1px solid shade-color($aura-500, 15%);
         border-bottom-width: 2px;
         border-radius: .5rem;
         color: $white;

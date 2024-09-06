@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  gap: spacing("4");
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@for $i from 1 through $grid-columns {
+  .span-#{$i} {
+    grid-column: span #{$i};
+  }
+
+  @each $breakpoint, $value in $breakpoints {
+    @media (max-width: #{$value}) {
+      .span-#{$breakpoint}-#{$i} {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+@each $spacing, $value in $spaces {
+  .spacing-#{$spacing} {
+    gap: #{$value};
+  }
+}

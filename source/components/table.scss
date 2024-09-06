@@ -1,228 +1,73 @@
 .table {
   width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  background: $gray-600;
-  border-radius: 0.3rem;
-
-  thead {
-    display: table-header-group;
-    color: $white;
-
-    th {
-      padding: 0.5rem;
-    }
-  }
-
-  tbody {
-    font-size: 0.875rem;
-
-    tr {
-      border: none;
-      display: table-row;
-
-      &:nth-child(odd) {
-        background: $white;
+  border-collapse: separate;
+  border-spacing: 0 spacing("1");
+  tr {
+    background: var(--gray-200);
+    td, th {
+      padding: spacing("3") spacing("5");
+      font-size: fontSize("sm");
+      &:first-child {
+        border-top-left-radius: radius("sm");
+        border-bottom-left-radius: radius("sm");
       }
-
-      &:nth-child(even) {
-        background: tint-color($gray-600, 85%);
+      &:last-child {
+        border-top-right-radius: radius("sm");
+        border-bottom-right-radius: radius("sm");
       }
+      a {
+        color: var(--text);
+        font-weight: fontWeight("bold");
 
-      td {
-        display: table-cell;
-        padding: 0.5rem;
-        text-align: left;
-        border-bottom: 1px solid $gray-400;
-
-        .link {
-          font-weight: bold;
-          color: $gray-900;
-          text-decoration: none;
-          transition: all 0.2s;
-
-          &:hover {
-            color: $gray-600;
-            text-decoration: underline !important;
-          }
+        &:hover {
+          color: var(--aura-500);
         }
       }
-    }
-  }
-}
+      .img_thumb {
+        width: 28px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: radius("full");
+        border: 1px solid var(--text);
 
-@each $color, $value in $theme-colors {
-  .table-#{$color} {
-    background: $value;
-
-    tbody {
-      tr {
-        &:nth-child(even) {
-          background: tint-color($value, 85%);
-        }
-
-        td {
-          .link {
-            &:hover {
-              color: $value;
-            }
-          }
+        &:hover {
+          border-color: var(--aura-500);
         }
       }
-    }
-  }
+      .img_product {
+        width: 60px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: radius("sm");
 
-  @media (max-width: 42em) {
-    .table-#{$color} {
-      tbody {
-        tr {
-          border-color: $value !important;
+        border: 1px solid var(--text);
 
-          td {
-            border-color: $value !important;
-
-            &:before {
-              color: $value !important;
-            }
-          }
+        &:hover {
+          border-color: var(--aura-500);
         }
       }
     }
   }
 }
 
-@media (max-width: 42em) {
-  .table {
-    border: none;
-    background: transparent;
-
-    thead {
-      display: none;
-    }
-
-    tbody {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-
-      tr {
-        width: 100%;
-        border: 1px solid $gray-400;
-        border-bottom-width: 2px;
-        background: $white;
-        border-radius: 0.5rem;
-        display: block;
-
-        &:nth-child(odd) {
-          background: $white;
-        }
-
-        &:nth-child(even) {
-          background: $white;
-        }
-
-        td {
-          display: block;
-          padding: 0.5rem 0.8rem;
-          padding-left: 30%;
-          position: relative;
-          text-align: left;
-          border-bottom: 1px solid $gray-400;
-
-          &:nth-last-child(-n + 1) {
-            border-bottom: none;
-          }
-
-          &:before {
-            color: $gray-800;
-            font-weight: $weight-strong;
-            content: attr(data-label);
-            position: absolute;
-            left: 0.8rem;
-          }
+//Backgrounds
+@each $color, $value in $colors {
+  .tr-#{$color} {
+    background: #{$value} !important;
+    color: #{$white} !important;
+    td, th {
+      a {
+        color: #{$white} !important;
+        &:hover {
+          color: darken($value, 25%) !important;
         }
       }
-
-      .app_form {
-        .label {
-          display: block;
-          width: 100%;
-          margin-bottom: 0.8rem;
-
-          .legend {
-            display: block;
-            margin-bottom: 0.2rem;
-            font-size: $font-small;
-            font-weight: $weight-strong;
-            color: $gray-700;
-
-            b {
-              color: $red;
-            }
-          }
-
-          input,
-          select,
-          textarea {
-            display: block;
-            width: 100%;
-            color: $black;
-            font-size: $font-normal;
-            padding: 0.8rem 1rem;
-            background: $white;
-            resize: none;
-            border: 1px solid $gray-300;
-            border-bottom-width: 2px;
-            border-radius: 0.5rem;
-            outline: none;
-            transition: border 0.5s;
-
-            &:focus {
-              border-color: $gray-800 !important;
-            }
-          }
-
-          input[type="date"] {
-            // -webkit-appearance: none;
-            font-size: 1em !important;
-            font-family: $font-primary !important;
-            padding: 0.8rem 1rem !important;
-            font-weight: $font-normal !important;
-            color: $gray-700 !important;
-          }
-
-          /* Radios */
-          .input-radio input {
-            display: none !important;
-          }
-
-          .input-radio input + label:before {
-            content: "";
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background: #fff;
-            border: 1px solid $gray-500;
-            border-bottom-width: 2px;
-
-            display: inline-flex;
-            vertical-align: middle;
-            margin-right: 0.24rem;
-          }
-
-          .input-radio input:checked + label:before {
-            background: $primary;
-          }
+      .img_thumb, .img_product {
+        border-color: #{$white} !important;
+        &:hover {
+          border-color: darken($value, 25%) !important;
         }
       }
-    }
-  }
-}
-
-@media (max-width: 34em) {
-  .table_list {
-    tbody {
-      display: block;
     }
   }
 }

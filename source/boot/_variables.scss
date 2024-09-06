@@ -1,133 +1,138 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@300;400;900&display=swap");
-
-/**
-	Colors Sistem
- */
+/** Colors Sistem */
 $white: #fff !default;
-$gray-100: #F5f5f5 !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: #fafafa !default;
+$gray-200: #ededed !default;
+$gray-300: #b2b2bc !default;
+$gray-400: #7c7c8a !default;
+$gray-600: #323238 !default;
+$gray-700: #39393e !default;
+$gray-800: #202024 !default;
+$gray-900: #121214 !default;
 $black: #000 !default;
 
-/**
-	Gray color map
- */
-$grays: (
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900,
-  ) !default;
-
-/**
-	Color-variables
- */
+/** Color-variables */
 $blue: #0084ff !default;
 $red: #e92c2c !default;
 $yellow: #ff9f2d !default;
 $green: #00ba34 !default;
 
-/**
-	Colors-map
- */
+/** Theme color variables */
+$aura-500: #EC1889 !default;
+$aura-600: #b60e6a !default;
+
 $colors: (
+  "aura-500": $aura-500,
+  "aura-600": $aura-600,
   "blue": $blue,
   "red": $red,
   "yellow": $yellow,
   "green": $green,
-  "white": $white,
+  "gray-200": $gray-200,
+  "gray-400": $gray-400,
+  "gray-800": $gray-800,
+) !default;
+
+/** Theme colors map */
+$light-mode-colors: (
+  "aura-500": $aura-500,
+  "aura-600": $aura-600,
+  "blue": $blue,
+  "red": $red,
+  "yellow": $yellow,
+  "green": $green,
+  "background": $white,
+  "background-sidebar": $gray-100,
+  "text": $gray-600,
   "gray": $gray-600,
-  "gray-dark": $gray-800,
-  ) !default;
+  "gray-dark": $gray-400,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-600": $gray-600,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+) !default;
 
-/**
-	Theme color variables
- */
-$primary: #EC1889 !default;
-$secondary: #d62828 !default;
-$tertiary: #00043B !default;
-$light: $gray-300 !default;
-$dark: $gray-900 !default;
-
-/**
-	Theme colors map
- */
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "tertiary": $tertiary,
-  "green": $green,
+$dark-mode-colors: (
+  "aura-500": $aura-500,
+  "aura-600": $aura-600,
   "blue": $blue,
-  "yellow": $yellow,
   "red": $red,
-  "light": $light,
-  "white": $white,
-  "dark": $dark,
-  ) !default;
+  "yellow": $yellow,
+  "green": $green,
+  "background": $gray-600,
+  "background-sidebar": $gray-900,
+  "text": $gray-100,
+  "gray-100": $gray-900,
+  "gray-200": $gray-800,
+  "gray-300": $gray-600,
+  "gray-400": $gray-400,
+  "gray-600": $gray-300,
+  "gray-800": $gray-200,
+  "gray-900": $gray-100,
+) !default;
 
-$body-bg: $gray-100 !default;
-$body-color: $gray-900 !default;
-$body-text-align: null !default;
+/** Theme fonts */
+$fonts: (
+  "default": 'Roboto'
+) !default;
 
-/**
-	FONTS
- */
-$font-primary: "Roboto",
-  sans-serif;
-$font-secondary: "Roboto Mono",
-  monospace;
+$fontSizes: (
+  "xxs": 0.625rem,
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "md": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+  '2xl': 1.5rem,
+  '4xl': 2rem,
+  '5xl': 2.25rem,
+  '6xl': 3rem,
+  '7xl': 4rem,
+  '8xl': 4.5rem,
+  '9xl': 6rem,
+);
 
-$font-min: 0.8rem;
-$font-small: 0.875rem;
-$font-normal: 1rem;
-$font-medium: 1.2rem;
-$font-large: 1.4rem;
-$font-max: 2rem;
+$fontWeights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
 
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-black: 900;
+$radius: (
+  "px": 1px,
+  "xs": 4px,
+  "sm": 6px,
+  "md": 8px,
+  "lg": 16px,
+  "full": 99999px,
+);
 
-$weight-light: 300;
-$weight-normal: 400;
-$weight-strong: 600;
-$weight-bold: 700;
-$weight-black: 900;
+$spaces: (
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 1.25rem,
+  "6": 1.5rem,
+  "7": 1.75rem,
+  "8": 2rem,
+  "10": 2.5rem,
+  "12": 3rem,
+  "16": 4rem,
+  "20": 5rem,
+  "40": 10rem,
+  "64": 16rem,
+  "80": 20rem,
+);
 
-/**
-	COMPONENTS
- */
-$radius-normal: 5px;
-$radius-medium: 10px;
-$radius-large: 20px;
-$radius-round: 50%;
-$hover-duration: 0.3s;
-
-/**
-	MEDIA QUERIES
- */
-$desk-max: 80em; //1280w
-$desk-mid: 62em; //992w
-$desk-min: 52em; //832w
-$tablet: 45em; //720w
-$mobile: 34em; //540w
-
-/*
-	SLIDER
-*/
-$handle-size: 3.6rem;
-$img-gap: 0.25rem;
-$items-per-screen: 4;
-$slider-index: 0;
+/* GRID */
+$grid-columns: 6;
+$gutter-width: 1rem;
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);

@@ -1,0 +1,12 @@
+// Mixin para criar as colunas
+@mixin column($columns, $breakpoint: null) {
+  width: calculate-column-width($columns);
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+
+  @if $breakpoint != null {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      width: calculate-column-width($columns);
+    }
+  }
+}

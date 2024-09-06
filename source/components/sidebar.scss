@@ -1,31 +1,26 @@
-.dash_sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1002;
-  width: 240px;
-  height: 100%;
-  background: $white;
+.sidebar {
+  grid-area: sidebar;
+  background: var(--background-sidebar);
   display: flex;
   flex-direction: column;
 
-  .dash_sidebar_logo {
+  .sidebar_logo {
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: spacing("4") 0;
   }
 
-  .dash_sidebar_nav {
-    margin-top: 1rem;
+  .sidebar_navbar {
+    margin-top: spacing("4");
 
-    .dash_sidebar_nav_li {
+    .navbar_li {
       display: block;
       width: 100%;
 
       &.active {
         a {
-          color: $primary;
-          border-right-color: $primary !important;
+          color: var(--aura-500);
+          border-right-color: var(--aura-500) !important;
         }
       }
 
@@ -33,10 +28,10 @@
         display: block;
         width: 100%;
         padding: 0.5rem 2rem;
-        color: $gray-600;
-        font-size: $font-small;
+        color: var(--text);
+        font-size: 1rem;
         transition: color 0.2s;
-        border-right: 3px solid $white;
+        border-right: 3px solid var(--background-sidebar);
 
         i {
           margin-right: 0.8rem;
@@ -44,17 +39,17 @@
         }
 
         &:before {
-          font-size: $font-small;
+          font-size: 1rem;
         }
 
         &:hover {
-          color: $primary;
+          color: var(--aura-500);
         }
       }
     }
   }
 
-  .dash_sidebar_footer {
+  .sidebar_footer {
     color: $gray-600;
     text-align: center;
     font-size: .8rem;
@@ -62,17 +57,11 @@
 
     a {
       font-weight: bold;
-      color: $primary;
+      color: var(--aura-500);
       
       &:hover {
         text-decoration: underline !important;
       }
     }
-  }
-}
-
-@media (max-width: 42em) {
-  .dash_sidebar {
-    left: -240px;
   }
 }
