@@ -13,7 +13,8 @@
     <!--Navbar-->
     <div class="navbar">
         <div class="container">
-            <div class="navbar_title"></div>
+            <button id="menu-toggle" class="btn-sm"><i class="fa-solid fa-bars"></i></button>
+            <div></div>
             <div class="navbar_actions">
                 <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
                 <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
@@ -55,35 +56,35 @@
                     </div>
 
                     <div class="row">
-                        <div class="span-3 span-sm-6 span-md-6">
+                        <div class="span-6 span-sm-12 span-md-12">
                             <form action="" class="app_form column spacing-4">
                                 <div class="row">
-                                    <div class="label span-3 span-sm-6">
+                                    <div class="label span-6 span-sm-12">
                                         <span class="legend">Nome:</span>
                                         <input type="text" placeholder="">
                                     </div>
 
-                                    <div class="label span-3 span-sm-6">
+                                    <div class="label span-6 span-sm-12">
                                         <span class="legend">Sobrenome:</span>
                                         <input type="text" placeholder="">
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="label span-3 span-sm-6">
+                                    <div class="label span-6 span-sm-12">
                                         <span class="legend">Data vencimento:</span>
                                         <input type="date">
                                     </div>
 
-                                    <div class="label span-3 span-sm-6">
+                                    <div class="label span-6 span-sm-12">
                                         <span class="legend">Tipo de pessoa:</span>
                                         <div class="row">
-                                            <label for="type1" class="span-sm-3 span-3">
+                                            <label for="type1" class="span-sm-6 span-6">
                                                 <input type="radio" checked name="type" id="type1">
                                                 <u></u><span>Física</span>
                                             </label>
 
-                                            <label for="type2" class="span-sm-3 span-3">
+                                            <label for="type2" class="span-sm-6 span-6">
                                                 <input type="radio" name="type" id="type2">
                                                 <u></u><span>Jurídica</span>
                                             </label>
@@ -92,7 +93,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="label span-3 span-sm-6">
+                                    <div class="label span-6 span-sm-12">
                                         <span class="legend">O que você domina?</span>
                                         <div class="column spacing-1">
                                             <label for="check1">
@@ -115,7 +116,7 @@
                             </form>
                         </div>
 
-                        <div class="span-3 span-sm-6 span-md-6">
+                        <div class="span-6 span-sm-12 column spacing-4">
                             <form action="" class="app_form column spacing-4">
                                 <label class="label">
                                     <span class="legend">Nome de usuário:</span>
@@ -140,10 +141,20 @@
                                 </label>
                             </form>
 
-                            <form action="" class="app_form_search mt-4">
+                            <form action="" class="app_form_search">
                                 <input type="text" placeholder="Pesquisar...">
                                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
+                            
+                            <div class="card">
+                                <form action="" class="app_form_note">
+                                    <div class="img_thumb">
+                                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                                    </div>
+
+                                    <input type="text" name="content" placeholder="Qual a sua anotação...">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -155,6 +166,7 @@
 <script src="https://kit.fontawesome.com/cc3d171406.js" crossorigin="anonymous"></script>
 <script>
     const themeToggle = document.getElementById('theme-toggle');
+    const menuToggle = document.getElementById('menu-toggle');
     const html = document.documentElement;
     let isDarkMode = false;
 
@@ -196,6 +208,11 @@
         }
         document.cookie = name + '=' + value + expires + '; path=/';
     }
+
+    //responsavel por abrir o menu responsivo
+    menuToggle.addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
 </script>
 </body>
 </html>

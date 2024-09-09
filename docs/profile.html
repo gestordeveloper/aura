@@ -9,85 +9,87 @@
 </head>
 <body>
 
-<!--Navbar-->
-<div class="navbar">
-    <div class="container">
-        <div class="navbar_title"></div>
-        <div class="navbar_actions">
-            <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
-            <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
-        </div>
-    </div>
-</div>
-
-<!--Sidebar-->
-<div class="sidebar">
-    <div class="sidebar_logo">
-        <h1 class="text-primary">Aura</h1>
-    </div>
-
-    <ul class="sidebar_navbar">
-        <li class="navbar_li"><a href="./index.html"><i class="fa-solid fa-house"></i> Components</a></li>
-        <li class="navbar_li active"><a href="./profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
-    </ul>
-</div>
-
-<!--Content-->
-<main class="app">
-    <div class="container">
-        <div class="app_box">
-            <div class="box_content">
-                <div class="profile_header">
-                    <div class="header_cover">
-                        <div class="cover">
-                            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                        </div>
-                        
-                        <div class="actions">
-                            <a href="#" class="btn-sm"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="btn-sm"><i class="fa-brands fa-facebook"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="header_infors">
-                        <div class="infors_photo">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
-                        </div>
-
-                        <div class="infors_body">
-                            <h2>Ana Carla Leal</h2>
-                            <p>Administrativo</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tabs mt-12">
-                    <input type="radio" name="slider" checked id="tab-1">
-                    <input type="radio" name="slider" id="tab-2">
-
-                    <nav>
-                        <label for="tab-1" class="tab-1"><i class="fa-solid fa-address-card"></i> Informações</label>
-                        <label for="tab-2" class="tab-2"><i class="fa-solid fa-user-group"></i> Clientes</label>
-                    </nav>
-
-                    <section class="mt-4">
-                        <div class="tabs-content content-1">
-                            <div class="card">
-                                <div class="card_body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur delectus distinctio dolor eum eveniet inventore iusto officia quaerat unde.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs-content content-2">
-                            Beatae deserunt dolorem libero minus numquam praesentium.
-                        </div>
-                    </section>
-                </div>
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar_title"></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
             </div>
         </div>
     </div>
-</main>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+
+        <ul class="sidebar_navbar">
+            <li class="navbar_li"><a href="./index.html"><i class="fa-solid fa-house"></i> Components</a></li>
+            <li class="navbar_li active"><a href="./profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+        </ul>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <div class="box_content">
+                    <div class="profile_header">
+                        <div class="header_cover">
+                            <div class="cover">
+                                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            </div>
+
+                            <div class="actions">
+                                <a href="#" class="btn-sm"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="btn-sm"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="header_infors">
+                            <div class="infors_photo">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                            </div>
+
+                            <div class="infors_body">
+                                <h2>Ana Carla Leal</h2>
+                                <p>Administrativo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs mt-12">
+                        <input type="radio" name="slider" checked id="tab-1">
+                        <input type="radio" name="slider" id="tab-2">
+
+                        <nav>
+                            <label for="tab-1" class="tab-1"><i class="fa-solid fa-address-card"></i> Informações</label>
+                            <label for="tab-2" class="tab-2"><i class="fa-solid fa-user-group"></i> Clientes</label>
+                        </nav>
+
+                        <section class="mt-4">
+                            <div class="tabs-content content-1">
+                                <div class="card">
+                                    <div class="card_body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur delectus distinctio dolor eum eveniet inventore iusto officia quaerat unde.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabs-content content-2">
+                                Beatae deserunt dolorem libero minus numquam praesentium.
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
 
 <script src="https://kit.fontawesome.com/cc3d171406.js" crossorigin="anonymous"></script>
 <script>

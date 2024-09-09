@@ -1,14 +1,25 @@
 .app {
   grid-area: app;
+  width: 100%;
 
   .app_box {
     margin: spacing("8") 0;
 
     /*Sidebar content app*/
     .box_sidebar {
+      width: 100%;
+
       nav {
+        width: 100%;
         display: flex;
+        align-items: center;
         gap: spacing("2");
+
+        @media (max-width: 42em) {
+          overflow-x: auto !important;
+          display: flex;
+          flex-wrap: wrap;
+        }
 
         a {
           display: block;
@@ -20,27 +31,14 @@
           border-radius: radius("sm");
           background: transparent;
           transition: background-color 0.2s;
+          white-space: nowrap !important;
 
           &.active, &:hover {
             background: var(--gray-200);
             color: var(--text);
           }
-        }
-      }
-    }
 
-    @media (max-width: 42em) {
-      .box_sidebar {
-        overflow-y: auto !important;
-        white-space: nowrap !important;
-
-        nav {
-          display: flex !important;
-          align-items: center;
-          flex-wrap: nowrap;
-          gap: 0.5rem;
-
-          a {
+          @media (max-width: 42em) {
             padding: spacing("3") spacing("4");
           }
         }
@@ -77,12 +75,6 @@
           }
         }
       }
-    }
-  }
-
-  @media (max-width: 42em) {
-    .content_app_box {
-      grid-template-columns: 1fr;
     }
   }
 }

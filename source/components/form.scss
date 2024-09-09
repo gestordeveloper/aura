@@ -25,6 +25,10 @@
       border-radius: radius("sm");
       outline: none;
 
+      &::placeholder {
+        color: var(--gray-400) !important;
+      }
+
       &:focus {
         border-color: var(--aura-500) !important;
       }
@@ -169,6 +173,37 @@
     &:hover {
       background: var(--aura-600);
       border-color: var(--aura-600);
+    }
+  }
+}
+
+.app_form_note {
+  @extend .app_form_search;
+  gap: spacing("2");
+  align-items: center;
+
+  .img_thumb {
+    max-height: 60px;
+    img {
+      width: 60px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      border-radius: radius("full");
+      border: 1px solid var(--gray-200);
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--aura-500);
+      }
+    }
+  }
+
+  input {
+    border-radius: radius("sm");
+    border: 1px solid var(--gray-200);
+
+    &:focus {
+      border-color: var(--aura-500);
     }
   }
 }

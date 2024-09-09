@@ -3,6 +3,20 @@
   background: var(--background-sidebar);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 42em) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 1002;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
 
   .sidebar_logo {
     width: 100%;
@@ -50,7 +64,7 @@
   }
 
   .sidebar_footer {
-    color: $gray-600;
+    color: var(--text);
     text-align: center;
     font-size: .8rem;
     margin-top: 3rem;
