@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery UI Autocomplete with Select</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <style>
+    .ui-autocomplete {
+      max-height: 150px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<div class="ui-widget">
+  <label>Your preferred programming language: </label>
+  <input id="combobox">
+</div>
+
+<script>
+  $(document).ready(function () {
+    // Pega as opções do select e converte para autocomplete
+    var select = $("#combobox");
+    var options = [
+      "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++",
+      "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy",
+      "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP",
+      "Python", "Ruby", "Scala", "Scheme"
+    ];
+
+    // Inicializa o autocomplete
+    select.autocomplete({
+      source: options,
+      minLength: 0,
+      select: function(event, ui) {
+        // Quando selecionar uma opção, define o valor do campo
+        select.val(ui.item.value);
+        return false;
+      }
+    });
+
+    // Mostra todas as opções ao focar no campo
+    select.on('focus', function() {
+      $(this).autocomplete("search", "");
+    });
+  });
+</script>
+
+</body>
+</html>

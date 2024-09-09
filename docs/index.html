@@ -6,6 +6,7 @@
     <title>Documentação Aura</title>
 
     <link rel="stylesheet" href="./../dist/app.css" />
+    <link rel="stylesheet" href="./../dist/select2.min.css" />
 </head>
 <body>
 
@@ -113,6 +114,19 @@
                                     <span class="legend">Foto de perfil: (600x600px)</span>
                                     <input type="file" name="file" />
                                 </label>
+
+                                <div class="row">
+                                    <label class="label span-6 span-sm-12">
+                                        <span class="legend">Selecione...</span>
+                                        <select name="" class="select-input">
+                                            <option></option>
+                                            <option value="2">Success!</option>
+                                            <option value="3">Danger!</option>
+                                            <option value="4">Warning!</option>
+                                            <option value="5">Information!</option>
+                                        </select>
+                                    </label>
+                                </div>
                             </form>
                         </div>
 
@@ -164,7 +178,20 @@
 </div>
 
 <script src="https://kit.fontawesome.com/cc3d171406.js" crossorigin="anonymous"></script>
+<script src="./../dist/jquery.min.js"></script>
+<script src="./../dist/select2.min.js"></script>
 <script>
+    $(document).ready(function () {
+        $(".select-input").select2({
+            placeholder: "Selecione uma opção...",
+            language: {
+                searching: function () {
+                    return "Digite para pesquisar..."
+                }
+            }
+        });
+    });
+
     const themeToggle = document.getElementById('theme-toggle');
     const menuToggle = document.getElementById('menu-toggle');
     const html = document.documentElement;
