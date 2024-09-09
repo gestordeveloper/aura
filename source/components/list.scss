@@ -55,6 +55,7 @@
     @extend .list;
 
     .infors {
+        width: 100%;
         display: grid;
         grid-template-columns: 42px 1fr;
         gap: spacing("2");
