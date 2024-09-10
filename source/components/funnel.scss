@@ -1,7 +1,6 @@
 .funnel_content {
-    padding-top: 60px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     .funnel_board {
         width: 100%;
@@ -12,132 +11,92 @@
         .funnel_list {
             flex: 0 0 320px;
 
-            &+div {
-                border-left: 1px solid #DDD;
+            & + div {
+                border-left: 1px solid var(--gray-200);
             }
 
             header {
+                height: 60px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                height: 42px;
-                background: $gray-600;
-                padding: 0 .5rem;
-                color: #FFF;
+                background: var(--gray-200);
+                padding: 0 spacing("3");
+                color: var(--text);
 
-                h3 {
-                    font-size: 1rem;
+                .infors {
+                    h3 {
+                        font-size: fontSize("md");
+                    }
+
+                    span {
+                        font-size: fontSize("xs");
+                    }
+                }
+
+                .list_count {
+                    font-weight: fontWeight("bold");
+                    font-size: fontSize("md");
+                    color: $aura-500;
                 }
             }
 
             .funnel_list_stage {
                 list-style: none;
                 overflow-y: scroll;
-                height: calc(100% - 42px);
-                padding: .5rem;
+                height: calc(100% - 60px);
+                padding: spacing("2");
 
                 display: flex;
                 flex-direction: column;
                 gap: .5rem;
 
                 li {
-                    padding: .8rem;
-                    background: $white;
-                    border: 1px solid $gray-400;
-                    border-radius: .3rem;
+                    padding: spacing("3");
+                    background: var(--gray-200);
+                    border: 1px solid var(--gray-200);
+                    border-radius: radius("sm");
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
-                    transition: all .2s;
                     cursor: pointer;
-
-                    &:hover {
-                        border-color: $gray-800;
-                    }
 
                     .infors {
                         display: flex;
                         align-items: flex-start;
                         width: 100%;
 
-                        .infors_thumb {
-                            display: block;
-                            margin: 0;
-                            margin-right: .5rem !important;
-                            width: 42px !important;
-                            height: 37px !important;
-                            overflow: hidden;
-                            border-radius: 50%;
-                            border: 1px solid $gray-600;
-                            border-bottom-width: 2px;
-
-                            img {
-                                width: 42px;
-                                object-fit: cover;
-                                aspect-ratio: 1 / 1;
-                                border-radius: radius("full");
-                            }
-                        }
-
                         .infors_body {
                             width: 100%;
                             display: flex;
                             align-items: flex-start;
                             justify-content: space-between;
-                            gap: .8rem;
-
-                            a {
-                                text-decoration: none;
-                                font-weight: fontWeight("bold");
-                                color: $gray-600;
-                                transition: all .2s;
-
-                                &:hover {
-                                    color: $gray-800;
-                                }
-                            }
-
-                            p {
-                                font-size: .9rem;
-                                color: $gray-600;
-                                margin: 0 !important;
-                            }
+                            gap: spacing("3");
 
                             .body_data {
                                 width: 100%;
 
-                                .body_icons {
-                                    display: flex;
-                                    align-items: center;
-                                    gap: .5rem;
-                                    width: 100%;
-                                    border-top: 1px solid $gray-300;
-                                    padding-top: .4rem;
-                                    margin-top: .4rem;
+                                a {
+                                    text-decoration: none;
+                                    font-weight: fontWeight("bold");
+                                    color: var(--text);
 
-                                    .thumb {
-                                        width: 24px !important;
-                                        height: 24px !important;
-                                        overflow: hidden;
-                                        border-radius: 50%;
-
-                                        img {
-                                            width: 24px;
-                                            height: 24px;
-                                        }
+                                    &:hover {
+                                        color: var(--aura-500);
                                     }
+                                }
 
-                                    i {
-                                        font-size: 1.2rem;
-                                        color: $gray-600;
-                                    }
+                                p {
+                                    font-size: fontSize("sm");
+                                    color: var(--text);
+                                    margin: 0 !important;
                                 }
                             }
 
                             .body_actions {
                                 display: flex;
                                 align-items: center;
-                                gap: .3rem;
+                                gap: spacing("1");
                             }
                         }
                     }

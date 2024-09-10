@@ -1,15 +1,11 @@
 :root,
 [data-aura-theme="light"] {
-  $theme: "light";
-
   @each $color, $value in $light-mode-colors {
     --#{$color}: #{$value};
   }
 }
 
 [data-aura-theme="dark"] {
-  $theme: "dark";
-
   @each $color, $value in $dark-mode-colors {
     --#{$color}: #{$value};
   }

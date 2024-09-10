@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="./../dist/app.css" />
+</head>
+<body>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar_title"></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+
+        <ul class="sidebar_navbar">
+            <li class="navbar_li"><a href="./index.html"><i class="fa-solid fa-house"></i> Components</a></li>
+            <li class="navbar_li"><a href="./profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
+            <li class="navbar_li active"><a href="./funnel.html"><i class="fa-solid fa-filter"></i> Funnel</a></li>
+        </ul>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="funnel_content">
+            <div class="funnel_board">
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Sem contato</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span class="list_count">0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage">
+                        <li class="funnel_card" draggable="true">
+                            <div class="infors">
+                                <div class="infors_body">
+                                    <div class="body_data">
+                                        <a href="#">Samuel Fogaça</a>
+                                        <p>054.985.671-46</p>
+                                    </div>
+
+                                    <div class="body_actions">
+                                        <span class="btn-sm btn-red"><i class="fa-solid fa-trash"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Em atendimento</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span>0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage"></ul>
+                </div>
+
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Em atendimento</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span>0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage"></ul>
+                </div>
+
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Em atendimento</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span>0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage"></ul>
+                </div>
+
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Em atendimento</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span>0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage"></ul>
+                </div>
+
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Em atendimento</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span>0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage"></ul>
+                </div>
+
+                <div class="funnel_list">
+                    <header>
+                        <div class="infors">
+                            <h3>Em atendimento</h3>
+                            <span>R$ 0,00</span>
+                        </div>
+
+                        <span>0</span>
+                    </header>
+
+                    <ul class="funnel_list_stage"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="https://kit.fontawesome.com/cc3d171406.js" crossorigin="anonymous"></script>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    let isDarkMode = false;
+
+    // Verifica se o tema está armazenado em cookie
+    if (getCookie('auraTheme') === 'dark') {
+        isDarkMode = true;
+        html.dataset.auraTheme = 'dark';
+    }
+
+    // Atualiza o texto do botão
+    themeToggle.innerHTML = isDarkMode ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+
+    themeToggle.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        html.dataset.auraTheme = isDarkMode ? 'dark' : 'light';
+
+        // Salva o tema no cookie
+        setCookie('auraTheme', isDarkMode ? 'dark' : 'light', 365); // Expira em 1 ano
+
+        // Atualiza o texto do botão
+        themeToggle.innerHTML = isDarkMode ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    });
+
+    // Funções para manipular cookies
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    }
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+</script>
+</body>
+</html>
