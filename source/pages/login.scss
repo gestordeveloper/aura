@@ -8,49 +8,23 @@
   height: 100vh;
 
   .login_box {
-    width: 400px;
-    max-width: 90%;
+    width: 90%;
+    max-width: 400px;
     margin: auto;
-    padding: 35px;
+    padding: spacing("8");
     background: #ffffff;
+    border-radius: radius("sm");
 
     .hl {
       text-align: center;
       font-size: fontSize("3xl");
     }
 
-    form {
-      display: block;
-      margin: 0 0 20px 0;
-
-      label {
-        display: block;
-        margin-bottom: 20px;
-
-        .field {
-          display: block;
-          font-size: fontSize("sm");
-          font-weight: bold;
-          color: $gray-800;
-        }
-
-        input {
-          border: none;
-          border-bottom: 1px solid #1d2025;
-          outline: none;
-          display: block;
-          width: 100%;
-          padding: 10px 0;
-          font-size: fontSize("md");
-        }
-      }
-    }
-
     footer {
       text-align: center;
       font-size: fontSize("xs");
       font-weight: 300;
-      color: $gray-900;
+      color: var(--text);
 
       a {
         display: inline-block;
