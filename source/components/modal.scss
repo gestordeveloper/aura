@@ -15,8 +15,8 @@
     width: 100% !important;
     max-width: 420px !important;
     display: block;
-    background: $white;
-    border-radius: 0.3rem;
+    background: var(--background);
+    border-radius: radius("sm");
 
     &.container_large {
       max-width: 960px !important;
@@ -27,19 +27,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem;
-      border-bottom: 1px solid $gray-300;
+      padding: spacing("4");
+      border-bottom: 1px solid var(--text);
     }
 
     .modal_body {
-      padding: 1rem;
+      padding: spacing("4");
     }
   }
 }
 
 @media (max-width: 42em) {
   .modal {
-    padding: 0 1rem;
+    padding: 0 spacing("4");
 
     .modal_container {
       max-height: 554px;
