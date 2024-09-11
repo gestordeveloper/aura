@@ -41,10 +41,28 @@
                 cursor: pointer;
                 border-radius: radius("sm");
                 transition: background-color 0.2s, color 0.2s;
+                position: relative;
 
                 &:hover {
                     background: var(--aura-500);
                     color: $white;
+                }
+
+                .badge {
+                    position: absolute;
+                    top: -3px;
+                    right: -3px;
+                    background: var(--aura-500);
+                    color: $gray-100;
+                    font-size: fontSize("xxs");
+                    font-weight: fontWeight("bold");
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: radius("full");
+                    line-height: 0;
                 }
             }
 
