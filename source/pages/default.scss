@@ -1,6 +1,7 @@
 .app {
   grid-area: app;
   width: 100%;
+  overflow-y: auto;
 
   .app_box {
     margin: spacing("8") 0;
