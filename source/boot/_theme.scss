@@ -79,3 +79,35 @@
     padding-right: #{$value} !important;
   }
 }
+
+//Texts Sizing, Weights and align
+@each $sizing, $value in $fontSizes {
+  .text-#{$sizing} {
+    font-size: #{$value} !important;
+  }
+}
+
+@each $weight, $value in $fontWeights {
+  .text-#{$weight} {
+    font-weight: #{$value} !important;
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+//radius
+@each $radio, $value in $radius {
+  .radius-#{$radio} {
+    border-radius: #{$value} !important;
+  }
+}
