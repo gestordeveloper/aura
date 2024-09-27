@@ -13,6 +13,9 @@ export type IconsId =
   | "arrow-20"
   | "arrow-21"
   | "arrow-22"
+  | "arrow-23"
+  | "arrow-24"
+  | "arrow-25"
   | "arrow-3"
   | "arrow-5"
   | "arrow-7"
@@ -33,6 +36,7 @@ export type IconsId =
   | "calendar-6"
   | "calendar-7"
   | "calendar-8"
+  | "calendar-9"
   | "cancel-1"
   | "cancel-2"
   | "chart-1"
@@ -54,6 +58,15 @@ export type IconsId =
   | "clock-1"
   | "clock-2"
   | "clock-3"
+  | "clock-4"
+  | "clock-5"
+  | "cloud-1"
+  | "cloud-2"
+  | "cloud-3"
+  | "cloud-4"
+  | "cloud-5"
+  | "cloud-6"
+  | "cloud-7"
   | "config-1"
   | "config-2"
   | "config-3"
@@ -65,6 +78,16 @@ export type IconsId =
   | "config-9"
   | "edit-1"
   | "edit-2"
+  | "face-1"
+  | "face-10"
+  | "face-2"
+  | "face-3"
+  | "face-4"
+  | "face-5"
+  | "face-6"
+  | "face-7"
+  | "face-8"
+  | "face-9"
   | "file-1"
   | "file-10"
   | "file-11"
@@ -135,13 +158,41 @@ export type IconsId =
   | "kit-42"
   | "kit-43"
   | "kit-44"
+  | "kit-45"
+  | "kit-46"
+  | "kit-47"
+  | "kit-48"
+  | "kit-49"
   | "kit-5"
+  | "kit-50"
+  | "kit-51"
+  | "kit-52"
+  | "kit-53"
+  | "kit-54"
+  | "kit-55"
+  | "kit-56"
+  | "kit-57"
+  | "kit-58"
+  | "kit-59"
   | "kit-6"
+  | "kit-60"
+  | "kit-61"
+  | "kit-62"
+  | "kit-63"
+  | "kit-64"
+  | "kit-65"
+  | "kit-66"
   | "kit-7"
   | "kit-8"
   | "kit-9"
   | "mail-1"
+  | "minus-1"
+  | "minus-2"
+  | "minus-3"
+  | "minus-4"
+  | "minus-5"
   | "money-1"
+  | "money-10"
   | "money-2"
   | "money-3"
   | "money-4"
@@ -154,6 +205,11 @@ export type IconsId =
   | "plus-2"
   | "print-1"
   | "search-1"
+  | "search-2"
+  | "search-3"
+  | "search-4"
+  | "search-5"
+  | "search-6"
   | "social-1"
   | "social-2"
   | "social-3"
@@ -163,12 +219,21 @@ export type IconsId =
   | "social-7"
   | "social-8"
   | "star-1"
+  | "star-2"
+  | "star-3"
+  | "star-4"
+  | "star-5"
   | "success-1"
   | "success-2"
   | "success-3"
   | "trash-1"
   | "trash-2"
   | "trash-3"
+  | "truck-1"
+  | "truck-2"
+  | "truck-3"
+  | "truck-4"
+  | "truck-5"
   | "user-1"
   | "user-10"
   | "user-11"
@@ -178,6 +243,7 @@ export type IconsId =
   | "user-15"
   | "user-16"
   | "user-17"
+  | "user-18"
   | "user-2"
   | "user-3"
   | "user-4"
@@ -202,6 +268,9 @@ export type IconsKey =
   | "Arrow_20"
   | "Arrow_21"
   | "Arrow_22"
+  | "Arrow_23"
+  | "Arrow_24"
+  | "Arrow_25"
   | "Arrow_3"
   | "Arrow_5"
   | "Arrow_7"
@@ -222,6 +291,7 @@ export type IconsKey =
   | "Calendar_6"
   | "Calendar_7"
   | "Calendar_8"
+  | "Calendar_9"
   | "Cancel_1"
   | "Cancel_2"
   | "Chart_1"
@@ -243,6 +313,15 @@ export type IconsKey =
   | "Clock_1"
   | "Clock_2"
   | "Clock_3"
+  | "Clock_4"
+  | "Clock_5"
+  | "Cloud_1"
+  | "Cloud_2"
+  | "Cloud_3"
+  | "Cloud_4"
+  | "Cloud_5"
+  | "Cloud_6"
+  | "Cloud_7"
   | "Config_1"
   | "Config_2"
   | "Config_3"
@@ -254,6 +333,16 @@ export type IconsKey =
   | "Config_9"
   | "Edit_1"
   | "Edit_2"
+  | "Face_1"
+  | "Face_10"
+  | "Face_2"
+  | "Face_3"
+  | "Face_4"
+  | "Face_5"
+  | "Face_6"
+  | "Face_7"
+  | "Face_8"
+  | "Face_9"
   | "File_1"
   | "File_10"
   | "File_11"
@@ -324,13 +413,41 @@ export type IconsKey =
   | "Kit_42"
   | "Kit_43"
   | "Kit_44"
+  | "Kit_45"
+  | "Kit_46"
+  | "Kit_47"
+  | "Kit_48"
+  | "Kit_49"
   | "Kit_5"
+  | "Kit_50"
+  | "Kit_51"
+  | "Kit_52"
+  | "Kit_53"
+  | "Kit_54"
+  | "Kit_55"
+  | "Kit_56"
+  | "Kit_57"
+  | "Kit_58"
+  | "Kit_59"
   | "Kit_6"
+  | "Kit_60"
+  | "Kit_61"
+  | "Kit_62"
+  | "Kit_63"
+  | "Kit_64"
+  | "Kit_65"
+  | "Kit_66"
   | "Kit_7"
   | "Kit_8"
   | "Kit_9"
   | "Mail_1"
+  | "Minus_1"
+  | "Minus_2"
+  | "Minus_3"
+  | "Minus_4"
+  | "Minus_5"
   | "Money_1"
+  | "Money_10"
   | "Money_2"
   | "Money_3"
   | "Money_4"
@@ -343,6 +460,11 @@ export type IconsKey =
   | "Plus_2"
   | "Print_1"
   | "Search_1"
+  | "Search_2"
+  | "Search_3"
+  | "Search_4"
+  | "Search_5"
+  | "Search_6"
   | "Social_1"
   | "Social_2"
   | "Social_3"
@@ -352,12 +474,21 @@ export type IconsKey =
   | "Social_7"
   | "Social_8"
   | "Star_1"
+  | "Star_2"
+  | "Star_3"
+  | "Star_4"
+  | "Star_5"
   | "Success_1"
   | "Success_2"
   | "Success_3"
   | "Trash_1"
   | "Trash_2"
   | "Trash_3"
+  | "Truck_1"
+  | "Truck_2"
+  | "Truck_3"
+  | "Truck_4"
+  | "Truck_5"
   | "User_1"
   | "User_10"
   | "User_11"
@@ -367,6 +498,7 @@ export type IconsKey =
   | "User_15"
   | "User_16"
   | "User_17"
+  | "User_18"
   | "User_2"
   | "User_3"
   | "User_4"
@@ -391,6 +523,9 @@ export enum Icons {
   Arrow_20 = "arrow-20",
   Arrow_21 = "arrow-21",
   Arrow_22 = "arrow-22",
+  Arrow_23 = "arrow-23",
+  Arrow_24 = "arrow-24",
+  Arrow_25 = "arrow-25",
   Arrow_3 = "arrow-3",
   Arrow_5 = "arrow-5",
   Arrow_7 = "arrow-7",
@@ -411,6 +546,7 @@ export enum Icons {
   Calendar_6 = "calendar-6",
   Calendar_7 = "calendar-7",
   Calendar_8 = "calendar-8",
+  Calendar_9 = "calendar-9",
   Cancel_1 = "cancel-1",
   Cancel_2 = "cancel-2",
   Chart_1 = "chart-1",
@@ -432,6 +568,15 @@ export enum Icons {
   Clock_1 = "clock-1",
   Clock_2 = "clock-2",
   Clock_3 = "clock-3",
+  Clock_4 = "clock-4",
+  Clock_5 = "clock-5",
+  Cloud_1 = "cloud-1",
+  Cloud_2 = "cloud-2",
+  Cloud_3 = "cloud-3",
+  Cloud_4 = "cloud-4",
+  Cloud_5 = "cloud-5",
+  Cloud_6 = "cloud-6",
+  Cloud_7 = "cloud-7",
   Config_1 = "config-1",
   Config_2 = "config-2",
   Config_3 = "config-3",
@@ -443,6 +588,16 @@ export enum Icons {
   Config_9 = "config-9",
   Edit_1 = "edit-1",
   Edit_2 = "edit-2",
+  Face_1 = "face-1",
+  Face_10 = "face-10",
+  Face_2 = "face-2",
+  Face_3 = "face-3",
+  Face_4 = "face-4",
+  Face_5 = "face-5",
+  Face_6 = "face-6",
+  Face_7 = "face-7",
+  Face_8 = "face-8",
+  Face_9 = "face-9",
   File_1 = "file-1",
   File_10 = "file-10",
   File_11 = "file-11",
@@ -513,13 +668,41 @@ export enum Icons {
   Kit_42 = "kit-42",
   Kit_43 = "kit-43",
   Kit_44 = "kit-44",
+  Kit_45 = "kit-45",
+  Kit_46 = "kit-46",
+  Kit_47 = "kit-47",
+  Kit_48 = "kit-48",
+  Kit_49 = "kit-49",
   Kit_5 = "kit-5",
+  Kit_50 = "kit-50",
+  Kit_51 = "kit-51",
+  Kit_52 = "kit-52",
+  Kit_53 = "kit-53",
+  Kit_54 = "kit-54",
+  Kit_55 = "kit-55",
+  Kit_56 = "kit-56",
+  Kit_57 = "kit-57",
+  Kit_58 = "kit-58",
+  Kit_59 = "kit-59",
   Kit_6 = "kit-6",
+  Kit_60 = "kit-60",
+  Kit_61 = "kit-61",
+  Kit_62 = "kit-62",
+  Kit_63 = "kit-63",
+  Kit_64 = "kit-64",
+  Kit_65 = "kit-65",
+  Kit_66 = "kit-66",
   Kit_7 = "kit-7",
   Kit_8 = "kit-8",
   Kit_9 = "kit-9",
   Mail_1 = "mail-1",
+  Minus_1 = "minus-1",
+  Minus_2 = "minus-2",
+  Minus_3 = "minus-3",
+  Minus_4 = "minus-4",
+  Minus_5 = "minus-5",
   Money_1 = "money-1",
+  Money_10 = "money-10",
   Money_2 = "money-2",
   Money_3 = "money-3",
   Money_4 = "money-4",
@@ -532,6 +715,11 @@ export enum Icons {
   Plus_2 = "plus-2",
   Print_1 = "print-1",
   Search_1 = "search-1",
+  Search_2 = "search-2",
+  Search_3 = "search-3",
+  Search_4 = "search-4",
+  Search_5 = "search-5",
+  Search_6 = "search-6",
   Social_1 = "social-1",
   Social_2 = "social-2",
   Social_3 = "social-3",
@@ -541,12 +729,21 @@ export enum Icons {
   Social_7 = "social-7",
   Social_8 = "social-8",
   Star_1 = "star-1",
+  Star_2 = "star-2",
+  Star_3 = "star-3",
+  Star_4 = "star-4",
+  Star_5 = "star-5",
   Success_1 = "success-1",
   Success_2 = "success-2",
   Success_3 = "success-3",
   Trash_1 = "trash-1",
   Trash_2 = "trash-2",
   Trash_3 = "trash-3",
+  Truck_1 = "truck-1",
+  Truck_2 = "truck-2",
+  Truck_3 = "truck-3",
+  Truck_4 = "truck-4",
+  Truck_5 = "truck-5",
   User_1 = "user-1",
   User_10 = "user-10",
   User_11 = "user-11",
@@ -556,6 +753,7 @@ export enum Icons {
   User_15 = "user-15",
   User_16 = "user-16",
   User_17 = "user-17",
+  User_18 = "user-18",
   User_2 = "user-2",
   User_3 = "user-3",
   User_4 = "user-4",
@@ -581,177 +779,243 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Arrow_20]: "61708",
   [Icons.Arrow_21]: "61709",
   [Icons.Arrow_22]: "61710",
-  [Icons.Arrow_3]: "61711",
-  [Icons.Arrow_5]: "61712",
-  [Icons.Arrow_7]: "61713",
-  [Icons.Arrow_9]: "61714",
-  [Icons.Box_1]: "61715",
-  [Icons.Box_2]: "61716",
-  [Icons.Box_3]: "61717",
-  [Icons.Box_4]: "61718",
-  [Icons.Box_5]: "61719",
-  [Icons.Box_6]: "61720",
-  [Icons.Box_7]: "61721",
-  [Icons.Box_8]: "61722",
-  [Icons.Calendar_1]: "61723",
-  [Icons.Calendar_2]: "61724",
-  [Icons.Calendar_3]: "61725",
-  [Icons.Calendar_4]: "61726",
-  [Icons.Calendar_5]: "61727",
-  [Icons.Calendar_6]: "61728",
-  [Icons.Calendar_7]: "61729",
-  [Icons.Calendar_8]: "61730",
-  [Icons.Cancel_1]: "61731",
-  [Icons.Cancel_2]: "61732",
-  [Icons.Chart_1]: "61733",
-  [Icons.Chart_10]: "61734",
-  [Icons.Chart_11]: "61735",
-  [Icons.Chart_12]: "61736",
-  [Icons.Chart_13]: "61737",
-  [Icons.Chart_14]: "61738",
-  [Icons.Chart_15]: "61739",
-  [Icons.Chart_16]: "61740",
-  [Icons.Chart_2]: "61741",
-  [Icons.Chart_3]: "61742",
-  [Icons.Chart_4]: "61743",
-  [Icons.Chart_5]: "61744",
-  [Icons.Chart_6]: "61745",
-  [Icons.Chart_7]: "61746",
-  [Icons.Chart_8]: "61747",
-  [Icons.Chart_9]: "61748",
-  [Icons.Clock_1]: "61749",
-  [Icons.Clock_2]: "61750",
-  [Icons.Clock_3]: "61751",
-  [Icons.Config_1]: "61752",
-  [Icons.Config_2]: "61753",
-  [Icons.Config_3]: "61754",
-  [Icons.Config_4]: "61755",
-  [Icons.Config_5]: "61756",
-  [Icons.Config_6]: "61757",
-  [Icons.Config_7]: "61758",
-  [Icons.Config_8]: "61759",
-  [Icons.Config_9]: "61760",
-  [Icons.Edit_1]: "61761",
-  [Icons.Edit_2]: "61762",
-  [Icons.File_1]: "61763",
-  [Icons.File_10]: "61764",
-  [Icons.File_11]: "61765",
-  [Icons.File_12]: "61766",
-  [Icons.File_13]: "61767",
-  [Icons.File_14]: "61768",
-  [Icons.File_15]: "61769",
-  [Icons.File_16]: "61770",
-  [Icons.File_17]: "61771",
-  [Icons.File_18]: "61772",
-  [Icons.File_19]: "61773",
-  [Icons.File_2]: "61774",
-  [Icons.File_20]: "61775",
-  [Icons.File_21]: "61776",
-  [Icons.File_22]: "61777",
-  [Icons.File_23]: "61778",
-  [Icons.File_24]: "61779",
-  [Icons.File_25]: "61780",
-  [Icons.File_26]: "61781",
-  [Icons.File_27]: "61782",
-  [Icons.File_28]: "61783",
-  [Icons.File_29]: "61784",
-  [Icons.File_3]: "61785",
-  [Icons.File_30]: "61786",
-  [Icons.File_4]: "61787",
-  [Icons.File_5]: "61788",
-  [Icons.File_6]: "61789",
-  [Icons.File_7]: "61790",
-  [Icons.File_8]: "61791",
-  [Icons.File_9]: "61792",
-  [Icons.House_1]: "61793",
-  [Icons.Kit_1]: "61794",
-  [Icons.Kit_10]: "61795",
-  [Icons.Kit_11]: "61796",
-  [Icons.Kit_12]: "61797",
-  [Icons.Kit_13]: "61798",
-  [Icons.Kit_14]: "61799",
-  [Icons.Kit_15]: "61800",
-  [Icons.Kit_16]: "61801",
-  [Icons.Kit_17]: "61802",
-  [Icons.Kit_18]: "61803",
-  [Icons.Kit_19]: "61804",
-  [Icons.Kit_2]: "61805",
-  [Icons.Kit_20]: "61806",
-  [Icons.Kit_21]: "61807",
-  [Icons.Kit_22]: "61808",
-  [Icons.Kit_23]: "61809",
-  [Icons.Kit_24]: "61810",
-  [Icons.Kit_25]: "61811",
-  [Icons.Kit_26]: "61812",
-  [Icons.Kit_27]: "61813",
-  [Icons.Kit_28]: "61814",
-  [Icons.Kit_29]: "61815",
-  [Icons.Kit_3]: "61816",
-  [Icons.Kit_30]: "61817",
-  [Icons.Kit_31]: "61818",
-  [Icons.Kit_32]: "61819",
-  [Icons.Kit_33]: "61820",
-  [Icons.Kit_34]: "61821",
-  [Icons.Kit_35]: "61822",
-  [Icons.Kit_36]: "61823",
-  [Icons.Kit_37]: "61824",
-  [Icons.Kit_38]: "61825",
-  [Icons.Kit_39]: "61826",
-  [Icons.Kit_4]: "61827",
-  [Icons.Kit_40]: "61828",
-  [Icons.Kit_41]: "61829",
-  [Icons.Kit_42]: "61830",
-  [Icons.Kit_43]: "61831",
-  [Icons.Kit_44]: "61832",
-  [Icons.Kit_5]: "61833",
-  [Icons.Kit_6]: "61834",
-  [Icons.Kit_7]: "61835",
-  [Icons.Kit_8]: "61836",
-  [Icons.Kit_9]: "61837",
-  [Icons.Mail_1]: "61838",
-  [Icons.Money_1]: "61839",
-  [Icons.Money_2]: "61840",
-  [Icons.Money_3]: "61841",
-  [Icons.Money_4]: "61842",
-  [Icons.Money_5]: "61843",
-  [Icons.Money_6]: "61844",
-  [Icons.Money_7]: "61845",
-  [Icons.Money_8]: "61846",
-  [Icons.Money_9]: "61847",
-  [Icons.Plus_1]: "61848",
-  [Icons.Plus_2]: "61849",
-  [Icons.Print_1]: "61850",
-  [Icons.Search_1]: "61851",
-  [Icons.Social_1]: "61852",
-  [Icons.Social_2]: "61853",
-  [Icons.Social_3]: "61854",
-  [Icons.Social_4]: "61855",
-  [Icons.Social_5]: "61856",
-  [Icons.Social_6]: "61857",
-  [Icons.Social_7]: "61858",
-  [Icons.Social_8]: "61859",
-  [Icons.Star_1]: "61860",
-  [Icons.Success_1]: "61861",
-  [Icons.Success_2]: "61862",
-  [Icons.Success_3]: "61863",
-  [Icons.Trash_1]: "61864",
-  [Icons.Trash_2]: "61865",
-  [Icons.Trash_3]: "61866",
-  [Icons.User_1]: "61867",
-  [Icons.User_10]: "61868",
-  [Icons.User_11]: "61869",
-  [Icons.User_12]: "61870",
-  [Icons.User_13]: "61871",
-  [Icons.User_14]: "61872",
-  [Icons.User_15]: "61873",
-  [Icons.User_16]: "61874",
-  [Icons.User_17]: "61875",
-  [Icons.User_2]: "61876",
-  [Icons.User_3]: "61877",
-  [Icons.User_4]: "61878",
-  [Icons.User_5]: "61879",
-  [Icons.User_6]: "61880",
-  [Icons.User_7]: "61881",
-  [Icons.User_8]: "61882",
-  [Icons.User_9]: "61883",
+  [Icons.Arrow_23]: "61711",
+  [Icons.Arrow_24]: "61712",
+  [Icons.Arrow_25]: "61713",
+  [Icons.Arrow_3]: "61714",
+  [Icons.Arrow_5]: "61715",
+  [Icons.Arrow_7]: "61716",
+  [Icons.Arrow_9]: "61717",
+  [Icons.Box_1]: "61718",
+  [Icons.Box_2]: "61719",
+  [Icons.Box_3]: "61720",
+  [Icons.Box_4]: "61721",
+  [Icons.Box_5]: "61722",
+  [Icons.Box_6]: "61723",
+  [Icons.Box_7]: "61724",
+  [Icons.Box_8]: "61725",
+  [Icons.Calendar_1]: "61726",
+  [Icons.Calendar_2]: "61727",
+  [Icons.Calendar_3]: "61728",
+  [Icons.Calendar_4]: "61729",
+  [Icons.Calendar_5]: "61730",
+  [Icons.Calendar_6]: "61731",
+  [Icons.Calendar_7]: "61732",
+  [Icons.Calendar_8]: "61733",
+  [Icons.Calendar_9]: "61734",
+  [Icons.Cancel_1]: "61735",
+  [Icons.Cancel_2]: "61736",
+  [Icons.Chart_1]: "61737",
+  [Icons.Chart_10]: "61738",
+  [Icons.Chart_11]: "61739",
+  [Icons.Chart_12]: "61740",
+  [Icons.Chart_13]: "61741",
+  [Icons.Chart_14]: "61742",
+  [Icons.Chart_15]: "61743",
+  [Icons.Chart_16]: "61744",
+  [Icons.Chart_2]: "61745",
+  [Icons.Chart_3]: "61746",
+  [Icons.Chart_4]: "61747",
+  [Icons.Chart_5]: "61748",
+  [Icons.Chart_6]: "61749",
+  [Icons.Chart_7]: "61750",
+  [Icons.Chart_8]: "61751",
+  [Icons.Chart_9]: "61752",
+  [Icons.Clock_1]: "61753",
+  [Icons.Clock_2]: "61754",
+  [Icons.Clock_3]: "61755",
+  [Icons.Clock_4]: "61756",
+  [Icons.Clock_5]: "61757",
+  [Icons.Cloud_1]: "61758",
+  [Icons.Cloud_2]: "61759",
+  [Icons.Cloud_3]: "61760",
+  [Icons.Cloud_4]: "61761",
+  [Icons.Cloud_5]: "61762",
+  [Icons.Cloud_6]: "61763",
+  [Icons.Cloud_7]: "61764",
+  [Icons.Config_1]: "61765",
+  [Icons.Config_2]: "61766",
+  [Icons.Config_3]: "61767",
+  [Icons.Config_4]: "61768",
+  [Icons.Config_5]: "61769",
+  [Icons.Config_6]: "61770",
+  [Icons.Config_7]: "61771",
+  [Icons.Config_8]: "61772",
+  [Icons.Config_9]: "61773",
+  [Icons.Edit_1]: "61774",
+  [Icons.Edit_2]: "61775",
+  [Icons.Face_1]: "61776",
+  [Icons.Face_10]: "61777",
+  [Icons.Face_2]: "61778",
+  [Icons.Face_3]: "61779",
+  [Icons.Face_4]: "61780",
+  [Icons.Face_5]: "61781",
+  [Icons.Face_6]: "61782",
+  [Icons.Face_7]: "61783",
+  [Icons.Face_8]: "61784",
+  [Icons.Face_9]: "61785",
+  [Icons.File_1]: "61786",
+  [Icons.File_10]: "61787",
+  [Icons.File_11]: "61788",
+  [Icons.File_12]: "61789",
+  [Icons.File_13]: "61790",
+  [Icons.File_14]: "61791",
+  [Icons.File_15]: "61792",
+  [Icons.File_16]: "61793",
+  [Icons.File_17]: "61794",
+  [Icons.File_18]: "61795",
+  [Icons.File_19]: "61796",
+  [Icons.File_2]: "61797",
+  [Icons.File_20]: "61798",
+  [Icons.File_21]: "61799",
+  [Icons.File_22]: "61800",
+  [Icons.File_23]: "61801",
+  [Icons.File_24]: "61802",
+  [Icons.File_25]: "61803",
+  [Icons.File_26]: "61804",
+  [Icons.File_27]: "61805",
+  [Icons.File_28]: "61806",
+  [Icons.File_29]: "61807",
+  [Icons.File_3]: "61808",
+  [Icons.File_30]: "61809",
+  [Icons.File_4]: "61810",
+  [Icons.File_5]: "61811",
+  [Icons.File_6]: "61812",
+  [Icons.File_7]: "61813",
+  [Icons.File_8]: "61814",
+  [Icons.File_9]: "61815",
+  [Icons.House_1]: "61816",
+  [Icons.Kit_1]: "61817",
+  [Icons.Kit_10]: "61818",
+  [Icons.Kit_11]: "61819",
+  [Icons.Kit_12]: "61820",
+  [Icons.Kit_13]: "61821",
+  [Icons.Kit_14]: "61822",
+  [Icons.Kit_15]: "61823",
+  [Icons.Kit_16]: "61824",
+  [Icons.Kit_17]: "61825",
+  [Icons.Kit_18]: "61826",
+  [Icons.Kit_19]: "61827",
+  [Icons.Kit_2]: "61828",
+  [Icons.Kit_20]: "61829",
+  [Icons.Kit_21]: "61830",
+  [Icons.Kit_22]: "61831",
+  [Icons.Kit_23]: "61832",
+  [Icons.Kit_24]: "61833",
+  [Icons.Kit_25]: "61834",
+  [Icons.Kit_26]: "61835",
+  [Icons.Kit_27]: "61836",
+  [Icons.Kit_28]: "61837",
+  [Icons.Kit_29]: "61838",
+  [Icons.Kit_3]: "61839",
+  [Icons.Kit_30]: "61840",
+  [Icons.Kit_31]: "61841",
+  [Icons.Kit_32]: "61842",
+  [Icons.Kit_33]: "61843",
+  [Icons.Kit_34]: "61844",
+  [Icons.Kit_35]: "61845",
+  [Icons.Kit_36]: "61846",
+  [Icons.Kit_37]: "61847",
+  [Icons.Kit_38]: "61848",
+  [Icons.Kit_39]: "61849",
+  [Icons.Kit_4]: "61850",
+  [Icons.Kit_40]: "61851",
+  [Icons.Kit_41]: "61852",
+  [Icons.Kit_42]: "61853",
+  [Icons.Kit_43]: "61854",
+  [Icons.Kit_44]: "61855",
+  [Icons.Kit_45]: "61856",
+  [Icons.Kit_46]: "61857",
+  [Icons.Kit_47]: "61858",
+  [Icons.Kit_48]: "61859",
+  [Icons.Kit_49]: "61860",
+  [Icons.Kit_5]: "61861",
+  [Icons.Kit_50]: "61862",
+  [Icons.Kit_51]: "61863",
+  [Icons.Kit_52]: "61864",
+  [Icons.Kit_53]: "61865",
+  [Icons.Kit_54]: "61866",
+  [Icons.Kit_55]: "61867",
+  [Icons.Kit_56]: "61868",
+  [Icons.Kit_57]: "61869",
+  [Icons.Kit_58]: "61870",
+  [Icons.Kit_59]: "61871",
+  [Icons.Kit_6]: "61872",
+  [Icons.Kit_60]: "61873",
+  [Icons.Kit_61]: "61874",
+  [Icons.Kit_62]: "61875",
+  [Icons.Kit_63]: "61876",
+  [Icons.Kit_64]: "61877",
+  [Icons.Kit_65]: "61878",
+  [Icons.Kit_66]: "61879",
+  [Icons.Kit_7]: "61880",
+  [Icons.Kit_8]: "61881",
+  [Icons.Kit_9]: "61882",
+  [Icons.Mail_1]: "61883",
+  [Icons.Minus_1]: "61884",
+  [Icons.Minus_2]: "61885",
+  [Icons.Minus_3]: "61886",
+  [Icons.Minus_4]: "61887",
+  [Icons.Minus_5]: "61888",
+  [Icons.Money_1]: "61889",
+  [Icons.Money_10]: "61890",
+  [Icons.Money_2]: "61891",
+  [Icons.Money_3]: "61892",
+  [Icons.Money_4]: "61893",
+  [Icons.Money_5]: "61894",
+  [Icons.Money_6]: "61895",
+  [Icons.Money_7]: "61896",
+  [Icons.Money_8]: "61897",
+  [Icons.Money_9]: "61898",
+  [Icons.Plus_1]: "61899",
+  [Icons.Plus_2]: "61900",
+  [Icons.Print_1]: "61901",
+  [Icons.Search_1]: "61902",
+  [Icons.Search_2]: "61903",
+  [Icons.Search_3]: "61904",
+  [Icons.Search_4]: "61905",
+  [Icons.Search_5]: "61906",
+  [Icons.Search_6]: "61907",
+  [Icons.Social_1]: "61908",
+  [Icons.Social_2]: "61909",
+  [Icons.Social_3]: "61910",
+  [Icons.Social_4]: "61911",
+  [Icons.Social_5]: "61912",
+  [Icons.Social_6]: "61913",
+  [Icons.Social_7]: "61914",
+  [Icons.Social_8]: "61915",
+  [Icons.Star_1]: "61916",
+  [Icons.Star_2]: "61917",
+  [Icons.Star_3]: "61918",
+  [Icons.Star_4]: "61919",
+  [Icons.Star_5]: "61920",
+  [Icons.Success_1]: "61921",
+  [Icons.Success_2]: "61922",
+  [Icons.Success_3]: "61923",
+  [Icons.Trash_1]: "61924",
+  [Icons.Trash_2]: "61925",
+  [Icons.Trash_3]: "61926",
+  [Icons.Truck_1]: "61927",
+  [Icons.Truck_2]: "61928",
+  [Icons.Truck_3]: "61929",
+  [Icons.Truck_4]: "61930",
+  [Icons.Truck_5]: "61931",
+  [Icons.User_1]: "61932",
+  [Icons.User_10]: "61933",
+  [Icons.User_11]: "61934",
+  [Icons.User_12]: "61935",
+  [Icons.User_13]: "61936",
+  [Icons.User_14]: "61937",
+  [Icons.User_15]: "61938",
+  [Icons.User_16]: "61939",
+  [Icons.User_17]: "61940",
+  [Icons.User_18]: "61941",
+  [Icons.User_2]: "61942",
+  [Icons.User_3]: "61943",
+  [Icons.User_4]: "61944",
+  [Icons.User_5]: "61945",
+  [Icons.User_6]: "61946",
+  [Icons.User_7]: "61947",
+  [Icons.User_8]: "61948",
+  [Icons.User_9]: "61949",
 };
