@@ -65,6 +65,36 @@ export type IconsId =
   | "config-9"
   | "edit-1"
   | "edit-2"
+  | "file-1"
+  | "file-10"
+  | "file-11"
+  | "file-12"
+  | "file-13"
+  | "file-14"
+  | "file-15"
+  | "file-16"
+  | "file-17"
+  | "file-18"
+  | "file-19"
+  | "file-2"
+  | "file-20"
+  | "file-21"
+  | "file-22"
+  | "file-23"
+  | "file-24"
+  | "file-25"
+  | "file-26"
+  | "file-27"
+  | "file-28"
+  | "file-29"
+  | "file-3"
+  | "file-30"
+  | "file-4"
+  | "file-5"
+  | "file-6"
+  | "file-7"
+  | "file-8"
+  | "file-9"
   | "house-1"
   | "kit-1"
   | "kit-10"
@@ -96,7 +126,15 @@ export type IconsId =
   | "kit-34"
   | "kit-35"
   | "kit-36"
+  | "kit-37"
+  | "kit-38"
+  | "kit-39"
   | "kit-4"
+  | "kit-40"
+  | "kit-41"
+  | "kit-42"
+  | "kit-43"
+  | "kit-44"
   | "kit-5"
   | "kit-6"
   | "kit-7"
@@ -133,6 +171,13 @@ export type IconsId =
   | "trash-3"
   | "user-1"
   | "user-10"
+  | "user-11"
+  | "user-12"
+  | "user-13"
+  | "user-14"
+  | "user-15"
+  | "user-16"
+  | "user-17"
   | "user-2"
   | "user-3"
   | "user-4"
@@ -209,6 +254,36 @@ export type IconsKey =
   | "Config_9"
   | "Edit_1"
   | "Edit_2"
+  | "File_1"
+  | "File_10"
+  | "File_11"
+  | "File_12"
+  | "File_13"
+  | "File_14"
+  | "File_15"
+  | "File_16"
+  | "File_17"
+  | "File_18"
+  | "File_19"
+  | "File_2"
+  | "File_20"
+  | "File_21"
+  | "File_22"
+  | "File_23"
+  | "File_24"
+  | "File_25"
+  | "File_26"
+  | "File_27"
+  | "File_28"
+  | "File_29"
+  | "File_3"
+  | "File_30"
+  | "File_4"
+  | "File_5"
+  | "File_6"
+  | "File_7"
+  | "File_8"
+  | "File_9"
   | "House_1"
   | "Kit_1"
   | "Kit_10"
@@ -240,7 +315,15 @@ export type IconsKey =
   | "Kit_34"
   | "Kit_35"
   | "Kit_36"
+  | "Kit_37"
+  | "Kit_38"
+  | "Kit_39"
   | "Kit_4"
+  | "Kit_40"
+  | "Kit_41"
+  | "Kit_42"
+  | "Kit_43"
+  | "Kit_44"
   | "Kit_5"
   | "Kit_6"
   | "Kit_7"
@@ -277,6 +360,13 @@ export type IconsKey =
   | "Trash_3"
   | "User_1"
   | "User_10"
+  | "User_11"
+  | "User_12"
+  | "User_13"
+  | "User_14"
+  | "User_15"
+  | "User_16"
+  | "User_17"
   | "User_2"
   | "User_3"
   | "User_4"
@@ -353,6 +443,36 @@ export enum Icons {
   Config_9 = "config-9",
   Edit_1 = "edit-1",
   Edit_2 = "edit-2",
+  File_1 = "file-1",
+  File_10 = "file-10",
+  File_11 = "file-11",
+  File_12 = "file-12",
+  File_13 = "file-13",
+  File_14 = "file-14",
+  File_15 = "file-15",
+  File_16 = "file-16",
+  File_17 = "file-17",
+  File_18 = "file-18",
+  File_19 = "file-19",
+  File_2 = "file-2",
+  File_20 = "file-20",
+  File_21 = "file-21",
+  File_22 = "file-22",
+  File_23 = "file-23",
+  File_24 = "file-24",
+  File_25 = "file-25",
+  File_26 = "file-26",
+  File_27 = "file-27",
+  File_28 = "file-28",
+  File_29 = "file-29",
+  File_3 = "file-3",
+  File_30 = "file-30",
+  File_4 = "file-4",
+  File_5 = "file-5",
+  File_6 = "file-6",
+  File_7 = "file-7",
+  File_8 = "file-8",
+  File_9 = "file-9",
   House_1 = "house-1",
   Kit_1 = "kit-1",
   Kit_10 = "kit-10",
@@ -384,7 +504,15 @@ export enum Icons {
   Kit_34 = "kit-34",
   Kit_35 = "kit-35",
   Kit_36 = "kit-36",
+  Kit_37 = "kit-37",
+  Kit_38 = "kit-38",
+  Kit_39 = "kit-39",
   Kit_4 = "kit-4",
+  Kit_40 = "kit-40",
+  Kit_41 = "kit-41",
+  Kit_42 = "kit-42",
+  Kit_43 = "kit-43",
+  Kit_44 = "kit-44",
   Kit_5 = "kit-5",
   Kit_6 = "kit-6",
   Kit_7 = "kit-7",
@@ -421,6 +549,13 @@ export enum Icons {
   Trash_3 = "trash-3",
   User_1 = "user-1",
   User_10 = "user-10",
+  User_11 = "user-11",
+  User_12 = "user-12",
+  User_13 = "user-13",
+  User_14 = "user-14",
+  User_15 = "user-15",
+  User_16 = "user-16",
+  User_17 = "user-17",
   User_2 = "user-2",
   User_3 = "user-3",
   User_4 = "user-4",
@@ -498,80 +633,125 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Config_9]: "61760",
   [Icons.Edit_1]: "61761",
   [Icons.Edit_2]: "61762",
-  [Icons.House_1]: "61763",
-  [Icons.Kit_1]: "61764",
-  [Icons.Kit_10]: "61765",
-  [Icons.Kit_11]: "61766",
-  [Icons.Kit_12]: "61767",
-  [Icons.Kit_13]: "61768",
-  [Icons.Kit_14]: "61769",
-  [Icons.Kit_15]: "61770",
-  [Icons.Kit_16]: "61771",
-  [Icons.Kit_17]: "61772",
-  [Icons.Kit_18]: "61773",
-  [Icons.Kit_19]: "61774",
-  [Icons.Kit_2]: "61775",
-  [Icons.Kit_20]: "61776",
-  [Icons.Kit_21]: "61777",
-  [Icons.Kit_22]: "61778",
-  [Icons.Kit_23]: "61779",
-  [Icons.Kit_24]: "61780",
-  [Icons.Kit_25]: "61781",
-  [Icons.Kit_26]: "61782",
-  [Icons.Kit_27]: "61783",
-  [Icons.Kit_28]: "61784",
-  [Icons.Kit_29]: "61785",
-  [Icons.Kit_3]: "61786",
-  [Icons.Kit_30]: "61787",
-  [Icons.Kit_31]: "61788",
-  [Icons.Kit_32]: "61789",
-  [Icons.Kit_33]: "61790",
-  [Icons.Kit_34]: "61791",
-  [Icons.Kit_35]: "61792",
-  [Icons.Kit_36]: "61793",
-  [Icons.Kit_4]: "61794",
-  [Icons.Kit_5]: "61795",
-  [Icons.Kit_6]: "61796",
-  [Icons.Kit_7]: "61797",
-  [Icons.Kit_8]: "61798",
-  [Icons.Kit_9]: "61799",
-  [Icons.Mail_1]: "61800",
-  [Icons.Money_1]: "61801",
-  [Icons.Money_2]: "61802",
-  [Icons.Money_3]: "61803",
-  [Icons.Money_4]: "61804",
-  [Icons.Money_5]: "61805",
-  [Icons.Money_6]: "61806",
-  [Icons.Money_7]: "61807",
-  [Icons.Money_8]: "61808",
-  [Icons.Money_9]: "61809",
-  [Icons.Plus_1]: "61810",
-  [Icons.Plus_2]: "61811",
-  [Icons.Print_1]: "61812",
-  [Icons.Search_1]: "61813",
-  [Icons.Social_1]: "61814",
-  [Icons.Social_2]: "61815",
-  [Icons.Social_3]: "61816",
-  [Icons.Social_4]: "61817",
-  [Icons.Social_5]: "61818",
-  [Icons.Social_6]: "61819",
-  [Icons.Social_7]: "61820",
-  [Icons.Social_8]: "61821",
-  [Icons.Star_1]: "61822",
-  [Icons.Success_1]: "61823",
-  [Icons.Success_2]: "61824",
-  [Icons.Success_3]: "61825",
-  [Icons.Trash_1]: "61826",
-  [Icons.Trash_2]: "61827",
-  [Icons.Trash_3]: "61828",
-  [Icons.User_1]: "61829",
-  [Icons.User_10]: "61830",
-  [Icons.User_2]: "61831",
-  [Icons.User_3]: "61832",
-  [Icons.User_4]: "61833",
-  [Icons.User_5]: "61834",
-  [Icons.User_6]: "61835",
-  [Icons.User_7]: "61836",
-  [Icons.User_8]: "61837",
-  [Icons.User_9]: "61838",
+  [Icons.File_1]: "61763",
+  [Icons.File_10]: "61764",
+  [Icons.File_11]: "61765",
+  [Icons.File_12]: "61766",
+  [Icons.File_13]: "61767",
+  [Icons.File_14]: "61768",
+  [Icons.File_15]: "61769",
+  [Icons.File_16]: "61770",
+  [Icons.File_17]: "61771",
+  [Icons.File_18]: "61772",
+  [Icons.File_19]: "61773",
+  [Icons.File_2]: "61774",
+  [Icons.File_20]: "61775",
+  [Icons.File_21]: "61776",
+  [Icons.File_22]: "61777",
+  [Icons.File_23]: "61778",
+  [Icons.File_24]: "61779",
+  [Icons.File_25]: "61780",
+  [Icons.File_26]: "61781",
+  [Icons.File_27]: "61782",
+  [Icons.File_28]: "61783",
+  [Icons.File_29]: "61784",
+  [Icons.File_3]: "61785",
+  [Icons.File_30]: "61786",
+  [Icons.File_4]: "61787",
+  [Icons.File_5]: "61788",
+  [Icons.File_6]: "61789",
+  [Icons.File_7]: "61790",
+  [Icons.File_8]: "61791",
+  [Icons.File_9]: "61792",
+  [Icons.House_1]: "61793",
+  [Icons.Kit_1]: "61794",
+  [Icons.Kit_10]: "61795",
+  [Icons.Kit_11]: "61796",
+  [Icons.Kit_12]: "61797",
+  [Icons.Kit_13]: "61798",
+  [Icons.Kit_14]: "61799",
+  [Icons.Kit_15]: "61800",
+  [Icons.Kit_16]: "61801",
+  [Icons.Kit_17]: "61802",
+  [Icons.Kit_18]: "61803",
+  [Icons.Kit_19]: "61804",
+  [Icons.Kit_2]: "61805",
+  [Icons.Kit_20]: "61806",
+  [Icons.Kit_21]: "61807",
+  [Icons.Kit_22]: "61808",
+  [Icons.Kit_23]: "61809",
+  [Icons.Kit_24]: "61810",
+  [Icons.Kit_25]: "61811",
+  [Icons.Kit_26]: "61812",
+  [Icons.Kit_27]: "61813",
+  [Icons.Kit_28]: "61814",
+  [Icons.Kit_29]: "61815",
+  [Icons.Kit_3]: "61816",
+  [Icons.Kit_30]: "61817",
+  [Icons.Kit_31]: "61818",
+  [Icons.Kit_32]: "61819",
+  [Icons.Kit_33]: "61820",
+  [Icons.Kit_34]: "61821",
+  [Icons.Kit_35]: "61822",
+  [Icons.Kit_36]: "61823",
+  [Icons.Kit_37]: "61824",
+  [Icons.Kit_38]: "61825",
+  [Icons.Kit_39]: "61826",
+  [Icons.Kit_4]: "61827",
+  [Icons.Kit_40]: "61828",
+  [Icons.Kit_41]: "61829",
+  [Icons.Kit_42]: "61830",
+  [Icons.Kit_43]: "61831",
+  [Icons.Kit_44]: "61832",
+  [Icons.Kit_5]: "61833",
+  [Icons.Kit_6]: "61834",
+  [Icons.Kit_7]: "61835",
+  [Icons.Kit_8]: "61836",
+  [Icons.Kit_9]: "61837",
+  [Icons.Mail_1]: "61838",
+  [Icons.Money_1]: "61839",
+  [Icons.Money_2]: "61840",
+  [Icons.Money_3]: "61841",
+  [Icons.Money_4]: "61842",
+  [Icons.Money_5]: "61843",
+  [Icons.Money_6]: "61844",
+  [Icons.Money_7]: "61845",
+  [Icons.Money_8]: "61846",
+  [Icons.Money_9]: "61847",
+  [Icons.Plus_1]: "61848",
+  [Icons.Plus_2]: "61849",
+  [Icons.Print_1]: "61850",
+  [Icons.Search_1]: "61851",
+  [Icons.Social_1]: "61852",
+  [Icons.Social_2]: "61853",
+  [Icons.Social_3]: "61854",
+  [Icons.Social_4]: "61855",
+  [Icons.Social_5]: "61856",
+  [Icons.Social_6]: "61857",
+  [Icons.Social_7]: "61858",
+  [Icons.Social_8]: "61859",
+  [Icons.Star_1]: "61860",
+  [Icons.Success_1]: "61861",
+  [Icons.Success_2]: "61862",
+  [Icons.Success_3]: "61863",
+  [Icons.Trash_1]: "61864",
+  [Icons.Trash_2]: "61865",
+  [Icons.Trash_3]: "61866",
+  [Icons.User_1]: "61867",
+  [Icons.User_10]: "61868",
+  [Icons.User_11]: "61869",
+  [Icons.User_12]: "61870",
+  [Icons.User_13]: "61871",
+  [Icons.User_14]: "61872",
+  [Icons.User_15]: "61873",
+  [Icons.User_16]: "61874",
+  [Icons.User_17]: "61875",
+  [Icons.User_2]: "61876",
+  [Icons.User_3]: "61877",
+  [Icons.User_4]: "61878",
+  [Icons.User_5]: "61879",
+  [Icons.User_6]: "61880",
+  [Icons.User_7]: "61881",
+  [Icons.User_8]: "61882",
+  [Icons.User_9]: "61883",
 };
