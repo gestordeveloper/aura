@@ -34,6 +34,7 @@
             cursor: pointer;
             padding: spacing("2");
             max-height: 120px;
+            min-height: 120px;
 
             @media (max-width: 42em) {
                 max-height: none;
