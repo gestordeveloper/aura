@@ -6,6 +6,7 @@
     <title>Documentação Aura</title>
 
     <link rel="stylesheet" href="./../dist/app.css" />
+    <link rel="stylesheet" href="./../icons/icons-dist/icons.css" />
 </head>
 <body>
 
@@ -15,8 +16,8 @@
         <div class="container">
             <div class="navbar_title"></div>
             <div class="navbar_actions">
-                <span class="navbar_button"><i class="fa-solid fa-bell"></i></span>
-                <span id="theme-toggle" class="navbar_button"><i class="fa-solid fa-moon"></i></span>
+                <span class="navbar_button"><i class="icon icon-kit-22"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
             </div>
         </div>
     </div>
@@ -35,15 +36,16 @@
             </div>
 
             <div class="user_data">
-                <a href="#">Olá! Samuel <i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="#">Olá! Samuel <i class="icon icon-edit-1"></i></a>
                 <p>Super Admin</p>
             </div>
         </div>
 
         <ul class="sidebar_navbar">
-            <li class="navbar_li"><a href="./index.html"><i class="fa-solid fa-house"></i> Components</a></li>
-            <li class="navbar_li active"><a href="./profile.html"><i class="fa-solid fa-circle-user"></i> Profile</a></li>
-            <li class="navbar_li"><a href="./funnel.html"><i class="fa-solid fa-filter"></i> Funnel</a></li>
+            <li class="navbar_li"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
+            <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
+            <li class="navbar_li active"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
+            <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
         </ul>
     </div>
 
@@ -59,8 +61,8 @@
                             </div>
 
                             <div class="actions">
-                                <a href="#" class="btn-sm"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" class="btn-sm"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="btn-sm"><i class="icon icon-social-4"></i></a>
+                                <a href="#" class="btn-sm"><i class="icon icon-social-1"></i></a>
                             </div>
                         </div>
 
@@ -81,8 +83,8 @@
                         <input type="radio" name="slider" id="tab-2">
 
                         <nav>
-                            <label for="tab-1" class="tab-1"><i class="fa-solid fa-address-card"></i> Informações</label>
-                            <label for="tab-2" class="tab-2"><i class="fa-solid fa-user-group"></i> Clientes</label>
+                            <label for="tab-1" class="tab-1"><i class="icon icon-user-9"></i> Informações</label>
+                            <label for="tab-2" class="tab-2"><i class="icon icon-user-6"></i> Clientes</label>
                         </nav>
 
                         <section class="mt-4">
@@ -105,7 +107,6 @@
     </main>
 </div>
 
-<script src="https://kit.fontawesome.com/cc3d171406.js" crossorigin="anonymous"></script>
 <script>
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
@@ -118,7 +119,7 @@
     }
 
     // Atualiza o texto do botão
-    themeToggle.innerHTML = isDarkMode ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
 
     themeToggle.addEventListener('click', () => {
         isDarkMode = !isDarkMode;
@@ -128,7 +129,7 @@
         setCookie('auraTheme', isDarkMode ? 'dark' : 'light', 365); // Expira em 1 ano
 
         // Atualiza o texto do botão
-        themeToggle.innerHTML = isDarkMode ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
     });
 
     // Funções para manipular cookies

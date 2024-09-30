@@ -6,17 +6,16 @@
   z-index: 2000;
 
   .toast {
-    width: 320px;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    background: $white;
+    width: 360px;
+    border-radius: radius("sm");
+    padding: spacing("4");
+    margin-bottom: spacing("1");
+    background: var(--background);
     justify-content: space-between;
-    border: 1px solid $gray-400;
-    border-bottom-width: 2px;
+    border: 1px solid var(--gray-600);
     position: relative;
     overflow: hidden;
-    animation: show_toast 0.3s ease forwards;
+    animation: show_toast 0.6s ease forwards;
     display: flex;
     flex-direction: column;
 
@@ -24,14 +23,14 @@
       position: absolute;
       content: "";
       width: 100%;
-      height: 5px;
+      height: 6px;
       bottom: 0;
       left: 0;
-      animation: progress 3s linear forwards;
+      animation: progress 6s linear forwards;
     }
 
     &.hide {
-      animation: hide_toast 0.3s ease forwards;
+      animation: hide_toast 0.6s ease forwards;
     }
 
     @each $color, $value in $colors {
@@ -53,18 +52,18 @@
       display: flex;
       align-items: center;
       i {
-        font-size: 1.7rem;
+        font-size: fontSize("4xl");
       }
       span {
-        font-size: 1.07rem;
-        margin-left: 0.9rem;
+        font-size: fontSize("md");
+        margin-left: spacing("3");
       }
     }
 
     i:last-child {
       color: $gray-600;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.5s;
 
       &:hover {
         color: $aura-500;

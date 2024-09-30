@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="./../dist/app.css" />
+    <link rel="stylesheet" href="./../icons/icons-dist/icons.css" />
+</head>
+<body>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar_title">
+                <h3><i class="icon icon-calendar-2"></i> Setembro</h3>
+            </div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-arrow-25"></i></span>
+                <span class="navbar_button"><i class="icon icon-arrow-24"></i></span>
+
+                <span class="navbar_button"><i class="icon icon-kit-22"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Samuel <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <ul class="sidebar_navbar">
+            <li class="navbar_li"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
+            <li class="navbar_li active"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
+            <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
+            <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
+        </ul>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="calendar">
+            <div class="calendar_week">
+                <div>DOM</div>
+                <div>SEG</div>
+                <div>TER</div>
+                <div>QUA</div>
+                <div>QUI</div>
+                <div>SEX</div>
+                <div>SÁB</div>
+            </div>
+
+            <div class="calendar_days">
+                <div class="day inactive">
+                    <div class="day_header">
+                        <span>29</span>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">20:00 Ajuste de visualizaçã...</span>
+                    </div>
+                </div>
+
+                <div class="day inactive">
+                    <div class="day_header">
+                        <span>30</span>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">20:00 Ajuste de visualizaçã...</span>
+                    </div>
+                </div>
+
+                <div class="day active">
+                    <div class="day_header">
+                        <span>30</span>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">00:00 Ajuste de visualizaçã...</span>
+                        <span class="event">15:30 Ajuste de visualiza...</span>
+                        <span class="event">18:00 Ajuste de visualiza...</span>
+                        <span class="event">18:00 Ajuste de visualiza...</span>
+                        <span class="event">18:00 Ajuste de visualiza...</span>
+                        <span class="event">18:00 Ajuste de visualiza...</span>
+                        <span class="event">18:00 Ajuste de visualiza...</span>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day_header">
+                        <p>2</p>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">20:00 Ajuste de visualizaçã...</span>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day_header">
+                        <p>3</p>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">20:00 Ajuste de visualizaçã...</span>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day_header">
+                        <p>4</p>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">20:00 Ajuste de visualizaçã...</span>
+                    </div>
+                </div>
+
+                <div class="day">
+                    <div class="day_header">
+                        <p>5</p>
+                    </div>
+
+                    <div class="events">
+                        <span class="event">20:00 Ajuste de visualizaçã...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    let isDarkMode = false;
+
+    // Verifica se o tema está armazenado em cookie
+    if (getCookie('auraTheme') === 'dark') {
+        isDarkMode = true;
+        html.dataset.auraTheme = 'dark';
+    }
+
+    // Atualiza o texto do botão
+    themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+
+    themeToggle.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        html.dataset.auraTheme = isDarkMode ? 'dark' : 'light';
+
+        // Salva o tema no cookie
+        setCookie('auraTheme', isDarkMode ? 'dark' : 'light', 365); // Expira em 1 ano
+
+        // Atualiza o texto do botão
+        themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+    });
+
+    // Funções para manipular cookies
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    }
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+</script>
+</body>
+</html>

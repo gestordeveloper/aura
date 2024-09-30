@@ -1,8 +1,13 @@
 .container {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1125px;
   padding-right: 2rem;
   padding-left: 2rem;
+
+  @media (max-width: 42em) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .row {
