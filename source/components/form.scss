@@ -202,12 +202,49 @@
     }
   }
 
+  .app_form_task {
+    .label {
+      display: block;
+
+    }
+  }
+
   input {
     border-radius: radius("sm");
     border: 1px solid var(--gray-200);
 
     &:focus {
       border-color: var(--aura-500);
+    }
+  }
+}
+
+.app_form_task {
+  @extend .app_form;
+
+  .label {
+    input, textarea {
+      background: transparent;
+      border-color: transparent;
+      padding: 0;
+    }
+
+    input[name="title"] {
+      font-size: 1.4rem;
+      font-weight: 900;
+      padding-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:focus {
+        border-color: transparent !important;
+      }
+    }
+
+    textarea[name="description"] {
+      border: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 }
