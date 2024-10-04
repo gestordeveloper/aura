@@ -71,6 +71,7 @@
 
       &.active {
         a {
+          line-height: 0;
           color: var(--aura-500);
           border-right-color: var(--aura-500) !important;
         }

@@ -16,6 +16,14 @@
   margin: 0 !important;
 }
 
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
 @each $spacing, $value in $spaces {
   .m-#{$spacing} {
     margin: #{$value} !important;
@@ -93,6 +101,12 @@
   }
 }
 
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: #{$value} !important;
+  }
+}
+
 .text-center {
   text-align: center !important;
 }
@@ -109,5 +123,79 @@
 @each $radio, $value in $radius {
   .radius-#{$radio} {
     border-radius: #{$value} !important;
+  }
+}
+
+//Thumbnails
+.thumbnails-container {
+  display: flex;
+  align-items: flex-start;
+  gap: spacing("2");
+}
+
+@each $thumbnail, $value in $thumbnails {
+  .thumbnail-#{$thumbnail} {
+    img {
+      width: #{$value};
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      border: ($value / 12) solid var(--text);
+
+      &:hover {
+        border-color: var(--aura-500);
+      }
+    }
+  }
+
+  @each $radio, $value in $radius {
+    .thumb-radius-#{$radio} {
+      img {
+        border-radius: #{$value} !important;
+      }
+    }
+  }
+
+  .thumbnails-#{$thumbnail} {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin-right: -($value / 3);
+    }
+
+    img {
+      width: #{$value};
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      border-radius: radius("full");
+      border: ($value / 12) solid var(--background);
+      position: relative;
+
+      &:hover {
+        border-color: var(--aura-500);
+        z-index: 999;
+      }
+    }
+
+    .thumbnails_button {
+      width: #{$value};
+      height: #{$value};
+      border-radius: radius("full");
+      border: ($value / 12) solid var(--background);
+      cursor: pointer;
+      position: relative;
+      z-index: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+      background-color: var(--gray-200);
+      color: var(--text);
+      font-size: fontSize("md");
+
+      &:hover {
+        border-color: var(--aura-500);
+      }
+    }
   }
 }
