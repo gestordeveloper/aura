@@ -34,6 +34,10 @@
       }
     }
 
+    textarea {
+      max-height: none !important;
+    }
+
     input[type="date"] {
        -webkit-appearance: none;
       font-size: fontSize("md") !important;
