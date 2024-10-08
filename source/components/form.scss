@@ -162,6 +162,10 @@
     }
   }
 
+  textarea {
+    max-height: none !important;
+  }
+
   button {
     max-height: 45px;
     border: 1px solid var(--aura-500);
@@ -185,6 +189,10 @@
   @extend .app_form_search;
   gap: spacing("2");
   align-items: center;
+
+  textarea {
+    max-height: none !important;
+  }
 
   .img_thumb {
     height: 45px;
