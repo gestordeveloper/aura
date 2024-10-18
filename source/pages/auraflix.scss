@@ -1,0 +1,79 @@
+/*AURA NAVBAR*/
+.aura_navbar {
+  background: #141414;
+  color: #FFFFFF;
+  padding: spacing("4") 0;
+
+  &.border {
+    border-bottom: 1px solid #333;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    .navbar_logo {
+      img {
+        width: 100px;
+      }
+    }
+
+    .navbar_navigation {
+      display: flex;
+
+      @media (max-width: 42em) {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        background: #141414;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+
+        &.active {
+          display: flex;
+        }
+      }
+
+      ul {
+        display: flex;
+
+        @media (max-width: 42em) {
+          flex-direction: column;
+        }
+
+        li {
+          margin-left: spacing("4");
+
+          @media (max-width: 42em) {
+            margin: spacing("6") 0;
+          }
+
+          a {
+            color: #FFFFFF;
+            transition: color 0.3s;
+
+            &:hover {
+              color: $aura-500;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar-menu-toggle {
+      cursor: pointer;
+      display: none;
+
+      @media (max-width: 42em) {
+        display: block;
+      }
+    }
+  }
+}

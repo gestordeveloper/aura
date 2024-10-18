@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Auraflix</title>
+
+    <link rel="stylesheet" href="./../dist/app.css" />
+    <link rel="stylesheet" href="./../icons/icons-dist/icons.css" />
+</head>
+<body style="background: #141414; color: #fafafa;">
+    <div class="aura_navbar border">
+        <div class="container">
+            <div class="navbar_logo">
+                <img src="./../dist/auraflix-logo.svg" alt="Auraflix Logo">
+            </div>
+
+            <nav class="navbar_navigation">
+                <ul>
+                    <li><a href="./auraflix.html">Home</a></li>
+                    <li><a href="./index.html">Painel</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar-menu-toggle" id="mobile-menu">
+                <i class="icon icon-kit-4"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson container mx-auto">
+        <div class="row py-10 spacing-10">
+            <div class="span-8 span-sm-12 column spacing-4">
+                <div class="lesson_header">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, repellat!</h2>
+                </div>
+
+                <div class="lesson_thumb">
+                    <img src="https://images.unsplash.com/photo-1726853546098-380e29da9e31?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </div>
+
+                <div class="lesson_content">
+                    <p><a href="#" class="text-aura-500">Lorem ipsum dolor sit amet</a>, consectetur adipisicing elit. Blanditiis cupiditate debitis fuga
+                        laborum quibusdam sed suscipit voluptatem? Deserunt dolorem eos error facilis id libero maiores
+                        maxime mollitia nihil placeat, veritatis.
+                    </p><br>
+                    <p><a href="#" class="text-aura-500">Ipsam maiores possimus similique.</a> Ad assumenda consectetur debitis dolor doloremque enim
+                        explicabo fuga id laboriosam molestiae non numquam obcaecati perferendis, placeat porro quasi
+                        quidem quo quod quos reiciendis reprehenderit ullam.
+                    </p><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate debitis fuga
+                        laborum quibusdam sed suscipit voluptatem? Deserunt dolorem eos error facilis id libero maiores
+                        maxime mollitia nihil placeat, veritatis.
+                    </p><br>
+                    <p>Ipsam maiores possimus similique. Ad assumenda consectetur debitis dolor doloremque enim
+                        explicabo fuga id laboriosam molestiae non numquam obcaecati perferendis, placeat porro quasi
+                        quidem quo quod quos reiciendis reprehenderit ullam.
+                    </p>
+
+                    <div class="content_footer mt-10">
+                        <span class="btn"><i class="icon icon-kit-42"></i></span>
+                        <span class="btn"><i class="icon icon-kit-43"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span-4 span-sm-12">
+                <ul class="column spacing-4">
+                    <li><i class="icon icon-kit-15"></i> <a href="#" class="text-gray-200">Comece por aqui</a></li>
+                    <li><i class="icon icon-kit-15"></i> <a href="#" class="text-gray-200">Como baixar o seu cheklist viral</a></li>
+                    <li><i class="icon icon-kit-15"></i> <a href="#" class="text-gray-200">BÔNUS: Como viralizar em 2024</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-16">
+        <p>Todos os direitos reservados - Desenvolvido por <a href="#" class="text-aura-500 text-bold">Ebenezer</a></p>
+    </footer>
+
+    <script>
+        /*MOBILE MENU *************************************************************************************************/
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.querySelector('.navbar_navigation');
+
+        mobileMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
