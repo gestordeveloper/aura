@@ -2,6 +2,7 @@
   .label {
     display: block;
     width: 100%;
+    position: relative;
 
     .legend {
       display: block;
@@ -133,6 +134,35 @@
         &:focus {
           border: none;
         }
+      }
+    }
+
+    .suggestions {
+      width: 100%;
+      margin-top: spacing("1");
+      display: none;
+
+      .suggestion {
+        padding: spacing("2") spacing("4");
+        cursor: pointer;
+        background: var(--gray-200);
+        color: var(--text);
+
+        &:hover {
+          background: var(--aura-500);
+          color: $white;
+        }
+      }
+    }
+
+    .label-loader {
+      position: absolute;
+      right: spacing("4");
+      top: spacing("2");
+      display: none;
+
+      img {
+        height: 28px;
       }
     }
   }
@@ -300,6 +330,7 @@
   .select2-dropdown {
     background: var(--background-card);
     border: none;
+    z-index: 2100;
 
     .select2-search {
       padding: spacing("2");
