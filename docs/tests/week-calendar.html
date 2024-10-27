@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Semanal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .calendar {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .month-year {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .navigation button {
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .weekdays {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .days {
+            display: flex;
+            justify-content: space-between;
+        }
+        .date {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .date.selected {
+            background-color: #e57373;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .date:hover {
+            background-color: #e0e0e0;
+        }
+        .events {
+            margin-top: 20px;
+            width: 300px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .event {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="calendar">
+    <div class="header">
+        <span class="month-year" id="month-year">outubro de 2024</span>
+        <div class="navigation">
+            <button id="prev-week">&lt;</button>
+            <button id="next-week">&gt;</button>
+        </div>
+    </div>
+    <div class="weekdays">
+        <div class="day">dom.</div>
+        <div class="day">seg.</div>
+        <div class="day">ter.</div>
+        <div class="day">qua.</div>
+        <div class="day">qui.</div>
+        <div class="day">sex.</div>
+        <div class="day">sáb.</div>
+    </div>
+    <div class="days" id="days">
+        <div class="date">20</div>
+        <div class="date">21</div>
+        <div class="date">22</div>
+        <div class="date selected">23</div>
+        <div class="date">24</div>
+        <div class="date">25</div>
+        <div class="date">26</div>
+    </div>
+</div>
+<div class="events" id="events">
+    <h3>Eventos do dia</h3>
+    <div class="event">Nenhum evento para este dia.</div>
+</div>
+<script>
+    const monthYearElement = document.getElementById('month-year');
+    const daysElement = document.getElementById('days');
+    const prevWeekButton = document.getElementById('prev-week');
+    const nextWeekButton = document.getElementById('next-week');
+    const eventsElement = document.getElementById('events');
+
+    let currentDate = new Date(2024, 9, 23); // 23 de outubro de 2024
+    let events = {
+        '2024-10-23': ['Reunião com a equipe', 'Entrega do relatório mensal'],
+        '2024-10-25': ['Apresentação do projeto', 'Chamada com cliente']
+    };
+
+    function updateCalendar() {
+        const monthNames = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+        const startOfWeek = new Date(currentDate);
+        startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+
+        monthYearElement.textContent = `${monthNames[currentDate.getMonth()]} de ${currentDate.getFullYear()}`;
+
+        daysElement.innerHTML = '';
+        for (let i = 0; i < 7; i++) {
+            const day = new Date(startOfWeek);
+            day.setDate(startOfWeek.getDate() + i);
+
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('date');
+            dayElement.textContent = day.getDate();
+            if (day.toDateString() === currentDate.toDateString()) {
+                dayElement.classList.add('selected');
+            }
+
+            dayElement.addEventListener('click', () => {
+                currentDate = day;
+                updateCalendar();
+                updateEvents();
+            });
+
+            daysElement.appendChild(dayElement);
+        }
+    }
+
+    function updateEvents() {
+        const formattedDate = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')}`;
+        eventsElement.innerHTML = '<h3>Eventos do dia</h3>';
+        if (events[formattedDate] && events[formattedDate].length > 0) {
+            events[formattedDate].forEach(event => {
+                const eventElement = document.createElement('div');
+                eventElement.classList.add('event');
+                eventElement.textContent = event;
+                eventsElement.appendChild(eventElement);
+            });
+        } else {
+            const noEventElement = document.createElement('div');
+            noEventElement.classList.add('event');
+            noEventElement.textContent = 'Nenhum evento para este dia.';
+            eventsElement.appendChild(noEventElement);
+        }
+    }
+
+    prevWeekButton.addEventListener('click', () => {
+        currentDate.setDate(currentDate.getDate() - 7);
+        updateCalendar();
+        updateEvents();
+    });
+
+    nextWeekButton.addEventListener('click', () => {
+        currentDate.setDate(currentDate.getDate() + 7);
+        updateCalendar();
+        updateEvents();
+    });
+
+    updateCalendar();
+    updateEvents();
+</script>
+</body>
+</html>
