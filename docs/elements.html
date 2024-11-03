@@ -365,6 +365,8 @@
                 dropdownNavbar.classList.remove('show');
             } else {
                 dropdownNavbar.classList.add('show');
+                console.log("Estamos mostrando...")
+                adjustDropdownPosition(dropdown, dropdownNavbar);
             }
         });
     });
@@ -380,6 +382,21 @@
             }
         });
     });
+
+    function adjustDropdownPosition(trigger, dropdown) {
+        // Obter as dimensões e posição do botão que aciona o dropdown
+        const triggerRect = trigger.getBoundingClientRect();
+        const offsetParent = trigger.offsetParent;
+
+        // Verificar se o offsetParent existe para determinar a posição correta
+        const parentRect = offsetParent ? offsetParent.getBoundingClientRect() : { top: 0, left: 0 };
+
+        // Ajustar a posição do dropdown logo abaixo do botão
+        dropdown.style.position = 'absolute';
+        dropdown.style.top = `${triggerRect.bottom - parentRect.top}px`;
+        dropdown.style.left = `${triggerRect.left - parentRect.left}px`;
+        dropdown.style.minWidth = `${triggerRect.width}px`; // Largura mínima do dropdown igual à do botão
+    }
 
 </script>
 </body>
