@@ -92,6 +92,17 @@
                     }
                 }
 
+                @each $color, $value in $colors {
+                    .event-#{$color} {
+                        background: #{$color} !important;
+                        color: $white !important;
+
+                        &:hover {
+                            background: var(--aura-500) !important;
+                        }
+                    }
+                }
+
                 .more {
                     font-size: fontSize("xxs");
                     font-weight: fontWeight("bold");
