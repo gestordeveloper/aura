@@ -14,6 +14,7 @@
   .modal_container {
     width: 100% !important;
     max-width: 420px !important;
+    overflow-y: scroll !important;
     display: block;
     background: var(--background);
     border-radius: radius("sm");
