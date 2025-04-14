@@ -113,6 +113,15 @@
   .text-#{$color} {
     color: #{$value} !important;
   }
+
+  .event-#{$color} {
+    background: $value !important;
+    color: $white !important;
+
+    &:hover {
+      background: darken($value, 15%) !important;
+    }
+  }
 }
 
 .text-center {
