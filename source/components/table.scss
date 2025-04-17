@@ -69,6 +69,21 @@
   }
 }
 
+.table-container {
+  .table-card {
+    display: none;
+  }
+
+  @media (max-width: 42em) {
+    .table-card {
+      display: block;
+    }
+
+    .table {
+      display: none;
+    }
+  }
+}
 //Backgrounds
 @each $color, $value in $colors {
   .tr-#{$color} {
