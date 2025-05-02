@@ -12,21 +12,44 @@ $black: #000 !default;
 
 /** Color-variables */
 $blue: #0084ff !default;
+$blue-600: #014f86 !default;
+$blue-900: #012a4a !default;
+
 $red: #e92c2c !default;
-$yellow: #ff9f2d !default;
+$red-600: #9d0208 !default;
+$red-900: #6a040f !default;
+
+$yellow: #ffba08 !default;
+$yellow-600: #f48c06 !default;
+$yellow-900: #d84a05 !default;
+
 $green: #00ba34 !default;
+$green-600: #008000 !default;
+$green-900: #004b23 !default;
 
 /** Theme color variables */
 $aura-500: #EC1889 !default;
 $aura-600: #b60e6a !default;
+$aura-800: #010765 !default;
+$aura-900: #333333 !default;
 
 $colors: (
   "aura-500": $aura-500,
   "aura-600": $aura-600,
+  "aura-800": $aura-800,
+  "aura-900": $aura-900,
   "blue": $blue,
+  "blue-600": $blue-600,
+  "blue-900": $blue-900,
   "red": $red,
+  "red-600": $red-600,
+  "red-900": $red-900,
   "yellow": $yellow,
+  "yellow-600": $yellow-600,
+  "yellow-900": $yellow-900,
   "green": $green,
+  "green-600": $green-600,
+  "green-900": $green-900,
   "gray-200": $gray-200,
   "gray-400": $gray-400,
   "gray-800": $gray-800,
