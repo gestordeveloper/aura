@@ -4,7 +4,7 @@
   border-spacing: 0 spacing("1");
 
   tr {
-    background: var(--gray-200);
+    background: var(--background-card);
 
     @media (max-width: 42em) {
       display: flex;
@@ -33,11 +33,11 @@
       }
 
       a {
-        color: var(--text);
+        color: var(--color);
         font-weight: fontWeight("bold");
 
         &:hover {
-          color: var(--aura-500);
+          color: $aura-500;
         }
       }
 
@@ -46,10 +46,10 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: radius("full");
-        border: 1px solid var(--text);
+        border: 1px solid var(--color);
 
         &:hover {
-          border-color: var(--aura-500);
+          border-color: $aura-500;
         }
       }
 
@@ -59,10 +59,10 @@
         object-fit: cover;
         border-radius: radius("sm");
 
-        border: 1px solid var(--text);
+        border: 1px solid var(--color);
 
         &:hover {
-          border-color: var(--aura-500);
+          border-color: $aura-500;
         }
       }
     }

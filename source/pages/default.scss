@@ -34,8 +34,9 @@
           white-space: nowrap !important;
 
           &.active, &:hover {
-            background: var(--gray-200);
-            color: var(--text);
+            background: var(--background-card);
+            border-color: var(--background-card);
+            color: var(--color);
           }
 
           @media (max-width: 42em) {

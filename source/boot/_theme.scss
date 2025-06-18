@@ -156,10 +156,10 @@
       width: #{$value};
       object-fit: cover;
       aspect-ratio: 1 / 1;
-      border: ($value / 12) solid var(--text);
+      border: ($value / 12) solid var(--color);
 
       &:hover {
-        border-color: var(--aura-500);
+        border-color: $aura-500;
       }
     }
   }
@@ -189,7 +189,7 @@
       position: relative;
 
       &:hover {
-        border-color: var(--aura-500);
+        border-color: $aura-500;
         z-index: 999;
       }
     }
@@ -206,12 +206,12 @@
       align-items: center;
       justify-content: center;
       line-height: 0;
-      background-color: var(--gray-200);
-      color: var(--text);
+      background-color: var(--gray-100);
+      color: var(--color);
       font-size: fontSize("md");
 
       &:hover {
-        border-color: var(--aura-500);
+        border-color: $aura-500;
       }
     }
   }

@@ -12,7 +12,7 @@
             flex: 0 0 320px;
 
             & + div {
-                border-left: 1px solid var(--gray-200);
+                border-left: 1px solid var(--gray-100);
             }
 
             header {
@@ -20,9 +20,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                background: var(--gray-200);
+                background: var(--background-navbar);
                 padding: 0 spacing("3");
-                color: var(--text);
+                color: var(--color);
 
                 .infors {
                     h3 {
@@ -53,8 +53,8 @@
 
                 li {
                     padding: spacing("3");
-                    background: var(--gray-200);
-                    border: 1px solid var(--gray-200);
+                    background: var(--background-card);
+                    border: 1px solid transparent;
                     border-radius: radius("sm");
                     display: flex;
                     align-items: flex-start;
@@ -79,16 +79,16 @@
                                 a {
                                     text-decoration: none;
                                     font-weight: fontWeight("bold");
-                                    color: var(--text);
+                                    color: var(--color);
 
                                     &:hover {
-                                        color: var(--aura-500);
+                                        color: $aura-500;
                                     }
                                 }
 
                                 p {
                                     font-size: fontSize("sm");
-                                    color: var(--text);
+                                    color: var(--color);
                                     margin: 0 !important;
                                 }
                             }

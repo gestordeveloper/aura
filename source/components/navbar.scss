@@ -43,11 +43,11 @@
             border-radius: radius("sm");
             transition: background-color 0.2s, color 0.2s;
             position: relative;
-            color: var(--text);
+            color: var(--color);
             line-height: 0;
 
             &:hover {
-                background: var(--aura-500);
+                background: $aura-500;
                 color: $white;
             }
 
@@ -55,8 +55,8 @@
                 position: absolute;
                 top: -3px;
                 right: -3px;
-                background: var(--aura-500);
-                color: $gray-100;
+                background: $aura-500;
+                color: $white;
                 font-size: fontSize("xxs");
                 font-weight: fontWeight("bold");
                 width: 16px;
@@ -71,12 +71,12 @@
 
         .navbar_link {
             font-weight: fontWeight("bold");
-            color: var(--text);
+            color: var(--color);
             cursor: pointer;
             line-height: 0;
 
             &:hover {
-                color: var(--aura-500);
+                color: $aura-500;
                 text-decoration: underline !important;
             }
         }

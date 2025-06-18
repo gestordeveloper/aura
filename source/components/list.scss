@@ -4,7 +4,7 @@
 
     .list_item {
         padding: spacing("3");
-        background: var(--gray-200);
+        background: var(--background-card);
         border-radius: radius("sm");
         display: flex;
         align-items: flex-start;
@@ -27,17 +27,17 @@
                 .body_data {
                     a {
                         font-weight: fontWeight("bold");
-                        color: var(--text);
+                        color: var(--color);
                         transition: all .2s;
 
                         &:hover {
-                            color: var(--aura-500);
+                            color: $aura-500;
                         }
                     }
 
                     p {
                         font-size: fontSize("sm");
-                        color: var(--text);
+                        color: var(--color);
                         margin: 0 !important;
                     }
                 }

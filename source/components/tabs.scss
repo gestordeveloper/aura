@@ -12,7 +12,7 @@
       font-size: fontSize("md");
       padding: spacing("2") spacing("3");
       font-weight: fontWeight("medium");
-      color: var(--text);
+      color: var(--color);
       border: 1px solid var(--gray-200);
       border-radius: radius("sm");
       background: transparent;
@@ -20,8 +20,9 @@
       cursor: pointer;
 
       &:hover {
-        background: var(--gray-200);
-        color: var(--text);
+        background: var(--background-card);
+        border-color: var(--background-card);
+        color: var(--color);
       }
 
       i {
@@ -47,8 +48,9 @@
   #tab-5:checked ~ nav label.tab-5,
   #tab-6:checked ~ nav label.tab-6,
   #tab-7:checked ~ nav label.tab-7 {
-    background: var(--gray-200);
-    color: var(--text);
+    background: var(--background-card);
+    border-color: var(--background-card);
+    color: var(--color);
   }
 
   #tab-1:checked ~ section .content-1,
