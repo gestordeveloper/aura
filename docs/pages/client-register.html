@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cadastro de Cliente</title>
+
+    <link rel="stylesheet" href="./../../dist/app.css" />
+    <link rel="stylesheet" href="./../../icons/icons-dist/icons.css" />
+</head>
+<body>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar_title"></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Samuel <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <nav class="sidebar_nav">
+            <a href="../index.html"><i class="icon icon-kit-67"></i> Forms</a>
+            <a href="../cards.html"><i class="icon icon-kit-16"></i> Cards</a>
+            <a href="../lists.html"><i class="icon icon-kit-68"></i> Lists</a>
+            <a href="../tables.html"><i class="icon icon-kit-17"></i> Tables</a>
+            <a href="../elements.html"><i class="icon icon-kit-71"></i> Elements</a>
+        </nav>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <div class="box_sidebar">
+                    <nav>
+                        <a href="../index.html"><i class="icon icon-kit-67"></i> Forms</a>
+                        <a href="../cards.html"><i class="icon icon-kit-16"></i> Cards</a>
+                        <a href="../lists.html"><i class="icon icon-kit-68"></i> Lists</a>
+                        <a href="../tables.html"><i class="icon icon-kit-17"></i> Tables</a>
+                        <a href="../elements.html"><i class="icon icon-kit-71"></i> Elements</a>
+                        <a href="client-register.html" class="active"><i class="icon icon-user-1"></i> Clientes</a>
+                    </nav>
+                </div>
+
+                <div class="box_content">
+                    <div class="box_header my-4">
+                        <header>
+                            <h2 class="header_title"><i class="icon icon-user-1"></i> Cadastro de Cliente</h2>
+                        </header>
+                    </div>
+
+                    <div class="card">
+                        <div class="card_body">
+                            <form action="#" class="app_form column spacing-4">
+                                <div class="row">
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Nome:</span>
+                                        <input type="text" placeholder="Nome do cliente">
+                                    </div>
+
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Sobrenome:</span>
+                                        <input type="text" placeholder="Sobrenome do cliente">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">E-mail:</span>
+                                        <input type="email" placeholder="exemplo@dominio.com">
+                                    </div>
+
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Telefone:</span>
+                                        <input type="text" placeholder="(99) 99999-9999">
+                                    </div>
+                                </div>
+
+                                <label class="label">
+                                    <span class="legend">Endereço:</span>
+                                    <input type="text" placeholder="Rua, número - Bairro">
+                                </label>
+
+                                <label class="label">
+                                    <span class="legend">Data de nascimento:</span>
+                                    <input type="date">
+                                </label>
+
+                                <button class="btn btn-aura-500">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    let isDarkMode = false;
+
+    if (getCookie('auraTheme') === 'dark') {
+        isDarkMode = true;
+        html.dataset.auraTheme = 'dark';
+    }
+
+    themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+
+    themeToggle.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        html.dataset.auraTheme = isDarkMode ? 'dark' : 'light';
+        setCookie('auraTheme', isDarkMode ? 'dark' : 'light', 365);
+        themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+    });
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    }
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+</script>
+</body>
+</html>

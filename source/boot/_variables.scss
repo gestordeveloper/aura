@@ -1,107 +1,192 @@
 /** Colors Sistem */
-$white: #fff !default;
-$gray-100: #fafafa !default;
-$gray-200: #ededed !default;
-$gray-300: #b2b2bc !default;
-$gray-400: #7c7c8a !default;
-$gray-600: #323238 !default;
-$gray-700: #39393e !default;
-$gray-800: #202024 !default;
-$gray-900: #121214 !default;
-$black: #000 !default;
+$white:    #fff !default;
+$gray-50:  #ebebeb !default;
+$gray-100: #bfbfc1 !default;
+$gray-200: #a1a1a3 !default;
+$gray-300: #76767a !default;
+$gray-400: #5b5b60 !default;
+$gray-500: #323238 !default;
+$gray-600: #2e2e33 !default;
+$gray-700: #242428 !default;
+$gray-800: #1c1c1f !default;
+$gray-900: #09090b !default;
+$black:    #000 !default;
 
 /** Color-variables */
-$blue: #0084ff !default;
-$blue-600: #014f86 !default;
-$blue-900: #012a4a !default;
+$blue-50:  #e6f3ff !default;
+$blue-100: #b0d9ff !default;
+$blue-200: #8ac6ff !default;
+$blue-300: #54adff !default;
+$blue-400: #339dff !default;
+$blue:     #0084ff !default;
+$blue-600: #0078e8 !default;
+$blue-700: #005eb5 !default;
+$blue-800: #00498c !default;
+$blue-900: #00376b !default;
 
-$red: #e92c2c !default;
-$red-600: #9d0208 !default;
-$red-900: #6a040f !default;
+$red-50:  #fdeaea !default;
+$red-100: #f8bebe !default;
+$red-200: #f59e9e !default;
+$red-300: #f07272 !default;
+$red-400: #ed5656 !default;
+$red:     #e92c2c !default;
+$red-600: #d42828 !default;
+$red-700: #a51f1f !default;
+$red-800: #801818 !default;
+$red-900: #621212 !default;
 
-$yellow: #ffba08 !default;
-$yellow-600: #f48c06 !default;
-$yellow-900: #d84a05 !default;
+$yellow-50:  #fff8e6 !default;
+$yellow-100: #ffeab2 !default;
+$yellow-200: #ffdf8d !default;
+$yellow-300: #ffd15a !default;
+$yellow-400: #ffc839 !default;
+$yellow:     #ffba08 !default;
+$yellow-600: #e8a907 !default;
+$yellow-700: #b58406 !default;
+$yellow-800: #8c6604 !default;
+$yellow-900: #6b4e03 !default;
 
-$green: #00ba34 !default;
-$green-600: #008000 !default;
-$green-900: #004b23 !default;
+$green-50:  #e6f8eb !default;
+$green-100: #b0eac0 !default;
+$green-200: #8adfa2 !default;
+$green-300: #54d177 !default;
+$green-400: #33c85d !default;
+$green:     #00ba34 !default;
+$green-600: #00a92f !default;
+$green-700: #008425 !default;
+$green-800: #00661d !default;
+$green-900: #004e16 !default;
 
-/** Theme color variables */
-$aura-500: #EC1889 !default;
-$aura-600: #b60e6a !default;
-$aura-800: #010765 !default;
-$aura-900: #333333 !default;
+$aura-50: #fde8f3 !default;
+$aura-100: #f9b7da !default;
+$aura-200: #f695c9 !default;
+$aura-300: #f264b0 !default;
+$aura-400: #f046a1 !default;
+$aura-500: #ec1889 !default;
+$aura-600: #d7167d !default;
+$aura-700: #a81161 !default;
+$aura-800: #820d4b !default;
+$aura-900: #630a3a !default;
+
+$secondary-50:  #e6e6f0 !default;
+$secondary-100: #b0b2cf !default;
+$secondary-200: #8a8db8 !default;
+$secondary-300: #555998 !default;
+$secondary-400: #343984 !default;
+$secondary-500: #010765 !default;
+$secondary-600: #01065c !default;
+$secondary-700: #010548 !default;
+$secondary-800: #010438 !default;
+$secondary-900: #00032a !default;
 
 $colors: (
+  "aura-50": $aura-50,
+  "aura-100": $aura-100,
+  "aura-200": $aura-200,
+  "aura-300": $aura-300,
+  "aura-400": $aura-400,
   "aura-500": $aura-500,
   "aura-600": $aura-600,
+  "aura-700": $aura-700,
   "aura-800": $aura-800,
   "aura-900": $aura-900,
+  "secoondary-50": $aura-50,
+  "secondary-100": $secondary-100,
+  "secondary-200": $secondary-200,
+  "secondary-300": $secondary-300,
+  "secondary-400": $secondary-400,
+  "secondary-500": $secondary-500,
+  "secondary-600": $secondary-600,
+  "secondary-700": $secondary-700,
+  "secondary-800": $secondary-800,
+  "secondary-900": $secondary-900,
+  "blue-50": $blue-50,
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
   "blue": $blue,
   "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
   "blue-900": $blue-900,
+  "red-50": $red-50,
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
   "red": $red,
   "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
   "red-900": $red-900,
+  "yellow-50": $yellow-50,
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
   "yellow": $yellow,
   "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
   "yellow-900": $yellow-900,
+  "green-50": $green-50,
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
   "green": $green,
   "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
   "green-900": $green-900,
-  "gray-200": $gray-200,
-  "gray-400": $gray-400,
-  "gray-800": $gray-800,
-) !default;
-
-/** Theme colors map */
-$light-mode-colors: (
-  "aura-500": $aura-500,
-  "aura-600": $aura-600,
-  "blue": $blue,
-  "red": $red,
-  "yellow": $yellow,
-  "green": $green,
-  "background": $white,
-  "background-sidebar": $gray-100,
-  "background-card": $gray-100,
-  "background-calendar-inactive": $gray-100,
-  "background-calendar": $gray-200,
-  "text": $gray-600,
-  "text-invert": $gray-100,
-  "gray": $gray-600,
-  "gray-dark": $gray-400,
+  "gray-50": $gray-50,
   "gray-100": $gray-100,
   "gray-200": $gray-200,
   "gray-300": $gray-300,
   "gray-400": $gray-400,
+  "gray-500": $gray-500,
   "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+) !default;
+
+/** Theme colors map */
+$light-mode-colors: (
+  "background": $gray-50,
+  "background-sidebar": $white,
+  "background-navbar": lighten($gray-200, 20%),
+  "background-card": $white,
+  "color": $gray-900,
+  "gray-50": $gray-50,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
   "gray-800": $gray-800,
   "gray-900": $gray-900,
 ) !default;
 
 $dark-mode-colors: (
-  "aura-500": $aura-500,
-  "aura-600": $aura-600,
-  "blue": $blue,
-  "red": $red,
-  "yellow": $yellow,
-  "green": $green,
-  "background": $gray-600,
-  "background-sidebar": $gray-900,
-  "background-card": $gray-900,
-  "background-calendar-inactive": $gray-800,
-  "background-calendar": $gray-900,
-  "text": $gray-100,
-  "text-invert": $gray-600,
-  "gray-100": $gray-900,
-  "gray-200": $gray-800,
+  "background": $gray-900,
+  "background-sidebar": $gray-800,
+  "background-navbar": $gray-700,
+  "background-card": $gray-500,
+  "color": $gray-50,
+  "gray-50": $gray-900,
+  "gray-100": $gray-800,
+  "gray-200": $gray-700,
   "gray-300": $gray-600,
-  "gray-400": $gray-400,
+  "gray-400": $gray-500,
+  "gray-500": $gray-400,
   "gray-600": $gray-300,
-  "gray-800": $gray-200,
-  "gray-900": $gray-100,
+  "gray-700": $gray-200,
+  "gray-800": $gray-100,
+  "gray-900": $gray-50,
 ) !default;
 
 /** Theme fonts */

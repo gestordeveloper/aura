@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cadastro de Membros</title>
+    <link rel="stylesheet" href="./../dist/app.css" />
+    <link rel="stylesheet" href="./../icons/icons-dist/icons.css" />
+</head>
+<body>
+<div class="wrapper">
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+            <div class="user_data">
+                <a href="#">Olá! Samuel <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+        <ul class="sidebar_navbar">
+            <li class="navbar_li"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
+            <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
+            <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-user-6"></i> Clientes/Fornecedores</a></li>
+            <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
+            <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
+            <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Auraflix</a></li>
+            <li class="navbar_li active"><a href="./cadastro-membro.html"><i class="icon icon-user-3"></i> Membros</a></li>
+        </ul>
+    </div>
+
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <div class="box_sidebar">
+                    <nav>
+                        <a href="index.html"><i class="icon icon-kit-67"></i> Forms</a>
+                        <a href="cards.html"><i class="icon icon-kit-16"></i> Cards</a>
+                        <a href="lists.html"><i class="icon icon-kit-68"></i> Lists</a>
+                        <a href="tables.html"><i class="icon icon-kit-17"></i> Tables</a>
+                        <a href="elements.html"><i class="icon icon-kit-71"></i> Elements</a>
+                    </nav>
+                </div>
+                <div class="box_content">
+                    <div class="box_header my-4">
+                        <header>
+                            <h2 class="header_title"><i class="icon icon-user-3"></i> Cadastro de Membros</h2>
+                        </header>
+                    </div>
+                    <form action="" class="app_form column spacing-4">
+                        <div class="row">
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Nome:</span>
+                                <input type="text" placeholder="Nome">
+                            </div>
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Sobrenome:</span>
+                                <input type="text" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Data de nascimento:</span>
+                                <input type="date">
+                            </div>
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Data de batismo:</span>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Estado civil:</span>
+                                <select name="estado_civil">
+                                    <option>Solteiro(a)</option>
+                                    <option>Casado(a)</option>
+                                    <option>Divorciado(a)</option>
+                                    <option>Viúvo(a)</option>
+                                </select>
+                            </div>
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Ministério:</span>
+                                <select name="ministerio">
+                                    <option>Membro</option>
+                                    <option>Diácono</option>
+                                    <option>Presbítero</option>
+                                    <option>Pastor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Telefone:</span>
+                                <input type="text" placeholder="(00) 0000-0000">
+                            </div>
+                            <div class="label span-6 span-sm-12">
+                                <span class="legend">Celular:</span>
+                                <input type="text" placeholder="(00) 00000-0000">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-12">
+                                <span class="legend">Email:</span>
+                                <input type="text" placeholder="email@exemplo.com">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-8 span-sm-12">
+                                <span class="legend">Rua:</span>
+                                <input type="text" placeholder="Rua">
+                            </div>
+                            <div class="label span-4 span-sm-12">
+                                <span class="legend">Número:</span>
+                                <input type="text" placeholder="Nº">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-4 span-sm-12">
+                                <span class="legend">Bairro:</span>
+                                <input type="text" placeholder="Bairro">
+                            </div>
+                            <div class="label span-4 span-sm-12">
+                                <span class="legend">Cidade:</span>
+                                <input type="text" placeholder="Cidade">
+                            </div>
+                            <div class="label span-4 span-sm-12">
+                                <span class="legend">Estado:</span>
+                                <input type="text" placeholder="UF">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="label span-4 span-sm-12">
+                                <span class="legend">CEP:</span>
+                                <input type="text" placeholder="00000-000">
+                            </div>
+                            <div class="label span-8 span-sm-12">
+                                <span class="legend">Foto:</span>
+                                <input type="file" name="foto">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="label span-12">
+                                <span class="legend">Observações:</span>
+                                <textarea rows="4" placeholder="Digite aqui..."></textarea>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-aura-500">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const menuToggle = document.getElementById('menu-toggle');
+    const html = document.documentElement;
+    let isDarkMode = false;
+
+    if (getCookie('auraTheme') === 'dark') {
+        isDarkMode = true;
+        html.dataset.auraTheme = 'dark';
+    }
+
+    themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+
+    themeToggle.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        html.dataset.auraTheme = isDarkMode ? 'dark' : 'light';
+        setCookie('auraTheme', isDarkMode ? 'dark' : 'light', 365);
+        themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+    });
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    }
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+
+    menuToggle.addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+</script>
+</body>
+</html>

@@ -38,10 +38,10 @@
         object-fit: cover;
         aspect-ratio: 1 / 1;
         border-radius: radius("full");
-        border: 2px solid var(--text);
+        border: 2px solid var(--color);
 
         &:hover {
-          border-color: var(--aura-500);
+          border-color: $aura-500;
         }
       }
     }
@@ -49,10 +49,10 @@
     .user_data {
       a {
         font-weight: fontWeight("bold");
-        color: var(--text);
+        color: var(--color);
 
         &:hover {
-          color: var(--aura-500);
+          color: $aura-500;
         }
       }
 
@@ -72,8 +72,8 @@
       &.active {
         a {
           line-height: 0;
-          color: var(--aura-500);
-          border-right-color: var(--aura-500) !important;
+          color: $aura-500;
+          border-right-color: $aura-500 !important;
         }
       }
 
@@ -81,7 +81,7 @@
         display: block;
         width: 100%;
         padding: spacing("2") spacing("4");
-        color: var(--text);
+        color: var(--color);
         font-size: fontSize("sm");
         transition: color 0.2s;
         border-right: 3px solid var(--background-sidebar);
@@ -92,21 +92,21 @@
         }
 
         &:hover {
-          color: var(--aura-500);
+          color: $aura-500;
         }
       }
     }
   }
 
   .sidebar_footer {
-    color: var(--text);
+    color: var(--color);
     text-align: center;
     font-size: .8rem;
     margin-top: 3rem;
 
     a {
       font-weight: bold;
-      color: var(--aura-500);
+      color: $aura-500;
       
       &:hover {
         text-decoration: underline !important;

@@ -8,7 +8,7 @@
       display: block;
       margin-bottom: 0.2rem;
       font-size: fontSize("xs");
-      color: var(--text);
+      color: var(--color);
     }
 
     input,
@@ -17,21 +17,21 @@
       display: block;
       width: 100%;
       max-height: 45px;
-      color: var(--gray-900);
+      color: var(--color);
       font-size: fontSize("md");
       padding: spacing("3") spacing("4");
-      background: var(--gray-200);
+      background: var(--gray-100);
       resize: none;
-      border: 1px solid var(--gray-200);
+      border: 1px solid var(--gray-100);
       border-radius: radius("sm");
       outline: none;
 
       &::placeholder {
-        color: var(--gray-400) !important;
+        color: var(--gray-500) !important;
       }
 
       &:focus {
-        border-color: var(--aura-500) !important;
+        border-color: $aura-500 !important;
       }
     }
 
@@ -75,7 +75,7 @@
       cursor: pointer;
 
       &:has(input:checked) {
-        border: 1px solid var(--aura-500);
+        border: 1px solid $aura-500;
       }
 
       input {
@@ -92,12 +92,12 @@
           }
 
           &:checked ~ u {
-            background: var(--aura-500) url(./radio.svg) no-repeat center center / 50%;
+            background: $aura-500 url(./radio.svg) no-repeat center center / 50%;
           }
         }
 
         &:checked ~ u {
-          background: var(--aura-500) url(./check.svg) no-repeat center center / 70%;
+          background: $aura-500 url(./check.svg) no-repeat center center / 70%;
         }
       }
 
@@ -105,7 +105,7 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        background: var(--gray-200);
+        background: var(--gray-100);
         border-radius: radius("sm");
         margin-right: spacing("1");
       }
@@ -117,15 +117,15 @@
       align-items: center;
       width: 100%;
       max-height: 45px;
-      color: var(--gray-400);
+      color: var(--gray-500);
       padding-left: spacing("4");
       font-size: fontSize("md");
-      background: var(--gray-200);
-      border: 1px solid var(--gray-200);
+      background: var(--gray-100);
+      border: 1px solid var(--gray-100);
       border-radius: radius("sm");
 
       &:has(input:focus) {
-        border-color: var(--aura-500);
+        border-color: $aura-500;
       }
 
       input {
@@ -148,10 +148,10 @@
         padding: spacing("2") spacing("4");
         cursor: pointer;
         background: var(--gray-200);
-        color: var(--text);
+        color: var(--color);
 
         &:hover {
-          background: var(--aura-500);
+          background: $aura-500;
           color: $white;
         }
       }
@@ -179,18 +179,18 @@
     display: block;
     width: 100%;
     max-height: 45px;
-    color: var(--gray-900);
+    color: var(--color);
     font-size: fontSize("md");
     padding: spacing("3") spacing("4");
-    background: var(--gray-200);
+    background: var(--gray-100);
     resize: none;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-100);
     border-right: none;
     border-radius: radius("sm") 0 0 radius("sm");
     outline: none;
 
     &:focus {
-      border-color: var(--aura-500);
+      border-color: $aura-500;
     }
   }
 
@@ -200,10 +200,10 @@
 
   button {
     max-height: 45px;
-    border: 1px solid var(--aura-500);
+    border: 1px solid $aura-500;
     border-left: none;
     border-radius: 0 radius("sm") radius("sm") 0;
-    background: var(--aura-500);
+    background: $aura-500;
     font-size: fontSize("md");
     padding: spacing("3") spacing("4");
     color: $white;
@@ -241,7 +241,7 @@
       cursor: pointer;
 
       &:hover {
-        border-color: var(--aura-500);
+        border-color: $aura-500;
       }
     }
   }
@@ -255,10 +255,10 @@
 
   input {
     border-radius: radius("sm");
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-100);
 
     &:focus {
-      border-color: var(--aura-500);
+      border-color: $aura-500;
     }
   }
 }
