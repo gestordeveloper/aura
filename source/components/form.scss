@@ -180,6 +180,15 @@
       padding: spacing("1") spacing("2");
     }
 
+    input[type="date"] {
+      -webkit-appearance: none;
+      font-size: fontSize("xs") !important;
+      max-height: 25px;
+      padding: spacing("1") spacing("2") !important;
+      font-weight: fontWeight("regular") !important;
+      color: var(--gray-900) !important;
+    }
+
     .group {
       max-height: 35px;
       font-size: fontSize("sm");
