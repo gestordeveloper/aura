@@ -168,6 +168,29 @@
       }
     }
   }
+
+  .label-sm {
+    @extend .label;
+
+    input,
+    select,
+    textarea {
+      max-height: 25px;
+      font-size: fontSize("xs");
+      padding: spacing("1") spacing("2");
+    }
+
+    .group {
+      max-height: 35px;
+      font-size: fontSize("sm");
+      padding-left: spacing("3");
+
+      input {
+        padding: spacing("2") spacing("3");
+        padding-left: spacing("2");
+      }
+    }
+  }
 }
 
 .app_form_search {
@@ -243,13 +266,6 @@
       &:hover {
         border-color: $aura-500;
       }
-    }
-  }
-
-  .app_form_task {
-    .label {
-      display: block;
-
     }
   }
 
