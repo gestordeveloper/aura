@@ -111,6 +111,7 @@
         }
 
         .day {
+            max-width: 100%;
             background: var(--background-card);
             border-radius: radius("sm");
             cursor: pointer;
@@ -153,6 +154,7 @@
             }
 
             .events {
+                max-width: 100%;
                 background: transparent;
                 display: flex;
                 flex-direction: column;
@@ -162,6 +164,7 @@
                 scrollbar-width: none;
 
                 .event {
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     gap: spacing("2");
@@ -174,6 +177,14 @@
                     &:hover {
                         background: $aura-500;
                         color: $white;
+                    }
+
+                    p {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 120px;
+                        flex: 1;
                     }
                 }
 
