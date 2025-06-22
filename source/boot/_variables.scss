@@ -1,5 +1,6 @@
 /** Colors Sistem */
 $white:    #fff !default;
+$background: #F5F5F5 !default;
 $gray-50:  #eeeeee !default;
 $gray-100: #bfbfc1 !default;
 $gray-200: #a1a1a3 !default;
@@ -156,7 +157,7 @@ $colors: (
 
 /** Theme colors map */
 $light-mode-colors: (
-  "background": $gray-50,
+  "background": $background,
   "background-sidebar": $white,
   "background-navbar": lighten($gray-200, 20%),
   "background-card": $white,
