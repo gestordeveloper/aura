@@ -69,6 +69,65 @@
   }
 }
 
+.table-sm {
+  @extend .table;
+
+  tr {
+    td, th {
+      padding: spacing("1") spacing("2");
+
+      .img_thumb {
+        width: 22px;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: spacing("1");
+
+        .btn-sm {
+          padding: 0;
+          width: 22px;
+          height: 22px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  &.table-header {
+    thead {
+      tr {
+        background: var(--background-card);
+
+        th {
+          padding: spacing("3") spacing("5");
+          font-size: fontSize("sm");
+          text-align: left;
+
+          &:first-child {
+            border-top-left-radius: radius("sm");
+            border-bottom-left-radius: 0;
+          }
+
+          &:last-child {
+            border-top-right-radius: radius("sm");
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background: transparent;
+      }
+    }
+  }
+}
+
 .table-container {
   .table-card {
     display: none;
@@ -84,6 +143,7 @@
     }
   }
 }
+
 //Backgrounds
 @each $color, $value in $colors {
   .tr-#{$color} {
