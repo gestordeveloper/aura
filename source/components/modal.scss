@@ -19,7 +19,7 @@
     border-radius: radius("sm");
 
     &.container_large {
-      width: 960px;
+      width: 960px !important;
     }
 
     .modal_header {
