@@ -319,11 +319,12 @@
 
 /** Select2 styles **/
 .select2 {
-  width: 0 !important;
+  width: 0;
 
   .selection {
     .select2-selection {
       display: block !important;
+      width: 100% !important;
       height: 45px;
       max-height: 45px !important;
       color: var(--gray-900);
