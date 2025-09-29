@@ -19,7 +19,7 @@
     border-radius: radius("sm");
 
     &.container_large {
-      width: 960px !important;
+      max-width: 960px;
     }
 
     .modal_header {
@@ -31,7 +31,7 @@
     }
 
     .modal_body {
-      max-height: 90vh;
+      max-height: 80vh;
       padding: spacing("4");
       overflow-y: auto;
     }
