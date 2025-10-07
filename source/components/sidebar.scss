@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  overflow-y: auto;
 
   @media (max-width: 42em) {
     position: fixed;
@@ -28,13 +29,13 @@
     display: flex;
     align-items: center;
     gap: spacing("2");
-    padding: spacing("4") spacing("4");
+    padding: spacing("2") spacing("4");
 
     .user_thumb {
-      height: 42px;
+      height: 32px;
 
       img {
-        width: 42px;
+        width: 32px;
         object-fit: cover;
         aspect-ratio: 1 / 1;
         border-radius: radius("full");
@@ -63,7 +64,10 @@
   }
 
   .sidebar_navbar {
-    margin-top: spacing("4");
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .navbar_li {
       display: block;
@@ -78,9 +82,11 @@
       }
 
       a {
-        display: block;
+        display: flex;
+        align-items: center;
         width: 100%;
-        padding: spacing("2") spacing("4");
+        height: 35px;
+        padding: 0 spacing("4");
         color: var(--color);
         font-size: fontSize("sm");
         transition: color 0.2s;
@@ -89,11 +95,62 @@
         i {
           margin-right: spacing("2");
           font-size: fontSize("sm");
+          line-height: fontSize("md");
         }
 
         &:hover {
           color: $aura-500;
         }
+      }
+
+      .navbar_li_dropdown {
+        display: none;
+        flex-direction: column;
+        background: color-mix(in srgb, var(--background-sidebar) 95%, #000);
+
+        .navbar_li_dropdown_li {
+          a {
+            border-right-color: color-mix(in srgb, var(--background-sidebar) 95%, #000);
+            color: var(--color);
+
+            &:hover {
+              color: $aura-500;
+            }
+          }
+        }
+      }
+
+      // Exibir dropdown ao passar o mouse
+      // &:hover > .navbar_li_dropdown
+      
+      &.active > .navbar_li_dropdown {
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
+      }
+    }
+
+    .li_dropdown {
+      // Ícone do item principal com seta opcional
+      > a {
+        position: relative;
+
+        &::after {
+          content: "▾";
+          font-weight: 900;
+          position: absolute;
+          right: spacing("4");
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: fontSize("sm");
+          transition: transform 0.3s ease;
+        }
+      }
+
+      // Girar seta quando aberto
+      &:hover > a::after,
+      &.active > a::after {
+        transform: translateY(-50%) rotate(180deg);
       }
     }
   }
@@ -102,7 +159,8 @@
     color: var(--color);
     text-align: center;
     font-size: .8rem;
-    margin-top: 3rem;
+    padding-top: spacing("2");
+    padding-bottom: spacing("4");
 
     a {
       font-weight: bold;

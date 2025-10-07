@@ -231,7 +231,7 @@
   }
 
   button {
-    max-height: 45px;
+    height: 45px;
     border: 1px solid $aura-500;
     border-left: none;
     border-radius: 0 radius("sm") radius("sm") 0;
@@ -245,6 +245,26 @@
     &:hover {
       background: $aura-600;
       border-color: $aura-600;
+    }
+  }
+}
+
+.app_form_search_filter {
+  @extend .app_form_search;
+
+  button[type="submit"] {
+    border-radius: 0 !important;
+  }
+
+  button[type="button"] {
+    background: $aura-700;
+    border-color: $aura-700;
+    display: flex;
+    align-items: center;
+    gap: spacing("2");
+    
+    span {
+      font-size: fontSize("xs")
     }
   }
 }

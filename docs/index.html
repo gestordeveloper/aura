@@ -11,6 +11,21 @@
 </head>
 <body>
 
+    <div class="fab-container">
+        <button class="fab main-fab">+</button>
+        <div class="fab-options">
+            <a href="#" class="fab-option" title="Novo Cliente">
+                <i class="icon icon-user-6"></i>
+            </a>
+            <a href="#" class="fab-option" title="Novo Pedido">
+                <i class="icon icon-kit-6"></i>
+            </a>
+            <a href="#" class="fab-option" title="Nova Tarefa">
+                <i class="icon icon-calendar-2"></i>
+            </a>
+        </div>
+    </div>
+
 <div class="wrapper">
     <!--Navbar-->
     <div class="navbar">
@@ -44,12 +59,33 @@
         </div>
 
         <ul class="sidebar_navbar">
-            <li class="navbar_li active"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
-            <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
-            <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-user-6"></i> Clientes/Fornecedores</a></li>
-            <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
-            <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
-            <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Auraflix</a></li>
+            <div class="primary_nav">
+                <li class="navbar_li active"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
+
+                <li class="navbar_li li_dropdown">
+                    <a href="./calendar.html"><i class="icon icon-plus-1"></i> Cadastro</a>
+
+                    <ul class="navbar_li_dropdown">
+                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Cliente</a></li>
+                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Fornecedor</a></li>
+                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Transportadora</a></li>
+                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Produto</a></li>
+                    </ul>
+                </li>
+
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-user-6"></i> Clientes/Fornecedores</a></li>
+                <!-- <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
+                <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Auraflix</a></li> -->
+            </div>
+
+            <div class="secondary_nav">
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Configurações</a></li>
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Suporte</a></li>
+
+                <p class="sidebar_footer"><a target="_blank" href="https://agenciaebenezer.com.br">Ebenezer</a> v5.11.437</p>
+            </div>
         </ul>
     </div>
 
@@ -186,7 +222,13 @@
 
                             <form action="" class="app_form_search card">
                                 <input type="text" placeholder="Pesquisar...">
-                                <button><i class="icon icon-search-1"></i></button>
+                                <button type="submit"><i class="icon icon-search-1"></i></button>
+                            </form>
+
+                            <form action="" class="app_form_search_filter card">
+                                <input type="text" placeholder="Pesquisar...">
+                                <button type="submit"><i class="icon icon-search-1"></i></button>
+                                <button type="button"><i class="icon icon-kit-36"></i> <span>Filtro Avançado</span></button>
                             </form>
                             
                             <div class="card">
@@ -312,6 +354,26 @@
     menuToggle.addEventListener("click", () => {
         document.querySelector(".sidebar").classList.toggle("active");
     });
+
+
+    document.querySelectorAll('.navbar_li > a').forEach(link => {
+        link.addEventListener('click', e => {
+            const parent = e.currentTarget.parentElement;
+
+            if (parent.querySelector('.navbar_li_dropdown')) {
+                e.preventDefault();
+                parent.classList.toggle('active');
+            }
+        });
+    });
+
+    const fabContainer = document.querySelector('.fab-container');
+    const mainFab = document.querySelector('.main-fab');
+
+    mainFab.addEventListener('click', () => {
+        fabContainer.classList.toggle('active');
+    });
+
 </script>
 </body>
 </html>
