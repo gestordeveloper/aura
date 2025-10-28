@@ -107,6 +107,7 @@
         grid-auto-rows: 1fr;
         gap: spacing("1");
         padding: spacing("1");
+        height: 100%;
 
         @media (max-width: 42em) {
             grid-template-columns: 1fr;
