@@ -82,6 +82,9 @@
 
 .calendar {
     background: var(--background);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
 
     .calendar_week {
         display: grid;
@@ -101,6 +104,7 @@
     .calendar_days {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
+        grid-auto-rows: 1fr;
         gap: spacing("1");
         padding: spacing("1");
 
@@ -116,8 +120,6 @@
             border-radius: radius("sm");
             cursor: pointer;
             padding: spacing("2");
-            max-height: 120px;
-            min-height: 120px;
 
             @media (max-width: 42em) {
                 max-height: none;
