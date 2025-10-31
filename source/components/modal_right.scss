@@ -1,16 +1,23 @@
 .modal_right {
     position: fixed;
-    display: none;
+    display: block;
     top: 0;
-    right: -320px;
-    max-width: 320px;
+    right: 0;
+    max-width: 360px;
     width: calc(100% - 80px);
     height: 100%;
     overflow-y: scroll;
     padding: 1rem;
-    background: $gray-100;
+    background: var(--background-card);
     border-left: 1px solid $gray-300;
-    z-index: 1002;
+    z-index: 9999;
+
+  .modal_right_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: spacing("8");
+  }
 
     &::-webkit-scrollbar {
         width: .8rem;
