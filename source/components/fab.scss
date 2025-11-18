@@ -5,8 +5,8 @@
     z-index: 2000;
 
     .fab {
-        background: $aura-500;
-        color: #fff;
+        background: var(--primary);
+        color: var(--white);
         border: none;
         border-radius: 50%;
         width: 56px;
@@ -17,7 +17,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-            background: $aura-700;
+            background: var(--aura-700);
         }
     }
 
@@ -35,7 +35,7 @@
 
         .fab-option {
             margin-bottom: 10px;
-            background: $secondary-500;
+            background: var(--secondary-500);
             color: white;
             border: none;
             border-radius: 50%;
@@ -49,7 +49,7 @@
             transition: all 0.3s ease;
 
             &:hover {
-                background: $secondary-700;
+                background: var(--secondary-700);
             }
         }
     }

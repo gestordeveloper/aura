@@ -3,11 +3,27 @@
   @each $color, $value in $light-mode-colors {
     --#{$color}: #{$value};
   }
+
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  @each $shadow, $value in $shadows {
+    --shadow-#{$shadow}: #{$value};
+  }
 }
 
 [data-aura-theme="dark"] {
   @each $color, $value in $dark-mode-colors {
     --#{$color}: #{$value};
+  }
+
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  @each $shadow, $value in $shadows {
+    --shadow-#{$shadow}: #{$value};
   }
 }
 
@@ -140,6 +156,13 @@
 @each $radio, $value in $radius {
   .radius-#{$radio} {
     border-radius: #{$value} !important;
+  }
+}
+
+//shadows
+@each $shadow, $value in $shadows {
+  .shadow-#{$shadow} {
+    box-shadow: #{$value} !important;
   }
 }
 

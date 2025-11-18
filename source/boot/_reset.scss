@@ -8,7 +8,7 @@
 // Aplique o tema escuro como padrão
 body {
   background-color: var(--background);
-  color: var(--color);
+  color: var(--foreground);
   overflow: hidden;
 }
 
@@ -34,9 +34,8 @@ body {
 // Classe para aplicar o tema claro
 .dark-mode {
   background-color: var(--background);
-  color: var(--text);
+  color: var(--foreground);
 }
-
 
 /* Elements */
 img {

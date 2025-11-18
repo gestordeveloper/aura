@@ -5,7 +5,8 @@
     top: 0;
     left: 240px;
     z-index: 1000;
-    background: var(--background-navbar);
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
 
     @media (max-width: 42em) {
         width: 100% !important;
@@ -40,14 +41,14 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            border-radius: radius("sm");
+            border-radius: radius("md");
             transition: background-color 0.2s, color 0.2s;
             position: relative;
-            color: var(--color);
+            color: var(--foreground);
             line-height: 0;
 
             &:hover {
-                background: $aura-500;
+                background: var(--aura-500);
                 color: $white;
             }
 
@@ -55,8 +56,8 @@
                 position: absolute;
                 top: -3px;
                 right: -3px;
-                background: $aura-500;
-                color: $white;
+                background: var(--aura-500);
+                color: var(--white);
                 font-size: fontSize("xxs");
                 font-weight: fontWeight("bold");
                 width: 16px;
@@ -71,12 +72,12 @@
 
         .navbar_link {
             font-weight: fontWeight("bold");
-            color: var(--color);
+            color: var(--foreground);
             cursor: pointer;
             line-height: 0;
 
             &:hover {
-                color: $aura-500;
+                color: var(--aura-500);
                 text-decoration: underline !important;
             }
         }
@@ -86,7 +87,7 @@
             height: 38px;
             overflow: hidden;
             border-radius: 50%;
-            border: 2px solid $gray-600;
+            border: 2px solid var(--gray-300);
             cursor: pointer;
 
             img {

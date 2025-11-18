@@ -15,19 +15,18 @@
     }
 
     a {
-        color: $gray-900;
+        color: var(--foreground);
         transition: all .2s;
 
         &:hover {
-            color: $aura-500;
+            color: var(--primary);
         }
     }
 
     span {
-        background: $aura-500;
+        background: var(--primary);
         border: 1px solid shade-color($aura-500, 15%);
-        border-bottom-width: 2px;
-        border-radius: .5rem;
-        color: $white;
+        border-radius: radius("md");
+        color: var(--white);
     }
 }

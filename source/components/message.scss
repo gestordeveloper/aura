@@ -1,7 +1,7 @@
 .message {
     padding: spacing("2");
-    border: 1px solid var(--color);
-    border-radius: radius("sm");
+    border: 1px solid var(--foreground);
+    border-radius: radius("md");
     text-align: center;
     .title {
         font-size: fontSize("xl");

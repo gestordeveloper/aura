@@ -1,6 +1,5 @@
 /** Colors Sistem */
 $white:    #fff !default;
-$background: #F5F5F5 !default;
 $gray-50:  #eeeeee !default;
 $gray-100: #bfbfc1 !default;
 $gray-200: #a1a1a3 !default;
@@ -155,41 +154,96 @@ $colors: (
   "black": $black,
 ) !default;
 
+$shadow-2xs: 0px 2px 3px 0px #00000014;
+$shadow-xs: 0px 2px 3px 0px #00000014;
+$shadow-sm:
+        0px 2px 3px 0px #00000029,
+        0px 1px 2px -1px #00000029;
+$shadow:
+        0px 2px 3px 0px #00000029,
+        0px 1px 2px -1px #00000029;
+$shadow-md:
+        0px 2px 3px 0px #00000029,
+        0px 2px 4px -1px #00000029;
+$shadow-lg:
+        0px 2px 3px 0px #00000029,
+        0px 4px 6px -1px #00000029;
+$shadow-xl:
+        0px 2px 3px 0px #00000029,
+        0px 8px 10px -1px #00000029;
+$shadow-2xl:
+        0px 2px 3px 0px #00000066;
+
+
 /** Theme colors map */
 $light-mode-colors: (
-  "background": $background,
-  "background-sidebar": $white,
-  "background-navbar": lighten($gray-200, 20%),
-  "background-card": $white,
-  "color": $gray-900,
-  "gray-50": $gray-50,
-  "gray-100": $gray-100,
-  "gray-200": $gray-200,
-  "gray-300": $gray-300,
-  "gray-400": $gray-400,
-  "gray-500": $gray-500,
-  "gray-600": $gray-600,
-  "gray-700": $gray-700,
-  "gray-800": $gray-800,
-  "gray-900": $gray-900,
+  "background": #fdfdfd,
+  "foreground": $black,
+  "card": #fdfdfd,
+  "card-foreground": $black,
+  "popover": #fcfcfc,
+  "popover-foreground": $black,
+  "primary": $aura-500,
+  "primary-foreground": $white,
+  "secondary": #edf0f4,
+  "secondary-foreground": #080808,
+  "muted": #f5f5f5,
+  "muted-foreground": #525252,
+  "accent": #e2ebff,
+  "accent-foreground": #1e69dc,
+  "destructive": #e54b4f,
+  "destructive-foreground": $white,
+  "border": #e7e7ee,
+  "input": #ebebeb,
+  "ring": $black,
+  "chart-1": #4ade80,
+  "chart-2": #ec1889,
+  "chart-3": #f695c9,
+  "chart-4": #8a8db8,
+  "chart-5": #bfbfc1,
+  "sidebar": #f5f8fb,
+  "sidebar-foreground": $black,
+  "sidebar-primary": $black,
+  "sidebar-primary-foreground": $white,
+  "sidebar-accent": #ebebeb,
+  "sidebar-accent-foreground": $black,
+  "sidebar-border": #ebebeb,
+  "sidebar-ring": $black,
 ) !default;
 
 $dark-mode-colors: (
-  "background": $gray-900,
-  "background-sidebar": $gray-800,
-  "background-navbar": $gray-700,
-  "background-card": $gray-500,
-  "color": $gray-50,
-  "gray-50": $gray-900,
-  "gray-100": $gray-800,
-  "gray-200": $gray-700,
-  "gray-300": $gray-600,
-  "gray-400": $gray-500,
-  "gray-500": $gray-400,
-  "gray-600": $gray-300,
-  "gray-700": $gray-200,
-  "gray-800": $gray-100,
-  "gray-900": $gray-50,
+  "background": #1a1b1e,
+  "foreground": #f0f0f0,
+  "card": #222327,
+  "card-foreground": #f0f0f0,
+  "popover": #222327,
+  "popover-foreground": #f0f0f0,
+  "primary": $aura-500,
+  "primary-foreground": $white,
+  "secondary": #2a2c33,
+  "secondary-foreground": #f0f0f0,
+  "muted": #2a2c33,
+  "muted-foreground": #a0a0a0,
+  "accent": #630a3a,
+  "accent-foreground": #f695c9,
+  "destructive": #f87171,
+  "destructive-foreground": $white,
+  "border": #33353a,
+  "input": #33353a,
+  "ring": $aura-500,
+  "chart-1": #4ade80,
+  "chart-2": $aura-500,
+  "chart-3": #f695c9,
+  "chart-4": #8a8db8,
+  "chart-5": #bfbfc1,
+  "sidebar": #161618,
+  "sidebar-foreground": #f0f0f0,
+  "sidebar-primary": $aura-500,
+  "sidebar-primary-foreground": $white,
+  "sidebar-accent": #2a2c33,
+  "sidebar-accent-foreground": #f0f0f0,
+  "sidebar-border": #33353a,
+  "sidebar-ring": $aura-500,
 ) !default;
 
 /** Theme fonts */
@@ -244,6 +298,16 @@ $spaces: (
   "40": 10rem,
   "64": 16rem,
   "80": 20rem,
+);
+
+$shadows: (
+  "xxs": $shadow-2xs,
+  "xs": $shadow-xs,
+  "sm": $shadow-sm,
+  "md": $shadow-md,
+  "lg": $shadow-lg,
+  "xl": $shadow-xl,
+  '2xl': $shadow-2xl,
 );
 
 $thumbnails: (

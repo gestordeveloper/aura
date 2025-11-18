@@ -8,8 +8,9 @@
     height: 100%;
     overflow-y: scroll;
     padding: 1rem;
-    background: var(--background-card);
-    border-left: 1px solid $gray-300;
+    background: var(--background);
+    color: var(--foreground);
+    border-left: 1px solid var(--border);
     z-index: 9999;
 
   .modal_right_header {
@@ -24,11 +25,11 @@
     }
 
     &::-webkit-scrollbar-track {
-        background: $gray-300;
+        background: var(--gray-300);
     }
 
     &::-webkit-scrollbar-thumb {
-        background: $aura-500;
+        background: var(--aura-500);
         border-radius: .5rem;
     }
 }

@@ -62,22 +62,19 @@
             <div class="primary_nav">
                 <li class="navbar_li active"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
 
-                <li class="navbar_li li_dropdown">
-                    <a href="./calendar.html"><i class="icon icon-plus-1"></i> Cadastro</a>
+                <li class="navbar_li li_title">CADASTRO</li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Cliente</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Fornecedor</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Transportadora</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Produto</a></li>
 
-                    <ul class="navbar_li_dropdown">
-                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Cliente</a></li>
-                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Fornecedor</a></li>
-                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Transportadora</a></li>
-                        <li class="navbar_li_dropdown_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Produto</a></li>
-                    </ul>
-                </li>
-
+                <li class="navbar_li li_title">VENDAS</li>
                 <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
-                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-user-6"></i> Clientes/Fornecedores</a></li>
-                <!-- <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
                 <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
-                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Auraflix</a></li> -->
+
+                <li class="navbar_li li_title">Ferramentas</li>
+                <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Auraflix</a></li>
             </div>
 
             <div class="secondary_nav">
@@ -302,7 +299,7 @@
     </main>
 </div>
 
-<div class="modal_right modal_options">
+<div class="modal_right modal_options" style="display: none;">
     <div class="modal_right_header">
         <h2>Opções</h2>
         <span class="btn-sm btn-red" data-close-modal-right="nomedamodal">
@@ -381,7 +378,7 @@
 
             if (parent.querySelector('.navbar_li_dropdown')) {
                 e.preventDefault();
-                parent.classList.toggle('active');
+                parent.classList.toggle('show');
             }
         });
     });

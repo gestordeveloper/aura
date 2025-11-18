@@ -4,8 +4,9 @@
 
     .list_item {
         padding: spacing("3");
-        background: var(--background-card);
-        border-radius: radius("sm");
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: radius("md");
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -73,36 +74,18 @@
     }
 }
 
-//Backgrounds
-//@each $color, $value in $colors {
-//    .list-#{$color} {
-//        background: #{$value} !important;
-//
-//        .infors {
-//            .infors_body {
-//                a, p {
-//                    color: #{$white} !important;
-//                }
-//
-//                a:hover {
-//                    color: darken($value, 25%) !important;
-//                }
-//            }
-//        }
-//    }
-//}
-
 @each $color, $value in $colors {
     .list-#{$color} {
         background: #{$value} !important;
+        border-color: transparent;
 
         .infors {
             .infors_body {
                 a, p {
                     @if lightness($value) > 50 {
-                        color: darken($value, 50%) !important; // Cor escura para fundos claros
+                        color: darken($value, 50%) !important;
                     } @else {
-                        color: #{$white} !important; // Cor clara para fundos escuros
+                        color: #{$white} !important;
                     }
                 }
 

@@ -28,17 +28,23 @@
           font-size: fontSize("md");
           padding: spacing("2") spacing("3");
           font-weight: fontWeight("medium");
-          color: var(--text);
-          border: 1px solid var(--gray-200);
-          border-radius: radius("sm");
-          background: transparent;
+          color: var(--card-foreground);
+          border: 1px solid var(--border);
+          border-radius: radius("md");
+          background: var(--card);
           transition: background-color 0.2s;
           white-space: nowrap !important;
 
-          &.active, &:hover {
-            background: var(--background-card);
-            border-color: var(--background-card);
-            color: var(--color);
+          &:hover {
+            background: var(--sidebar-accent);
+            border-color: transparent;
+            color: var(--sidebar-accent-foreground);
+          }
+
+          &.active {
+            background: var(--primary);
+            border-color: transparent;
+            color: var(--primary-foreground);
           }
 
           @media (max-width: 42em) {

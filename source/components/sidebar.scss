@@ -1,10 +1,14 @@
 .sidebar {
   grid-area: sidebar;
-  background: var(--background-sidebar);
+  background: var(--sidebar);
+  color: var(--sidebar-foreground);
+  border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
+  gap: spacing("4");
   transition: transform 0.3s ease;
   overflow-y: auto;
+  padding: 0 spacing("5");
 
   @media (max-width: 42em) {
     position: fixed;
@@ -22,14 +26,14 @@
   .sidebar_logo {
     width: 100%;
     text-align: center;
-    padding: spacing("4") 0;
+    padding-top: spacing("4");
   }
 
   .sidebar_user {
     display: flex;
     align-items: center;
     gap: spacing("2");
-    padding: spacing("2") spacing("4");
+    padding: spacing("2") 0;
 
     .user_thumb {
       height: 32px;
@@ -39,10 +43,9 @@
         object-fit: cover;
         aspect-ratio: 1 / 1;
         border-radius: radius("full");
-        border: 2px solid var(--color);
 
         &:hover {
-          border-color: $aura-500;
+          border-color: var(--aura-500);
         }
       }
     }
@@ -50,10 +53,10 @@
     .user_data {
       a {
         font-weight: fontWeight("bold");
-        color: var(--color);
+        color: var(--foreground);
 
         &:hover {
-          color: $aura-500;
+          color: var(--aura-500);
         }
       }
 
@@ -75,10 +78,20 @@
 
       &.active {
         a {
-          line-height: 0;
-          color: $aura-500;
-          border-right-color: $aura-500 !important;
+          background: var(--primary);
+          color: var(--white);
+
+          &:hover {
+            background: var(--primary);
+            color: var(--white);
+          }
         }
+      }
+
+      &.li_title {
+        text-transform: uppercase;
+        font-size: fontSize("xs");
+        padding: spacing("2") 0;
       }
 
       a {
@@ -87,10 +100,10 @@
         width: 100%;
         height: 35px;
         padding: 0 spacing("4");
-        color: var(--color);
+        color: var(--foreground);
         font-size: fontSize("sm");
         transition: color 0.2s;
-        border-right: 3px solid var(--background-sidebar);
+        border-radius: radius("md");
 
         i {
           margin-right: spacing("2");
@@ -99,31 +112,23 @@
         }
 
         &:hover {
-          color: $aura-500;
+          background: var(--sidebar-accent);
+          color: var(--foreground);
         }
       }
 
       .navbar_li_dropdown {
         display: none;
         flex-direction: column;
-        background: color-mix(in srgb, var(--background-sidebar) 95%, #000);
 
         .navbar_li_dropdown_li {
           a {
-            border-right-color: color-mix(in srgb, var(--background-sidebar) 95%, #000);
-            color: var(--color);
-
-            &:hover {
-              color: $aura-500;
-            }
+            color: var(--foreground);
           }
         }
       }
-
-      // Exibir dropdown ao passar o mouse
-      // &:hover > .navbar_li_dropdown
       
-      &.active > .navbar_li_dropdown {
+      &.show > .navbar_li_dropdown {
         display: flex;
         max-height: 500px;
         opacity: 1;
@@ -131,7 +136,6 @@
     }
 
     .li_dropdown {
-      // Ícone do item principal com seta opcional
       > a {
         position: relative;
 
@@ -147,9 +151,8 @@
         }
       }
 
-      // Girar seta quando aberto
       &:hover > a::after,
-      &.active > a::after {
+      &.show > a::after {
         transform: translateY(-50%) rotate(180deg);
       }
     }
@@ -164,7 +167,7 @@
 
     a {
       font-weight: bold;
-      color: $aura-500;
+      color: var(--aura-500);
       
       &:hover {
         text-decoration: underline !important;

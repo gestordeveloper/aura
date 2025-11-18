@@ -6,13 +6,14 @@
   z-index: 2000;
 
   .toast {
-    width: 360px;
-    border-radius: radius("sm");
+    min-width: 360px;
+    max-width: 414px;
+    border-radius: radius("md");
     padding: spacing("4");
     margin-bottom: spacing("1");
-    background: var(--background-card);
+    background: var(--card);
     justify-content: space-between;
-    border: 1px solid var(--gray-600);
+    border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
     animation: show_toast 0.6s ease forwards;

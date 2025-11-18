@@ -11,7 +11,7 @@
             flex: 0 0 320px;
 
             & + div {
-                border-left: 1px solid var(--gray-100);
+                border-left: 1px solid var(--border);
             }
 
             header {
@@ -19,9 +19,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                background: var(--background-navbar);
                 padding: 0 spacing("3");
-                color: var(--color);
+                color: var(--foreground);
+              border-bottom: 1px solid var(--border);
 
                 .infors {
                     h3 {
@@ -36,7 +36,7 @@
                 .list_count {
                     font-weight: fontWeight("bold");
                     font-size: fontSize("md");
-                    color: $aura-500;
+                    color: var(--aura-500);
                 }
             }
 
@@ -48,13 +48,13 @@
 
                 display: flex;
                 flex-direction: column;
-                gap: .5rem;
+                gap: spacing("2");
 
                 li {
                     padding: spacing("3");
-                    background: var(--background-card);
-                    border: 1px solid transparent;
-                    border-radius: radius("sm");
+                    background: var(--card);
+                    border: 1px solid var(--border);
+                    border-radius: radius("md");
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
@@ -78,16 +78,16 @@
                                 a {
                                     text-decoration: none;
                                     font-weight: fontWeight("bold");
-                                    color: var(--color);
+                                    color: var(--foreground);
 
                                     &:hover {
-                                        color: $aura-500;
+                                        color: var(--aura-500);
                                     }
                                 }
 
                                 p {
                                     font-size: fontSize("sm");
-                                    color: var(--color);
+                                    color: var(--foreground);
                                     margin: 0 !important;
                                 }
                             }
