@@ -319,7 +319,7 @@
   @extend .app_form;
 
   .label {
-    input[name="title"] {
+    input[name="title"], textarea[name="title"] {
       font-size: 1.4rem;
       font-weight: 900;
       border-bottom-left-radius: 0;
@@ -390,7 +390,7 @@
       height: auto !important;
       display: block;
       width: 100%;
-      color: $black;
+      color: var(--foreground);
       font-size: fontSize("md");
       background: var(--input) !important;
       resize: none;
@@ -446,7 +446,7 @@
           border-right: 1px solid var(--aura-700);
 
           &:hover {
-            background: $aura-700 !important;
+            background: var(--aura-700) !important;
           }
         }
       }
