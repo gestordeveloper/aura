@@ -76,7 +76,7 @@
       display: block;
       width: 100%;
 
-      &.active {
+      &.active-primary {
         a {
           background: var(--primary);
           color: var(--white);
@@ -85,6 +85,13 @@
             background: var(--primary);
             color: var(--white);
           }
+        }
+      }
+
+      &.active {
+        a {
+          background: var(--sidebar-accent);
+          color: var(--sidebar-foreground);
         }
       }
 
