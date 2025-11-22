@@ -293,6 +293,66 @@
                             </form>
                         </div>
                     </div>
+
+                    <div class="table-container mt-4">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th style="width: 25%">Produto</th>
+                                <th>Unid.</th>
+                                <th>Qtd.</th>
+                                <th>Preço</th>
+                                <th>Desconto</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="width: 45%">
+                                    <div class="product-search">
+                                        <input type="text" autocomplete="off" placeholder="Nome do produto..." name="title[]">
+                                        <div class="suggestions">
+                                            <div class="suggestion">Caneta Bic Azul</div>
+                                            <div class="suggestion">Caneca Stanley 500ml</div>
+                                            <div class="suggestion">Caneca Stanley 500ml</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <select required name="unit_of_measurement[]">
+                                        <option value="UNID">UN</option>
+                                        <option value="CX">CX</option>
+                                        <option value="EMBAL">EM</option>
+                                        <option value="FARDO">FD</option>
+                                        <option value="GRAMAS">G</option>
+                                        <option value="LITRO">LT</option>
+                                        <option value="M">M</option>
+                                        <option value="PACOTE">PC</option>
+                                        <option value="KG">KG</option>
+                                        <option value="SACO">SC</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" step="0.01" min="0" placeholder="0,00" name="amount[]" value="1">
+                                </td>
+                                <td>
+                                    <input type="number" step="0.01" min="0" placeholder="0,00" name="price[]">
+                                </td>
+                                <td>
+                                    <input type="number" step="any" min="0" placeholder="0,00" name="discount[]">
+                                </td>
+                                <td>
+                                    <input type="number" step="0.01" min="0" placeholder="0,00" name="subtotal[]" readonly>
+                                </td>
+                                <td class="flex spacing-1">
+                                    <button class="btn-sm"><i class="icon icon-kit-10"></i></button>
+                                    <button class="btn-sm"><i class="icon icon-trash-1"></i></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

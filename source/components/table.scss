@@ -2,7 +2,7 @@
   border: 1px solid var(--border);
   border-bottom: none;
   border-radius: radius("md");
-  overflow: hidden;
+  overflow: visible !important;
 }
 
 .table {
@@ -10,6 +10,7 @@
   width: 100%;
   border-collapse: collapse;
   border-spacing: 2px;
+  border-radius: radius("md");
   text-indent: 0;
   unicode-bidi: isolate;
 
@@ -78,6 +79,44 @@
 
         &:hover {
           border-color: $aura-500;
+        }
+      }
+
+      input, select {
+        background-color: transparent;
+        border: none;
+        font-size: fontSize("md");
+        width: 100%;
+        min-width: 100px;
+        outline: none;
+      }
+
+      .product-search {
+        position: relative;
+
+        .suggestions {
+          position: absolute;
+          display: none;
+          top: 2rem;
+          left: 0;
+          width: 100%;
+          z-index: 1500;
+          border: 1px solid var(--border);
+          border-radius: radius("md");
+          overflow: hidden;
+
+          .suggestion {
+            padding: spacing("2") spacing("4");
+            cursor: pointer;
+            background: var(--card);
+            color: var(--foreground);
+            box-shadow: $shadow-sm;
+
+            &:hover {
+              background: var(--primary);
+              color: var(--white);
+            }
+          }
         }
       }
     }
