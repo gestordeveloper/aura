@@ -1,0 +1,19 @@
+name: 🚀 Deploy Aura in Production
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: '77.37.127.190'
+        username: 'u923501099.aura'
+        password: '@88325741Saa'

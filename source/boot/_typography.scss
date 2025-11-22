@@ -1,0 +1,248 @@
+// Typography semantic classes
+
+// Headings
+.heading-1 {
+    font-size: fontSize('6xl');
+    font-weight: fontWeight('bold');
+    line-height: 1.2;
+    margin-bottom: spacing('4');
+
+    @media (max-width: 768px) {
+        font-size: fontSize('4xl');
+    }
+}
+
+.heading-2 {
+    font-size: fontSize('5xl');
+    font-weight: fontWeight('bold');
+    line-height: 1.25;
+    margin-bottom: spacing('3');
+
+    @media (max-width: 768px) {
+        font-size: fontSize('2xl');
+    }
+}
+
+.heading-3 {
+    font-size: fontSize('4xl');
+    font-weight: fontWeight('bold');
+    line-height: 1.3;
+    margin-bottom: spacing('3');
+
+    @media (max-width: 768px) {
+        font-size: fontSize('xl');
+    }
+}
+
+.heading-4 {
+    font-size: fontSize('2xl');
+    font-weight: fontWeight('bold');
+    line-height: 1.4;
+    margin-bottom: spacing('2');
+
+    @media (max-width: 768px) {
+        font-size: fontSize('lg');
+    }
+}
+
+.heading-5 {
+    font-size: fontSize('xl');
+    font-weight: fontWeight('bold');
+    line-height: 1.5;
+    margin-bottom: spacing('2');
+
+    @media (max-width: 768px) {
+        font-size: fontSize('md');
+    }
+}
+
+.heading-6 {
+    font-size: fontSize('lg');
+    font-weight: fontWeight('bold');
+    line-height: 1.5;
+    margin-bottom: spacing('2');
+
+    @media (max-width: 768px) {
+        font-size: fontSize('sm');
+    }
+}
+
+// Body text
+.body-1 {
+    font-size: fontSize('md');
+    line-height: 1.6;
+}
+
+.body-2 {
+    font-size: fontSize('sm');
+    line-height: 1.6;
+}
+
+// Subtitles
+.subtitle-1 {
+    font-size: fontSize('lg');
+    font-weight: fontWeight('medium');
+    line-height: 1.5;
+}
+
+.subtitle-2 {
+    font-size: fontSize('md');
+    font-weight: fontWeight('medium');
+    line-height: 1.5;
+}
+
+// Lead text
+.lead {
+    font-size: fontSize('xl');
+    line-height: 1.7;
+    font-weight: fontWeight('regular');
+    color: var(--muted-foreground);
+}
+
+// Caption
+.caption {
+    font-size: fontSize('xs');
+    line-height: 1.4;
+    color: var(--muted-foreground);
+}
+
+// Text transform
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-normal-case {
+    text-transform: none !important;
+}
+
+// Text truncate
+.text-truncate {
+    @include truncate;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// Line height
+.leading-none {
+    line-height: 1 !important;
+}
+
+.leading-tight {
+    line-height: 1.25 !important;
+}
+
+.leading-snug {
+    line-height: 1.375 !important;
+}
+
+.leading-normal {
+    line-height: 1.5 !important;
+}
+
+.leading-relaxed {
+    line-height: 1.625 !important;
+}
+
+.leading-loose {
+    line-height: 2 !important;
+}
+
+// Letter spacing
+.tracking-tighter {
+    letter-spacing: -0.05em !important;
+}
+
+.tracking-tight {
+    letter-spacing: -0.025em !important;
+}
+
+.tracking-normal {
+    letter-spacing: 0 !important;
+}
+
+.tracking-wide {
+    letter-spacing: 0.025em !important;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em !important;
+}
+
+.tracking-widest {
+    letter-spacing: 0.1em !important;
+}
+
+// Text decoration
+.underline {
+    text-decoration: underline !important;
+}
+
+.line-through {
+    text-decoration: line-through !important;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+// White space
+.whitespace-normal {
+    white-space: normal !important;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap !important;
+}
+
+.whitespace-pre {
+    white-space: pre !important;
+}
+
+.whitespace-pre-line {
+    white-space: pre-line !important;
+}
+
+.whitespace-pre-wrap {
+    white-space: pre-wrap !important;
+}
+
+// Word break
+.break-normal {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+.break-words {
+    overflow-wrap: break-word !important;
+}
+
+.break-all {
+    word-break: break-all !important;
+}

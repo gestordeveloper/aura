@@ -1,0 +1,70 @@
+// Badge component
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: spacing('1') spacing('2');
+    font-size: fontSize('xs');
+    font-weight: fontWeight('medium');
+    line-height: 1;
+    border-radius: radius('md');
+    background: var(--muted);
+    color: var(--muted-foreground);
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+
+    // Sizes
+    &.badge-sm {
+        padding: spacing('1') spacing('1');
+        font-size: fontSize('xxs');
+    }
+
+    &.badge-lg {
+        padding: spacing('2') spacing('3');
+        font-size: fontSize('sm');
+    }
+
+    // Pill variant
+    &.badge-pill {
+        border-radius: radius('full');
+    }
+
+    // Dot indicator
+    &.badge-dot {
+        padding-left: spacing('4');
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: spacing('2');
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: radius('full');
+            background: currentColor;
+        }
+    }
+}
+
+// Color variants - solid
+@each $color, $value in $colors {
+    .badge-#{$color} {
+        color: $white !important;
+        background: $value !important;
+        border-color: $value !important;
+    }
+
+    // Outline variants
+    .badge-outline-#{$color} {
+        color: $value !important;
+        background: transparent !important;
+        border-color: $value !important;
+
+        &:hover {
+            background: rgba($value, 0.1) !important;
+        }
+    }
+}

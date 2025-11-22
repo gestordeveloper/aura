@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                            <div class="breadcrumb-item">
+                            <a href="../componentes.html">Componentes</a>
+                        </div>
+                        <div class="breadcrumb-item active">
+                            Steppers
+                        </div>
+                                    </nav>
+
+                <div class="box_content">
+                    <h1 id="steppers">Steppers</h1>
+                    <p>Os steppers são componentes de navegação que
+                    guiam os usuários através de um processo dividido em
+                    etapas sequenciais.</p>
+                    <h2 id="stepper-horizontal">Stepper Horizontal</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="stepper stepper-horizontal">
+                    <div class="stepper-item completed">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;
+  &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Informações Pessoais&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Dados básicos&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item active">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Endereço&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Localização&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Pagamento&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Método de pagamento&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Confirmação&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Revisar pedido&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb5"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper stepper-horizontal&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Informações Pessoais<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Dados básicos<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item active&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>2<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Endereço<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Localização<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Pagamento<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Método de pagamento<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>4<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Confirmação<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Revisar pedido<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="stepper-vertical">Stepper Vertical</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="stepper stepper-vertical">
+                    <div class="stepper-item completed">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;
+  &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Criar Conta&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Preencha seus dados pessoais e crie uma senha segura.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item completed">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;
+  &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Verificar Email&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Confirme seu endereço de email através do link enviado.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item active">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Configurar Perfil&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Adicione uma foto e complete suas informações.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Começar a Usar&lt;/div&gt;
+  &lt;div class=&quot;stepper-description&quot;&gt;Explore os recursos da plataforma.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb10"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper stepper-vertical&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Criar Conta<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Preencha seus dados pessoais e crie uma senha segura.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Verificar Email<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Confirme seu endereço de email através do link enviado.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item active&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Configurar Perfil<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Adicione uma foto e complete suas informações.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>4<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Começar a Usar<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Explore os recursos da plataforma.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="stepper-simples-sem-descrição">Stepper
+                    Simples (sem descrição)</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="stepper stepper-horizontal">
+                    <div class="stepper-item completed">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;
+  &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Carrinho&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item active">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Entrega&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Pagamento&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb14"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper stepper-horizontal&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Carrinho<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item active&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>2<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Entrega<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Pagamento<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="stepper-com-item-desabilitado">Stepper com
+                    Item Desabilitado</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="stepper stepper-horizontal">
+                    <div class="stepper-item completed">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;
+  &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Passo 1&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item active">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Passo 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="stepper-item disabled">
+                    <pre><code>&lt;div class=&quot;stepper-step&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;stepper-content&quot;&gt;
+  &lt;div class=&quot;stepper-label&quot;&gt;Passo 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb18"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper stepper-horizontal&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Passo 1<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item active&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>2<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Passo 2<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item disabled&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Passo 3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="casos-de-uso">Casos de Uso</h2>
+                    <h3 id="processo-de-checkout">Processo de
+                    Checkout</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="card">
+                    <div class="card_body">
+                    <pre><code>&lt;div class=&quot;stepper stepper-horizontal mb-4&quot;&gt;
+  &lt;div class=&quot;stepper-item completed&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;
+      &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Carrinho&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;stepper-item completed&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;
+      &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Entrega&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;stepper-item active&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Pagamento&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;stepper-item&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Confirmação&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 class=&quot;mb-3&quot;&gt;Informações de Pagamento&lt;/h3&gt;
+&lt;p class=&quot;text-sm text-muted-foreground mb-4&quot;&gt;Escolha seu método de pagamento preferido&lt;/p&gt;
+
+&lt;div class=&quot;flex gap-3&quot;&gt;
+  &lt;button class=&quot;btn btn-outline-aura-500&quot;&gt;Voltar&lt;/button&gt;
+  &lt;button class=&quot;btn btn-aura-500&quot;&gt;Continuar&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb20"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card_body&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper stepper-horizontal mb-4&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Carrinho<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Entrega<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item active&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Pagamento<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>4<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Confirmação<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h3</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;mb-3&quot;</span><span class="dt">&gt;</span>Informações de Pagamento<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-sm text-muted-foreground mb-4&quot;</span><span class="dt">&gt;</span>Escolha seu método de pagamento preferido<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;flex gap-3&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-outline-aura-500&quot;</span><span class="dt">&gt;</span>Voltar<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-aura-500&quot;</span><span class="dt">&gt;</span>Continuar<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="onboarding-de-usuário">Onboarding de
+                    Usuário</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="card">
+                    <div class="card_body">
+                    <pre><code>&lt;h2 class=&quot;mb-4&quot;&gt;Bem-vindo! Vamos configurar sua conta&lt;/h2&gt;
+
+&lt;div class=&quot;stepper stepper-vertical&quot;&gt;
+  &lt;div class=&quot;stepper-item completed&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;
+      &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Conta Criada&lt;/div&gt;
+      &lt;div class=&quot;stepper-description&quot;&gt;Sua conta foi criada com sucesso!&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;stepper-item active&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Complete seu Perfil&lt;/div&gt;
+      &lt;div class=&quot;stepper-description&quot;&gt;
+        Adicione uma foto e informações adicionais para personalizar sua experiência.
+        &lt;div class=&quot;mt-3&quot;&gt;
+          &lt;button class=&quot;btn btn-sm btn-aura-500&quot;&gt;Adicionar Foto&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;stepper-item&quot;&gt;
+    &lt;div class=&quot;stepper-step&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;stepper-content&quot;&gt;
+      &lt;div class=&quot;stepper-label&quot;&gt;Convide Amigos&lt;/div&gt;
+      &lt;div class=&quot;stepper-description&quot;&gt;Compartilhe a plataforma com seus contatos.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb22"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card_body&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;mb-4&quot;</span><span class="dt">&gt;</span>Bem-vindo! Vamos configurar sua conta<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper stepper-vertical&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item completed&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Conta Criada<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Sua conta foi criada com sucesso!<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item active&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>2<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Complete seu Perfil<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>            Adicione uma foto e informações adicionais.</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;mt-3&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>              <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm btn-aura-500&quot;</span><span class="dt">&gt;</span>Adicionar Foto<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-item&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-step&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-label&quot;</span><span class="dt">&gt;</span>Convide Amigos<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;stepper-description&quot;</span><span class="dt">&gt;</span>Compartilhe a plataforma com seus contatos.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="container">Container</h3>
+                    <ul>
+                    <li><code>.stepper</code> - Container principal do
+                    stepper</li>
+                    <li><code>.stepper-horizontal</code> - Stepper
+                    horizontal (padrão)</li>
+                    <li><code>.stepper-vertical</code> - Stepper
+                    vertical</li>
+                    </ul>
+                    <h3 id="items">Items</h3>
+                    <ul>
+                    <li><code>.stepper-item</code> - Item individual do
+                    stepper</li>
+                    <li><code>.stepper-item.completed</code> - Item
+                    completado (com check)</li>
+                    <li><code>.stepper-item.active</code> - Item ativo
+                    (atual)</li>
+                    <li><code>.stepper-item.disabled</code> - Item
+                    desabilitado</li>
+                    </ul>
+                    <h3 id="elementos">Elementos</h3>
+                    <ul>
+                    <li><code>.stepper-step</code> - Círculo numerado do
+                    passo</li>
+                    <li><code>.stepper-content</code> - Container do
+                    conteúdo</li>
+                    <li><code>.stepper-label</code> - Título do
+                    passo</li>
+                    <li><code>.stepper-description</code> - Descrição do
+                    passo</li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Mantenha passos claros</strong>: Use
+                    títulos descritivos e concisos</li>
+                    <li><strong>Indique progresso</strong>: Sempre
+                    marque passos completados com
+                    <code>.completed</code></li>
+                    <li><strong>Um passo ativo por vez</strong>: Apenas
+                    um item deve ter a classe <code>.active</code></li>
+                    <li><strong>Use ícones em completados</strong>:
+                    Substitua números por ícones de check em passos
+                    concluídos</li>
+                    <li><strong>Considere o contexto</strong>: Use
+                    horizontal para processos curtos, vertical para
+                    processos detalhados</li>
+                    <li><strong>Navegação</strong>: Permita que usuários
+                    voltem a passos anteriores quando apropriado</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

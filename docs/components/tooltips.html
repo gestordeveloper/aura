@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                            <div class="breadcrumb-item">
+                            <a href="../componentes.html">Componentes</a>
+                        </div>
+                        <div class="breadcrumb-item active">
+                            Tooltips
+                        </div>
+                                    </nav>
+
+                <div class="box_content">
+                    <h1 id="tooltips">Tooltips</h1>
+                    <p>Os tooltips são pequenas mensagens informativas
+                    que aparecem quando o usuário passa o mouse sobre um
+                    elemento, fornecendo contexto adicional sem
+                    sobrecarregar a interface.</p>
+                    <h2 id="tooltip-básico">Tooltip Básico</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <button class="btn btn-aura-500" data-tooltip="Este é um tooltip básico">
+                    Passe o mouse aqui
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb1"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-aura-500&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Este é um tooltip básico&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  Passe o mouse aqui</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="posições-do-tooltip">Posições do
+                    Tooltip</h2>
+                    <h3 id="tooltip-no-topo-padrão">Tooltip no Topo
+                    (Padrão)</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <button class="btn btn-outline-aura-500" data-tooltip="Tooltip no topo">
+                    Topo
+                    </button>
+                    <div class="tooltip tooltip-top show"
+                    style="position: relative; display: inline-block; margin-left: 20px;">
+                    Tooltip no topo
+                    <div class="tooltip-arrow">
+
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb2"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Tooltip no topo&quot;</span><span class="dt">&gt;</span>Topo<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Estrutura do tooltip --&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip tooltip-top show&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  Tooltip no topo</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip-arrow&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="tooltip-embaixo">Tooltip Embaixo</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <button class="btn btn-outline-blue" data-tooltip="Tooltip embaixo">
+                    Embaixo
+                    </button>
+                    <div class="tooltip tooltip-bottom show"
+                    style="position: relative; display: inline-block; margin-left: 20px;">
+                    Tooltip embaixo
+                    <div class="tooltip-arrow">
+
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb3"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Tooltip embaixo&quot;</span><span class="dt">&gt;</span>Embaixo<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Estrutura do tooltip --&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip tooltip-bottom show&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  Tooltip embaixo</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip-arrow&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="tooltip-à-esquerda">Tooltip à Esquerda</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <button class="btn btn-outline-green" data-tooltip="Tooltip à esquerda">
+                    Esquerda
+                    </button>
+                    <div class="tooltip tooltip-left show"
+                    style="position: relative; display: inline-block; margin-left: 20px;">
+                    Tooltip à esquerda
+                    <div class="tooltip-arrow">
+
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb4"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Tooltip à esquerda&quot;</span><span class="dt">&gt;</span>Esquerda<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Estrutura do tooltip --&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip tooltip-left show&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  Tooltip à esquerda</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip-arrow&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="tooltip-à-direita">Tooltip à Direita</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <button class="btn btn-outline-yellow" data-tooltip="Tooltip à direita">
+                    Direita
+                    </button>
+                    <div class="tooltip tooltip-right show"
+                    style="position: relative; display: inline-block; margin-left: 20px;">
+                    Tooltip à direita
+                    <div class="tooltip-arrow">
+
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb5"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Tooltip à direita&quot;</span><span class="dt">&gt;</span>Direita<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Estrutura do tooltip --&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip tooltip-right show&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  Tooltip à direita</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tooltip-arrow&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="tooltips-em-diferentes-elementos">Tooltips
+                    em Diferentes Elementos</h2>
+                    <h3 id="tooltip-em-ícones">Tooltip em Ícones</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <button class="btn btn-sm btn-outline-aura-500" data-tooltip="Editar">
+                    <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-red" data-tooltip="Excluir">
+                    <i class="bi bi-trash"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-blue" data-tooltip="Compartilhar">
+                    <i class="bi bi-share"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-green" data-tooltip="Salvar">
+                    <i class="bi bi-save"></i>
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb6"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm btn-outline-aura-500&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Editar&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-pencil&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm btn-outline-red&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Excluir&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-trash&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm btn-outline-blue&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Compartilhar&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-share&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm btn-outline-green&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Salvar&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-save&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="tooltip-em-badges">Tooltip em Badges</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <p><span class="badge badge-green"
+                    data-tooltip="Produto disponível em estoque">Disponível</span>
+                    <span class="badge badge-yellow"
+                    data-tooltip="Aguardando processamento">Pendente</span>
+                    <span class="badge badge-red"
+                    data-tooltip="Produto fora de estoque">Esgotado</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb7"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-green&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Produto disponível em estoque&quot;</span><span class="dt">&gt;</span>Disponível<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-yellow&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Aguardando processamento&quot;</span><span class="dt">&gt;</span>Pendente<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-red&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Produto fora de estoque&quot;</span><span class="dt">&gt;</span>Esgotado<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="tooltip-em-links">Tooltip em Links</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <p><a href="#" class="text-aura-500" data-tooltip="Clique para ver mais detalhes">
+                    Saiba mais </a>
+                    <a href="#" class="text-blue" data-tooltip="Abre em nova aba">
+                    Documentação
+                    <i class="bi bi-box-arrow-up-right"></i> </a></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb8"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-aura-500&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Clique para ver mais detalhes&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  Saiba mais</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-blue&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Abre em nova aba&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  Documentação <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-box-arrow-up-right&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="casos-de-uso">Casos de Uso</h2>
+                    <h3 id="barra-de-ferramentas">Barra de
+                    Ferramentas</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="card">
+                    <div class="card_header">
+                    <pre><code>&lt;h2&gt;Editor de Texto&lt;/h2&gt;
+&lt;div class=&quot;actions&quot;&gt;
+  &lt;button class=&quot;btn btn-sm&quot; data-tooltip=&quot;Negrito (Ctrl+B)&quot;&gt;
+    &lt;i class=&quot;bi bi-type-bold&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn btn-sm&quot; data-tooltip=&quot;Itálico (Ctrl+I)&quot;&gt;
+    &lt;i class=&quot;bi bi-type-italic&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn btn-sm&quot; data-tooltip=&quot;Sublinhado (Ctrl+U)&quot;&gt;
+    &lt;i class=&quot;bi bi-type-underline&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;hr class=&quot;divider divider-vertical&quot;&gt;
+  &lt;button class=&quot;btn btn-sm&quot; data-tooltip=&quot;Alinhar à esquerda&quot;&gt;
+    &lt;i class=&quot;bi bi-text-left&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn btn-sm&quot; data-tooltip=&quot;Centralizar&quot;&gt;
+    &lt;i class=&quot;bi bi-text-center&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn btn-sm&quot; data-tooltip=&quot;Alinhar à direita&quot;&gt;
+    &lt;i class=&quot;bi bi-text-right&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb10"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card_header&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Editor de Texto<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;actions&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Negrito (Ctrl+B)&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-type-bold&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Itálico (Ctrl+I)&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-type-italic&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Sublinhado (Ctrl+U)&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-type-underline&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">hr</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;divider divider-vertical&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Alinhar à esquerda&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-text-left&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Centralizar&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-text-center&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-sm&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Alinhar à direita&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-text-right&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3
+                    id="informações-adicionais-em-formulários">Informações
+                    Adicionais em Formulários</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="card" style="max-width: 400px;">
+                    <div class="card_body">
+                    <pre><code>&lt;div class=&quot;app_form&quot;&gt;
+  &lt;div class=&quot;label&quot;&gt;
+    &lt;legend&gt;
+      Senha
+      &lt;i class=&quot;bi bi-info-circle text-aura-500&quot; data-tooltip=&quot;Mínimo 8 caracteres, incluindo letras e números&quot;&gt;&lt;/i&gt;
+    &lt;/legend&gt;
+    &lt;input type=&quot;password&quot; placeholder=&quot;Digite sua senha&quot;&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;label mt-3&quot;&gt;
+    &lt;legend&gt;
+      Email de Recuperação
+      &lt;i class=&quot;bi bi-question-circle text-blue&quot; data-tooltip=&quot;Usado para recuperar sua conta em caso de perda de acesso&quot;&gt;&lt;/i&gt;
+    &lt;/legend&gt;
+    &lt;input type=&quot;email&quot; placeholder=&quot;email@exemplo.com&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb12"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card_body&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;app_form&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;label&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">legend</span><span class="dt">&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>          Senha</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-info-circle text-aura-500&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Mínimo 8 caracteres, incluindo letras e números&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">legend</span><span class="dt">&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;password&quot;</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">&quot;Digite sua senha&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;label mt-3&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">legend</span><span class="dt">&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>          Email de Recuperação</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-question-circle text-blue&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Usado para recuperar sua conta em caso de perda de acesso&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">legend</span><span class="dt">&gt;</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;email&quot;</span><span class="ot"> placeholder</span><span class="op">=</span><span class="st">&quot;email@exemplo.com&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="status-e-indicadores">Status e
+                    Indicadores</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="card">
+                    <div class="card_body">
+                    <pre><code>&lt;div class=&quot;flex justify-between items-center mb-3&quot;&gt;
+  &lt;span&gt;Status do Servidor&lt;/span&gt;
+  &lt;span class=&quot;badge badge-dot badge-green&quot; data-tooltip=&quot;Todos os sistemas operacionais&quot;&gt;Online&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex justify-between items-center mb-3&quot;&gt;
+  &lt;span&gt;Backup Automático&lt;/span&gt;
+  &lt;span class=&quot;badge badge-dot badge-blue&quot; data-tooltip=&quot;Último backup: há 2 horas&quot;&gt;Ativo&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex justify-between items-center&quot;&gt;
+  &lt;span&gt;Manutenção Programada&lt;/span&gt;
+  &lt;span class=&quot;badge badge-dot badge-yellow&quot; data-tooltip=&quot;Programado para 25/11 às 02:00&quot;&gt;Agendado&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb14"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;card_body&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;flex justify-between items-center mb-3&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Status do Servidor<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-green&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Todos os sistemas operacionais&quot;</span><span class="dt">&gt;</span>Online<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;flex justify-between items-center mb-3&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Backup Automático<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-blue&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Último backup: há 2 horas&quot;</span><span class="dt">&gt;</span>Ativo<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;flex justify-between items-center&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Manutenção Programada<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-yellow&quot;</span><span class="ot"> data-tooltip</span><span class="op">=</span><span class="st">&quot;Programado para 25/11 às 02:00&quot;</span><span class="dt">&gt;</span>Agendado<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="implementação-javascript">Implementação
+                    JavaScript</h2>
+                    <p>Para ativar os tooltips, você precisará de
+                    JavaScript. Aqui está um exemplo básico:</p>
+                    <div class="sourceCode" id="cb15"><pre
+                    class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Inicializar tooltips</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&#39;[data-tooltip]&#39;</span>)<span class="op">.</span><span class="fu">forEach</span>(element <span class="kw">=&gt;</span> {</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  element<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;mouseenter&#39;</span><span class="op">,</span> <span class="kw">function</span>() {</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> tooltipText <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getAttribute</span>(<span class="st">&#39;data-tooltip&#39;</span>)<span class="op">;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> tooltip <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;div&#39;</span>)<span class="op">;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">.</span><span class="at">className</span> <span class="op">=</span> <span class="st">&#39;tooltip tooltip-top show&#39;</span><span class="op">;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span>tooltipText<span class="sc">}</span><span class="vs">&lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">appendChild</span>(tooltip)<span class="op">;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Posicionar tooltip</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> rect <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getBoundingClientRect</span>()<span class="op">;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">left</span> <span class="op">=</span> rect<span class="op">.</span><span class="at">left</span> <span class="op">+</span> (rect<span class="op">.</span><span class="at">width</span> <span class="op">/</span> <span class="dv">2</span>) <span class="op">-</span> (tooltip<span class="op">.</span><span class="at">offsetWidth</span> <span class="op">/</span> <span class="dv">2</span>) <span class="op">+</span> <span class="st">&#39;px&#39;</span><span class="op">;</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">top</span> <span class="op">=</span> rect<span class="op">.</span><span class="at">top</span> <span class="op">-</span> tooltip<span class="op">.</span><span class="at">offsetHeight</span> <span class="op">-</span> <span class="dv">8</span> <span class="op">+</span> <span class="st">&#39;px&#39;</span><span class="op">;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  element<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;mouseleave&#39;</span><span class="op">,</span> <span class="kw">function</span>() {</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&#39;.tooltip&#39;</span>)<span class="op">.</span><span class="fu">forEach</span>(t <span class="kw">=&gt;</span> t<span class="op">.</span><span class="fu">remove</span>())<span class="op">;</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="container">Container</h3>
+                    <ul>
+                    <li><code>.tooltip</code> - Container principal do
+                    tooltip</li>
+                    <li><code>.tooltip.show</code> - Tooltip
+                    visível</li>
+                    </ul>
+                    <h3 id="posições">Posições</h3>
+                    <ul>
+                    <li><code>.tooltip-top</code> - Tooltip acima do
+                    elemento (padrão)</li>
+                    <li><code>.tooltip-bottom</code> - Tooltip abaixo do
+                    elemento</li>
+                    <li><code>.tooltip-left</code> - Tooltip à esquerda
+                    do elemento</li>
+                    <li><code>.tooltip-right</code> - Tooltip à direita
+                    do elemento</li>
+                    </ul>
+                    <h3 id="elementos">Elementos</h3>
+                    <ul>
+                    <li><code>.tooltip-arrow</code> - Seta indicadora do
+                    tooltip</li>
+                    </ul>
+                    <h3 id="atributo-html">Atributo HTML</h3>
+                    <ul>
+                    <li><code>data-tooltip="texto"</code> - Atributo
+                    para definir o texto do tooltip</li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Seja conciso</strong>: Tooltips devem
+                    conter informações breves e diretas</li>
+                    <li><strong>Não esconda informações
+                    críticas</strong>: Use tooltips apenas para
+                    informações complementares</li>
+                    <li><strong>Considere dispositivos móveis</strong>:
+                    Tooltips não funcionam bem em touch screens</li>
+                    <li><strong>Evite tooltips em tooltips</strong>: Não
+                    coloque elementos com tooltip dentro de outros
+                    tooltips</li>
+                    <li><strong>Use posicionamento inteligente</strong>:
+                    Ajuste a posição do tooltip para não sair da
+                    tela</li>
+                    <li><strong>Acessibilidade</strong>: Considere
+                    adicionar <code>aria-label</code> para leitores de
+                    tela</li>
+                    <li><strong>Tempo de exibição</strong>: Mostre o
+                    tooltip imediatamente ao hover, sem delay</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

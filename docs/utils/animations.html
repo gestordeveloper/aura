@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                                                <div class="breadcrumb-item active">
+                            Animations
+                        </div>
+                                                        </nav>
+
+                <div class="box_content">
+                    <h1 id="animations">Animations</h1>
+                    <p>Sistema completo de animações e transições para
+                    criar interfaces dinâmicas e envolventes.</p>
+                    <h2 id="animações-de-entrada">Animações de
+                    Entrada</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 flex-wrap">
+                    <div class="card animate-fade-in"
+                    style="padding: 1rem; width: 150px;">
+                    Fade In
+                    </div>
+                    <div class="card animate-slide-up"
+                    style="padding: 1rem; width: 150px;">
+                    Slide Up
+                    </div>
+                    <div class="card animate-slide-down"
+                    style="padding: 1rem; width: 150px;">
+                    Slide Down
+                    </div>
+                    <div class="card animate-zoom-in"
+                    style="padding: 1rem; width: 150px;">
+                    Zoom In
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb1"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-fade-in&quot;</span><span class="dt">&gt;</span>Fade In<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-slide-up&quot;</span><span class="dt">&gt;</span>Slide Up<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-slide-down&quot;</span><span class="dt">&gt;</span>Slide Down<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-zoom-in&quot;</span><span class="dt">&gt;</span>Zoom In<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="animações-contínuas">Animações
+                    Contínuas</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 flex-wrap">
+                    <div class="card animate-pulse"
+                    style="padding: 1rem; width: 150px;">
+                    Pulse
+                    </div>
+                    <div class="card animate-bounce"
+                    style="padding: 1rem; width: 150px;">
+                    Bounce
+                    </div>
+                    <div class="card animate-spin"
+                    style="padding: 1rem; width: 150px;">
+                    <i class="bi bi-arrow-repeat"></i> Spin
+                    </div>
+                    <div class="card animate-ping"
+                    style="padding: 1rem; width: 150px; position: relative;">
+                    <p><span
+                    style="position: absolute; top: 10px; right: 10px; width: 10px; height: 10px; background: var(--green); border-radius: 50%;"></span>
+                    Ping</p>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb2"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-pulse&quot;</span><span class="dt">&gt;</span>Pulse<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-bounce&quot;</span><span class="dt">&gt;</span>Bounce<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-spin&quot;</span><span class="dt">&gt;&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-arrow-repeat&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;animate-ping&quot;</span><span class="dt">&gt;</span>Ping<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="animações-de-atenção">Animações de
+                    Atenção</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview flex gap-3">
+                    <button class="btn btn-aura-500 animate-shake">
+                    Shake
+                    </button>
+                    <button class="btn btn-blue animate-wiggle">
+                    Wiggle
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb3"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-aura-500 animate-shake&quot;</span><span class="dt">&gt;</span>Shake<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-blue animate-wiggle&quot;</span><span class="dt">&gt;</span>Wiggle<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="transições">Transições</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview flex gap-3">
+                    <button class="btn btn-aura-500 transition-all">
+                    Transition All
+                    </button>
+                    <button class="btn btn-blue transition-colors">
+                    Transition Colors
+                    </button>
+                    <button class="btn btn-green transition-transform">
+                    Transition Transform
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb4"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all&quot;</span><span class="dt">&gt;</span>Transition All<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-colors&quot;</span><span class="dt">&gt;</span>Transition Colors<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-transform&quot;</span><span class="dt">&gt;</span>Transition Transform<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="duração">Duração</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview flex gap-3">
+                    <button class="btn btn-aura-500 transition-all duration-75">
+                    75ms
+                    </button>
+                    <button class="btn btn-blue transition-all duration-300">
+                    300ms
+                    </button>
+                    <button class="btn btn-green transition-all duration-1000">
+                    1000ms
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb5"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all duration-75&quot;</span><span class="dt">&gt;</span>75ms<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all duration-300&quot;</span><span class="dt">&gt;</span>300ms<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all duration-1000&quot;</span><span class="dt">&gt;</span>1000ms<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="timing-functions">Timing Functions</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview flex gap-3">
+                    <button class="btn btn-aura-500 transition-all ease-linear">
+                    Linear
+                    </button>
+                    <button class="btn btn-blue transition-all ease-in">
+                    Ease In
+                    </button>
+                    <button class="btn btn-green transition-all ease-out">
+                    Ease Out
+                    </button>
+                    <button class="btn btn-yellow transition-all ease-in-out">
+                    Ease In-Out
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb6"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all ease-linear&quot;</span><span class="dt">&gt;</span>Linear<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all ease-in&quot;</span><span class="dt">&gt;</span>Ease In<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all ease-out&quot;</span><span class="dt">&gt;</span>Ease Out<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn transition-all ease-in-out&quot;</span><span class="dt">&gt;</span>Ease In-Out<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="animações-de-entradasaída">Animações de
+                    Entrada/Saída</h3>
+                    <ul>
+                    <li><code>.animate-fade-in</code> /
+                    <code>.animate-fade-out</code></li>
+                    <li><code>.animate-slide-up</code> /
+                    <code>.animate-slide-down</code></li>
+                    <li><code>.animate-slide-left</code> /
+                    <code>.animate-slide-right</code></li>
+                    <li><code>.animate-zoom-in</code> /
+                    <code>.animate-zoom-out</code></li>
+                    </ul>
+                    <h3 id="animações-contínuas-1">Animações
+                    Contínuas</h3>
+                    <ul>
+                    <li><code>.animate-pulse</code> - Pulsação
+                    suave</li>
+                    <li><code>.animate-bounce</code> - Salto</li>
+                    <li><code>.animate-spin</code> - Rotação
+                    contínua</li>
+                    <li><code>.animate-ping</code> - Expansão com
+                    fade</li>
+                    </ul>
+                    <h3 id="animações-de-atenção-1">Animações de
+                    Atenção</h3>
+                    <ul>
+                    <li><code>.animate-shake</code> - Tremor
+                    horizontal</li>
+                    <li><code>.animate-wiggle</code> - Balanço
+                    rotacional</li>
+                    </ul>
+                    <h3 id="transições-1">Transições</h3>
+                    <ul>
+                    <li><code>.transition-none</code> - Sem
+                    transição</li>
+                    <li><code>.transition-all</code> - Todas as
+                    propriedades</li>
+                    <li><code>.transition-colors</code> - Apenas
+                    cores</li>
+                    <li><code>.transition-opacity</code> - Apenas
+                    opacidade</li>
+                    <li><code>.transition-transform</code> - Apenas
+                    transformações</li>
+                    </ul>
+                    <h3 id="duração-1">Duração</h3>
+                    <ul>
+                    <li><code>.duration-75</code> a
+                    <code>.duration-1000</code> (75ms, 100ms, 150ms,
+                    200ms, 300ms, 500ms, 700ms, 1000ms)</li>
+                    </ul>
+                    <h3 id="timing">Timing</h3>
+                    <ul>
+                    <li><code>.ease-linear</code>,
+                    <code>.ease-in</code>, <code>.ease-out</code>,
+                    <code>.ease-in-out</code></li>
+                    </ul>
+                    <h3 id="delay">Delay</h3>
+                    <ul>
+                    <li><code>.delay-75</code> a
+                    <code>.delay-1000</code></li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Use com moderação</strong>: Animações em
+                    excesso cansam o usuário</li>
+                    <li><strong>Duração adequada</strong>: 150-300ms
+                    para a maioria das transições</li>
+                    <li><strong>Reduced motion</strong>: Sistema
+                    respeita <code>prefers-reduced-motion</code></li>
+                    <li><strong>Performance</strong>: Prefira
+                    <code>transform</code> e <code>opacity</code> para
+                    animações suaves</li>
+                    <li><strong>Propósito claro</strong>: Cada animação
+                    deve ter um objetivo</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

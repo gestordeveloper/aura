@@ -4,9 +4,54 @@
   padding-left: $gutter-width / 2;
   padding-right: $gutter-width / 2;
 
-  @if $breakpoint != null {
+  @if $breakpoint !=null {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       width: calculate-column-width($columns);
     }
   }
+}
+
+// Mixin para media queries responsivas
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Breakpoint `#{$breakpoint}` não encontrado em $breakpoints.";
+  }
+}
+
+// Mixin para truncar texto com ellipsis
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Mixin para aspect ratio
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+// Mixin clearfix tradicional
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Mixin para transições consistentes
+@mixin transition($property: all) {
+  transition: $property 0.3s ease;
 }

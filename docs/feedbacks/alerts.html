@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                                                <div class="breadcrumb-item active">
+                            Alerts
+                        </div>
+                                                        </nav>
+
+                <div class="box_content">
+                    <h1 id="alerts">Alerts</h1>
+                    <p>Os alerts são componentes de notificação que
+                    exibem mensagens importantes para o usuário, como
+                    sucessos, avisos, erros ou informações gerais.</p>
+                    <h2 id="alert-básico">Alert Básico</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert">
+                    <div class="alert-title">
+                    Informação
+                    </div>
+                    <div class="alert-description">
+                    Esta é uma mensagem informativa básica.
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb1"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span>Informação<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Esta é uma mensagem informativa básica.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="tipos-de-alert">Tipos de Alert</h2>
+                    <h3 id="alert-de-sucesso">Alert de Sucesso</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-success">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-check-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Sucesso!</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Sua operação foi concluída com sucesso.
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb3"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-success&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    Sucesso!</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Sua operação foi concluída com sucesso.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="alert-de-informação">Alert de
+                    Informação</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-info">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-info-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Informação</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Aqui está uma informação importante para você.
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb5"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-info&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-info-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    Informação</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Aqui está uma informação importante para você.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="alert-de-aviso">Alert de Aviso</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-warning">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-exclamation-triangle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Atenção!</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Esta ação pode ter consequências. Prossiga com
+                    cuidado.
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb7"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-warning&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-exclamation-triangle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    Atenção!</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Esta ação pode ter consequências. Prossiga com cuidado.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="alert-de-erro">Alert de Erro</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-error">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-x-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Erro!</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Ocorreu um erro ao processar sua solicitação. Tente
+                    novamente.
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb9"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-error&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    Erro!</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Ocorreu um erro ao processar sua solicitação. Tente novamente.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="alert-dispensável-dismissible">Alert
+                    Dispensável (Dismissible)</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-success alert-dismissible">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-check-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Sucesso!</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Você pode fechar este alerta clicando no botão X.
+                    </div>
+                    <p><button class="alert-close">
+                    <i class="bi bi-x"></i> </button></p>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb11"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-success alert-dismissible&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    Sucesso!</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Você pode fechar este alerta clicando no botão X.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-close&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2
+                    id="alerts-dispensáveis-com-diferentes-tipos">Alerts
+                    Dispensáveis com Diferentes Tipos</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex flex-column gap-3">
+                    <div class="alert alert-info alert-dismissible">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-info-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Informação</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Este é um alerta informativo que pode ser fechado.
+                    </div>
+                    <p><button class="alert-close">
+                    <i class="bi bi-x"></i> </button></p>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-exclamation-triangle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Aviso</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Este é um alerta de aviso que pode ser fechado.
+                    </div>
+                    <p><button class="alert-close">
+                    <i class="bi bi-x"></i> </button></p>
+                    </div>
+                    <div class="alert alert-error alert-dismissible">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-x-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Erro</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    Este é um alerta de erro que pode ser fechado.
+                    </div>
+                    <p><button class="alert-close">
+                    <i class="bi bi-x"></i> </button></p>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb15"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-info alert-dismissible&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-info-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    Informação</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Este é um alerta informativo que pode ser fechado.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-close&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-warning alert-dismissible&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-exclamation-triangle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    Aviso</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Este é um alerta de aviso que pode ser fechado.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-close&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-error alert-dismissible&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    Erro</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span>Este é um alerta de erro que pode ser fechado.<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-close&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="alert-simples-sem-descrição">Alert Simples
+                    (Sem Descrição)</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex flex-column gap-3">
+                    <div class="alert alert-success">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-check-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Operação concluída com sucesso!</code></pre>
+                    </div>
+                    </div>
+                    <div class="alert alert-info">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-info-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Você tem 3 novas notificações</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb18"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-success&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    Operação concluída com sucesso!</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-info&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-info-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    Você tem 3 novas notificações</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="casos-de-uso">Casos de Uso</h2>
+                    <h3 id="confirmação-de-ação">Confirmação de
+                    Ação</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-success">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-check-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Cadastro Realizado!</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    <pre><code>Seu cadastro foi realizado com sucesso. Enviamos um email de confirmação para seu endereço.</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb21"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-success&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-check-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    Cadastro Realizado!</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    Seu cadastro foi realizado com sucesso. Enviamos um email de confirmação para seu endereço.</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="aviso-de-manutenção">Aviso de
+                    Manutenção</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-warning alert-dismissible">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-exclamation-triangle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Manutenção Programada</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    <pre><code>O sistema estará em manutenção no dia 25/11 das 02:00 às 04:00. Durante este período, alguns serviços podem ficar indisponíveis.</code></pre>
+                    </div>
+                    <p><button class="alert-close">
+                    <i class="bi bi-x"></i> </button></p>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb24"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-warning alert-dismissible&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-exclamation-triangle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    Manutenção Programada</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    O sistema estará em manutenção no dia 25/11 das 02:00 às 04:00.</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-close&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="erro-de-validação">Erro de Validação</h3>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="alert alert-error">
+                    <div class="alert-title">
+                    <pre><code>&lt;i class=&quot;bi bi-x-circle-fill alert-icon&quot;&gt;&lt;/i&gt;
+Erro de Validação</code></pre>
+                    </div>
+                    <div class="alert-description">
+                    <pre><code>Por favor, corrija os seguintes erros antes de continuar:
+&lt;ul class=&quot;mt-2&quot;&gt;
+  &lt;li&gt;O campo email é obrigatório&lt;/li&gt;
+  &lt;li&gt;A senha deve ter no mínimo 8 caracteres&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb27"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert alert-error&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-x-circle-fill alert-icon&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    Erro de Validação</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;alert-description&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    Por favor, corrija os seguintes erros antes de continuar:</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">ul</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;mt-2&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>O campo email é obrigatório<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span>A senha deve ter no mínimo 8 caracteres<span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2
+                    id="implementação-javascript-dispensável">Implementação
+                    JavaScript (Dispensável)</h2>
+                    <p>Para fechar alerts dispensáveis, adicione este
+                    JavaScript:</p>
+                    <div class="sourceCode" id="cb28"><pre
+                    class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&#39;.alert-close&#39;</span>)<span class="op">.</span><span class="fu">forEach</span>(button <span class="kw">=&gt;</span> {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  button<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;click&#39;</span><span class="op">,</span> <span class="kw">function</span>() {</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">closest</span>(<span class="st">&#39;.alert&#39;</span>)<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">&#39;none&#39;</span><span class="op">;</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="estrutura">Estrutura</h3>
+                    <ul>
+                    <li><code>.alert</code> - Container principal do
+                    alert</li>
+                    <li><code>.alert-title</code> - Título do alert</li>
+                    <li><code>.alert-description</code> -
+                    Descrição/conteúdo do alert</li>
+                    <li><code>.alert-icon</code> - Ícone do alert</li>
+                    </ul>
+                    <h3 id="tipos">Tipos</h3>
+                    <ul>
+                    <li><code>.alert-success</code> - Alert de sucesso
+                    (verde)</li>
+                    <li><code>.alert-info</code> - Alert de informação
+                    (azul)</li>
+                    <li><code>.alert-warning</code> - Alert de aviso
+                    (amarelo)</li>
+                    <li><code>.alert-error</code> ou
+                    <code>.alert-danger</code> - Alert de erro
+                    (vermelho)</li>
+                    </ul>
+                    <h3 id="modificadores">Modificadores</h3>
+                    <ul>
+                    <li><code>.alert-dismissible</code> - Permite fechar
+                    o alert</li>
+                    <li><code>.alert-close</code> - Botão de fechar
+                    (dentro de alert-dismissible)</li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Use o tipo apropriado</strong>: Escolha
+                    o tipo de alert que melhor representa a
+                    mensagem</li>
+                    <li><strong>Seja claro e conciso</strong>: Mensagens
+                    de alert devem ser diretas e fáceis de entender</li>
+                    <li><strong>Use ícones</strong>: Ícones ajudam a
+                    identificar rapidamente o tipo de mensagem</li>
+                    <li><strong>Permita fechar quando
+                    apropriado</strong>: Use
+                    <code>.alert-dismissible</code> para mensagens não
+                    críticas</li>
+                    <li><strong>Posicionamento</strong>: Coloque alerts
+                    próximos ao contexto relevante</li>
+                    <li><strong>Não abuse</strong>: Muitos alerts podem
+                    sobrecarregar o usuário</li>
+                    <li><strong>Acessibilidade</strong>: Considere
+                    adicionar <code>role="alert"</code> para leitores de
+                    tela</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

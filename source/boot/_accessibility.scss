@@ -1,0 +1,125 @@
+// Accessibility utilities
+
+// Screen reader only - visually hidden but accessible to screen readers
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+
+// Not screen reader only - reverse sr-only
+.not-sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+}
+
+// Focus visible - better keyboard navigation focus state
+.focus-visible:focus-visible {
+    outline: 2px solid var(--ring) !important;
+    outline-offset: 2px !important;
+}
+
+// Remove focus outline for mouse users
+.focus-visible:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+// Skip link - for skipping to main content
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    padding: spacing('2') spacing('4');
+    text-decoration: none;
+    border-radius: radius('md');
+    z-index: 9999;
+
+    &:focus {
+        top: spacing('2');
+        left: spacing('2');
+        outline: 2px solid var(--ring);
+        outline-offset: 2px;
+    }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+
+    .btn,
+    .card,
+    input,
+    select,
+    textarea {
+        border-width: 2px !important;
+    }
+}
+
+// Reduced motion support (already in animations.scss but adding here for completeness)
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// Focus ring utilities
+.focus-ring {
+    &:focus {
+        outline: 2px solid var(--ring);
+        outline-offset: 2px;
+    }
+}
+
+.focus-ring-offset-0 {
+    &:focus {
+        outline-offset: 0 !important;
+    }
+}
+
+.focus-ring-offset-1 {
+    &:focus {
+        outline-offset: 1px !important;
+    }
+}
+
+.focus-ring-offset-2 {
+    &:focus {
+        outline-offset: 2px !important;
+    }
+}
+
+.focus-ring-offset-4 {
+    &:focus {
+        outline-offset: 4px !important;
+    }
+}
+
+// Forced colors mode (Windows High Contrast Mode)
+@media (forced-colors: active) {
+    .btn {
+        border: 1px solid currentColor;
+    }
+
+    .card {
+        border: 1px solid currentColor;
+    }
+}

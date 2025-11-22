@@ -1,0 +1,144 @@
+// Avatar component
+.avatar {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: radius('full');
+    overflow: hidden;
+    background: var(--muted);
+    color: var(--muted-foreground);
+    font-weight: fontWeight('medium');
+    user-select: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // Sizes
+    &.avatar-xs {
+        width: 24px;
+        height: 24px;
+        font-size: fontSize('xxs');
+    }
+
+    &.avatar-sm {
+        width: 32px;
+        height: 32px;
+        font-size: fontSize('xs');
+    }
+
+    &.avatar-md {
+        width: 48px;
+        height: 48px;
+        font-size: fontSize('md');
+    }
+
+    &.avatar-lg {
+        width: 64px;
+        height: 64px;
+        font-size: fontSize('lg');
+    }
+
+    &.avatar-xl {
+        width: 96px;
+        height: 96px;
+        font-size: fontSize('2xl');
+    }
+
+    // Shapes
+    &.avatar-square {
+        border-radius: radius('md');
+    }
+
+    &.avatar-rounded {
+        border-radius: radius('lg');
+    }
+
+    &.avatar-circle {
+        border-radius: radius('full');
+    }
+
+    // Status indicator
+    .avatar-status {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 25%;
+        height: 25%;
+        border-radius: radius('full');
+        border: 2px solid var(--background);
+
+        &.status-online {
+            background: $green;
+        }
+
+        &.status-offline {
+            background: var(--muted);
+        }
+
+        &.status-busy {
+            background: $red;
+        }
+
+        &.status-away {
+            background: $yellow;
+        }
+    }
+
+    // Fallback initials
+    .avatar-fallback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        color: var(--primary-foreground);
+        font-weight: fontWeight('bold');
+        text-transform: uppercase;
+    }
+}
+
+// Avatar group
+.avatar-group {
+    display: inline-flex;
+    flex-direction: row-reverse;
+
+    .avatar {
+        margin-left: -8px;
+        border: 2px solid var(--background);
+        transition: transform 0.2s, z-index 0.2s;
+
+        &:hover {
+            transform: translateY(-4px);
+            z-index: 10;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    // Stacked variant (normal order)
+    &.avatar-group-stacked {
+        flex-direction: row;
+
+        .avatar {
+            margin-left: 0;
+            margin-right: -8px;
+
+            &:first-child {
+                margin-right: -8px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

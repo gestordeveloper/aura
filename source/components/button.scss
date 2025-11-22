@@ -83,7 +83,7 @@
         line-height: 1;
 
         &:hover {
-          color: $aura-500;
+          color: var(--aura-500);
 
           i {
             opacity: 1;
@@ -91,7 +91,7 @@
         }
 
         i {
-          color: $aura-500;
+          color: var(--aura-500);
           opacity: 0.5;
         }
       }
@@ -108,6 +108,25 @@
 
     &:hover {
       background: tint-color($value, 15%) !important;
+      color: $white !important;
+    }
+  }
+
+  // Outline variant
+  .btn-outline-#{$color} {
+    color: $value !important;
+    background: transparent !important;
+    border: 1px solid $value !important;
+
+    &:hover {
+      background: $value !important;
+      color: $white !important;
+    }
+
+    &:active,
+    &:focus {
+      background: shade-color($value, 10%) !important;
+      border-color: shade-color($value, 10%) !important;
       color: $white !important;
     }
   }

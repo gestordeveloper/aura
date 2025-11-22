@@ -1,0 +1,123 @@
+/* Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--foreground);
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    @media (max-width: 42em) {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+
+    @media (max-width: 42em) {
+        font-size: 1.5rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+
+    @media (max-width: 42em) {
+        font-size: 1.25rem;
+    }
+}
+
+h4 {
+    font-size: 1.5rem;
+
+    @media (max-width: 42em) {
+        font-size: 1.125rem;
+    }
+}
+
+h5 {
+    font-size: 1.25rem;
+
+    @media (max-width: 42em) {
+        font-size: 1rem;
+    }
+}
+
+h6 {
+    font-size: 1.125rem;
+
+    @media (max-width: 42em) {
+        font-size: 0.875rem;
+    }
+}
+
+/* Links */
+a {
+    color: var(--aura-500);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--aura-600);
+}
+
+a:focus {
+    outline: 2px solid var(--aura-500);
+    outline-offset: 2px;
+}
+
+/* Listas */
+ul, ol {
+    padding-left: 2rem;
+    margin: 1rem 0;
+    list-style: circle;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+li > ul, li > ol {
+    margin-top: 0.5rem;
+}
+
+/* Tabelas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+table th {
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 500;
+    color: var(--foreground);
+    border-bottom: 1px solid var(--border);
+}
+
+table td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--border);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--card);
+}

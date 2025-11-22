@@ -1,6 +1,6 @@
 /** Colors Sistem */
-$white:    #fff !default;
-$gray-50:  #eeeeee !default;
+$white: #fff !default;
+$gray-50: #eeeeee !default;
 $gray-100: #bfbfc1 !default;
 $gray-200: #a1a1a3 !default;
 $gray-300: #76767a !default;
@@ -10,48 +10,48 @@ $gray-600: #2e2e33 !default;
 $gray-700: #242428 !default;
 $gray-800: #1c1c1f !default;
 $gray-900: #0d0d10 !default;
-$black:    #000 !default;
+$black: #000 !default;
 
 /** Color-variables */
-$blue-50:  #e6f3ff !default;
+$blue-50: #e6f3ff !default;
 $blue-100: #b0d9ff !default;
 $blue-200: #8ac6ff !default;
 $blue-300: #54adff !default;
 $blue-400: #339dff !default;
-$blue:     #0084ff !default;
+$blue: #0084ff !default;
 $blue-600: #0078e8 !default;
 $blue-700: #005eb5 !default;
 $blue-800: #00498c !default;
 $blue-900: #00376b !default;
 
-$red-50:  #fdeaea !default;
+$red-50: #fdeaea !default;
 $red-100: #f8bebe !default;
 $red-200: #f59e9e !default;
 $red-300: #f07272 !default;
 $red-400: #ed5656 !default;
-$red:     #e92c2c !default;
+$red: #e92c2c !default;
 $red-600: #d42828 !default;
 $red-700: #a51f1f !default;
 $red-800: #801818 !default;
 $red-900: #621212 !default;
 
-$yellow-50:  #fff8e6 !default;
+$yellow-50: #fff8e6 !default;
 $yellow-100: #ffeab2 !default;
 $yellow-200: #ffdf8d !default;
 $yellow-300: #ffd15a !default;
 $yellow-400: #ffc839 !default;
-$yellow:     #ffba08 !default;
+$yellow: #ffba08 !default;
 $yellow-600: #e8a907 !default;
 $yellow-700: #b58406 !default;
 $yellow-800: #8c6604 !default;
 $yellow-900: #6b4e03 !default;
 
-$green-50:  #e6f8eb !default;
+$green-50: #e6f8eb !default;
 $green-100: #b0eac0 !default;
 $green-200: #8adfa2 !default;
 $green-300: #54d177 !default;
 $green-400: #33c85d !default;
-$green:     #00ba34 !default;
+$green: #00ba34 !default;
 $green-600: #00a92f !default;
 $green-700: #008425 !default;
 $green-800: #00661d !default;
@@ -68,7 +68,7 @@ $aura-700: #a81161 !default;
 $aura-800: #820d4b !default;
 $aura-900: #630a3a !default;
 
-$secondary-50:  #e6e6f0 !default;
+$secondary-50: #e6e6f0 !default;
 $secondary-100: #b0b2cf !default;
 $secondary-200: #8a8db8 !default;
 $secondary-300: #555998 !default;
@@ -80,250 +80,282 @@ $secondary-800: #010438 !default;
 $secondary-900: #00032a !default;
 
 $colors: (
-  "aura-50": $aura-50,
-  "aura-100": $aura-100,
-  "aura-200": $aura-200,
-  "aura-300": $aura-300,
-  "aura-400": $aura-400,
-  "aura-500": $aura-500,
-  "aura-600": $aura-600,
-  "aura-700": $aura-700,
-  "aura-800": $aura-800,
-  "aura-900": $aura-900,
-  "secoondary-50": $aura-50,
-  "secondary-100": $secondary-100,
-  "secondary-200": $secondary-200,
-  "secondary-300": $secondary-300,
-  "secondary-400": $secondary-400,
-  "secondary-500": $secondary-500,
-  "secondary-600": $secondary-600,
-  "secondary-700": $secondary-700,
-  "secondary-800": $secondary-800,
-  "secondary-900": $secondary-900,
-  "blue-50": $blue-50,
-  "blue-100": $blue-100,
-  "blue-200": $blue-200,
-  "blue-300": $blue-300,
-  "blue-400": $blue-400,
-  "blue": $blue,
-  "blue-600": $blue-600,
-  "blue-700": $blue-700,
-  "blue-800": $blue-800,
-  "blue-900": $blue-900,
-  "red-50": $red-50,
-  "red-100": $red-100,
-  "red-200": $red-200,
-  "red-300": $red-300,
-  "red-400": $red-400,
-  "red": $red,
-  "red-600": $red-600,
-  "red-700": $red-700,
-  "red-800": $red-800,
-  "red-900": $red-900,
-  "yellow-50": $yellow-50,
-  "yellow-100": $yellow-100,
-  "yellow-200": $yellow-200,
-  "yellow-300": $yellow-300,
-  "yellow-400": $yellow-400,
-  "yellow": $yellow,
-  "yellow-600": $yellow-600,
-  "yellow-700": $yellow-700,
-  "yellow-800": $yellow-800,
-  "yellow-900": $yellow-900,
-  "green-50": $green-50,
-  "green-100": $green-100,
-  "green-200": $green-200,
-  "green-300": $green-300,
-  "green-400": $green-400,
-  "green": $green,
-  "green-600": $green-600,
-  "green-700": $green-700,
-  "green-800": $green-800,
-  "green-900": $green-900,
-  "white": $white,
-  "gray-50": $gray-50,
-  "gray-100": $gray-100,
-  "gray-200": $gray-200,
-  "gray-300": $gray-300,
-  "gray-400": $gray-400,
-  "gray-500": $gray-500,
-  "gray-600": $gray-600,
-  "gray-700": $gray-700,
-  "gray-800": $gray-800,
-  "gray-900": $gray-900,
-  "black": $black,
+        "aura-50": $aura-50,
+        "aura-100": $aura-100,
+        "aura-200": $aura-200,
+        "aura-300": $aura-300,
+        "aura-400": $aura-400,
+        "aura-500": $aura-500,
+        "aura-600": $aura-600,
+        "aura-700": $aura-700,
+        "aura-800": $aura-800,
+        "aura-900": $aura-900,
+        "secondary-50": $secondary-50,
+        "secondary-100": $secondary-100,
+        "secondary-200": $secondary-200,
+        "secondary-300": $secondary-300,
+        "secondary-400": $secondary-400,
+        "secondary-500": $secondary-500,
+        "secondary-600": $secondary-600,
+        "secondary-700": $secondary-700,
+        "secondary-800": $secondary-800,
+        "secondary-900": $secondary-900,
+        "blue-50": $blue-50,
+        "blue-100": $blue-100,
+        "blue-200": $blue-200,
+        "blue-300": $blue-300,
+        "blue-400": $blue-400,
+        "blue": $blue,
+        "blue-600": $blue-600,
+        "blue-700": $blue-700,
+        "blue-800": $blue-800,
+        "blue-900": $blue-900,
+        "red-50": $red-50,
+        "red-100": $red-100,
+        "red-200": $red-200,
+        "red-300": $red-300,
+        "red-400": $red-400,
+        "red": $red,
+        "red-600": $red-600,
+        "red-700": $red-700,
+        "red-800": $red-800,
+        "red-900": $red-900,
+        "yellow-50": $yellow-50,
+        "yellow-100": $yellow-100,
+        "yellow-200": $yellow-200,
+        "yellow-300": $yellow-300,
+        "yellow-400": $yellow-400,
+        "yellow": $yellow,
+        "yellow-600": $yellow-600,
+        "yellow-700": $yellow-700,
+        "yellow-800": $yellow-800,
+        "yellow-900": $yellow-900,
+        "green-50": $green-50,
+        "green-100": $green-100,
+        "green-200": $green-200,
+        "green-300": $green-300,
+        "green-400": $green-400,
+        "green": $green,
+        "green-600": $green-600,
+        "green-700": $green-700,
+        "green-800": $green-800,
+        "green-900": $green-900,
+        "white": $white,
+        "gray-50": $gray-50,
+        "gray-100": $gray-100,
+        "gray-200": $gray-200,
+        "gray-300": $gray-300,
+        "gray-400": $gray-400,
+        "gray-500": $gray-500,
+        "gray-600": $gray-600,
+        "gray-700": $gray-700,
+        "gray-800": $gray-800,
+        "gray-900": $gray-900,
+        "black": $black,
 ) !default;
 
 $shadow-2xs: 0px 2px 3px 0px #00000014;
 $shadow-xs: 0px 2px 3px 0px #00000014;
-$shadow-sm:
-        0px 2px 3px 0px #00000029,
-        0px 1px 2px -1px #00000029;
-$shadow:
-        0px 2px 3px 0px #00000029,
-        0px 1px 2px -1px #00000029;
-$shadow-md:
-        0px 2px 3px 0px #00000029,
-        0px 2px 4px -1px #00000029;
-$shadow-lg:
-        0px 2px 3px 0px #00000029,
-        0px 4px 6px -1px #00000029;
-$shadow-xl:
-        0px 2px 3px 0px #00000029,
-        0px 8px 10px -1px #00000029;
-$shadow-2xl:
-        0px 2px 3px 0px #00000066;
+$shadow-sm: 0px 2px 3px 0px #00000029,
+0px 1px 2px -1px #00000029;
+$shadow: 0px 2px 3px 0px #00000029,
+0px 1px 2px -1px #00000029;
+$shadow-md: 0px 2px 3px 0px #00000029,
+0px 2px 4px -1px #00000029;
+$shadow-lg: 0px 2px 3px 0px #00000029,
+0px 4px 6px -1px #00000029;
+$shadow-xl: 0px 2px 3px 0px #00000029,
+0px 8px 10px -1px #00000029;
+$shadow-2xl: 0px 2px 3px 0px #00000066;
 
 
 /** Theme colors map */
 $light-mode-colors: (
-  "background": #fdfdfd,
-  "foreground": $black,
-  "card": #fdfdfd,
-  "card-foreground": $black,
-  "popover": #fcfcfc,
-  "popover-foreground": $black,
-  "primary": $aura-500,
-  "primary-foreground": $white,
-  "secondary": #edf0f4,
-  "secondary-foreground": #080808,
-  "muted": #f5f5f5,
-  "muted-foreground": #525252,
-  "accent": #e2ebff,
-  "accent-foreground": #1e69dc,
-  "destructive": #e54b4f,
-  "destructive-foreground": $white,
-  "border": #e7e7ee,
-  "input": #ebebeb,
-  "ring": $black,
-  "chart-1": #4ade80,
-  "chart-2": #ec1889,
-  "chart-3": #f695c9,
-  "chart-4": #8a8db8,
-  "chart-5": #bfbfc1,
-  "sidebar": #f5f8fb,
-  "sidebar-foreground": $black,
-  "sidebar-primary": $black,
-  "sidebar-primary-foreground": $white,
-  "sidebar-accent": #ebebeb,
-  "sidebar-accent-foreground": $black,
-  "sidebar-border": #ebebeb,
-  "sidebar-ring": $black,
+        "background": #fdfdfd,
+        "foreground": $black,
+        "card": #fdfdfd,
+        "card-foreground": $black,
+        "popover": #fcfcfc,
+        "popover-foreground": $black,
+        "primary": $aura-500,
+        "primary-foreground": $white,
+        "secondary": #edf0f4,
+        "secondary-foreground": #080808,
+        "muted": #f5f5f5,
+        "muted-foreground": #525252,
+        "accent": #e2ebff,
+        "accent-foreground": #1e69dc,
+        "destructive": #e54b4f,
+        "destructive-foreground": $white,
+        "border": #e7e7ee,
+        "input": #ebebeb,
+        "ring": $black,
+        "chart-1": #4ade80,
+        "chart-2": #ec1889,
+        "chart-3": #f695c9,
+        "chart-4": #8a8db8,
+        "chart-5": #bfbfc1,
+        "sidebar": #f5f8fb,
+        "sidebar-foreground": $black,
+        "sidebar-primary": $black,
+        "sidebar-primary-foreground": $white,
+        "sidebar-accent": #ebebeb,
+        "sidebar-accent-foreground": $black,
+        "sidebar-border": #ebebeb,
+        "sidebar-ring": $black,
 ) !default;
 
 $dark-mode-colors: (
-  "background": #1a1b1e,
-  "foreground": #f0f0f0,
-  "card": #222327,
-  "card-foreground": #f0f0f0,
-  "popover": #222327,
-  "popover-foreground": #f0f0f0,
-  "primary": $aura-500,
-  "primary-foreground": $white,
-  "secondary": #2a2c33,
-  "secondary-foreground": #f0f0f0,
-  "muted": #2a2c33,
-  "muted-foreground": #a0a0a0,
-  "accent": #630a3a,
-  "accent-foreground": #f695c9,
-  "destructive": #f87171,
-  "destructive-foreground": $white,
-  "border": #33353a,
-  "input": #33353a,
-  "ring": $aura-500,
-  "chart-1": #4ade80,
-  "chart-2": $aura-500,
-  "chart-3": #f695c9,
-  "chart-4": #8a8db8,
-  "chart-5": #bfbfc1,
-  "sidebar": #161618,
-  "sidebar-foreground": #f0f0f0,
-  "sidebar-primary": $aura-500,
-  "sidebar-primary-foreground": $white,
-  "sidebar-accent": #2a2c33,
-  "sidebar-accent-foreground": #f0f0f0,
-  "sidebar-border": #33353a,
-  "sidebar-ring": $aura-500,
+        "background": #1a1b1e,
+        "foreground": #f0f0f0,
+        "card": #222327,
+        "card-foreground": #f0f0f0,
+        "popover": #222327,
+        "popover-foreground": #f0f0f0,
+        "primary": $aura-500,
+        "primary-foreground": $white,
+        "secondary": #2a2c33,
+        "secondary-foreground": #f0f0f0,
+        "muted": #2a2c33,
+        "muted-foreground": #a0a0a0,
+        "accent": #630a3a,
+        "accent-foreground": #f695c9,
+        "destructive": #f87171,
+        "destructive-foreground": $white,
+        "border": #33353a,
+        "input": #33353a,
+        "ring": $aura-500,
+        "chart-1": #4ade80,
+        "chart-2": $aura-500,
+        "chart-3": #f695c9,
+        "chart-4": #8a8db8,
+        "chart-5": #bfbfc1,
+        "sidebar": #161618,
+        "sidebar-foreground": #f0f0f0,
+        "sidebar-primary": $aura-500,
+        "sidebar-primary-foreground": $white,
+        "sidebar-accent": #2a2c33,
+        "sidebar-accent-foreground": #f0f0f0,
+        "sidebar-border": #33353a,
+        "sidebar-ring": $aura-500,
 ) !default;
 
 /** Theme fonts */
 $fonts: (
-  "default": 'Roboto'
+        "default": 'Roboto'
 ) !default;
 
 $fontSizes: (
-  "xxs": 0.625rem,
-  "xs": 0.75rem,
-  "sm": 0.875rem,
-  "md": 1rem,
-  "lg": 1.125rem,
-  "xl": 1.25rem,
-  '2xl': 1.5rem,
-  '4xl': 2rem,
-  '5xl': 2.25rem,
-  '6xl': 3rem,
-  '7xl': 4rem,
-  '8xl': 4.5rem,
-  '9xl': 6rem,
+        "xxs": 0.625rem,
+        "xs": 0.75rem,
+        "sm": 0.875rem,
+        "md": 1rem,
+        "lg": 1.125rem,
+        "xl": 1.25rem,
+        '2xl': 1.5rem,
+        '4xl': 2rem,
+        '5xl': 2.25rem,
+        '6xl': 3rem,
+        '7xl': 4rem,
+        '8xl': 4.5rem,
+        '9xl': 6rem,
 );
 
 $fontWeights: (
-  "regular": 400,
-  "medium": 500,
-  "bold": 700,
+        "regular": 400,
+        "medium": 500,
+        "bold": 700,
 );
 
 $radius: (
-  "px": 1px,
-  "xs": 4px,
-  "sm": 6px,
-  "md": 8px,
-  "lg": 16px,
-  "full": 99999px,
+        "px": 1px,
+        "xs": 4px,
+        "sm": 6px,
+        "md": 8px,
+        "lg": 16px,
+        "full": 99999px,
 );
 
 $spaces: (
-  "1": 0.25rem,
-  "2": 0.5rem,
-  "3": 0.75rem,
-  "4": 1rem,
-  "5": 1.25rem,
-  "6": 1.5rem,
-  "7": 1.75rem,
-  "8": 2rem,
-  "10": 2.5rem,
-  "12": 3rem,
-  "16": 4rem,
-  "20": 5rem,
-  "40": 10rem,
-  "64": 16rem,
-  "80": 20rem,
+        "1": 0.25rem,
+        "2": 0.5rem,
+        "3": 0.75rem,
+        "4": 1rem,
+        "5": 1.25rem,
+        "6": 1.5rem,
+        "7": 1.75rem,
+        "8": 2rem,
+        "9": 2.25rem,
+        "10": 2.5rem,
+        "11": 2.75rem,
+        "12": 3rem,
+        "14": 3.5rem,
+        "16": 4rem,
+        "20": 5rem,
+        "24": 6rem,
+        "28": 7rem,
+        "32": 8rem,
+        "36": 9rem,
+        "40": 10rem,
+        "44": 11rem,
+        "48": 12rem,
+        "52": 13rem,
+        "56": 14rem,
+        "60": 15rem,
+        "64": 16rem,
+        "72": 18rem,
+        "80": 20rem,
+        "96": 24rem,
 );
 
 $shadows: (
-  "xxs": $shadow-2xs,
-  "xs": $shadow-xs,
-  "sm": $shadow-sm,
-  "md": $shadow-md,
-  "lg": $shadow-lg,
-  "xl": $shadow-xl,
-  '2xl': $shadow-2xl,
+        "xxs": $shadow-2xs,
+        "xs": $shadow-xs,
+        "sm": $shadow-sm,
+        "md": $shadow-md,
+        "lg": $shadow-lg,
+        "xl": $shadow-xl,
+        '2xl': $shadow-2xl,
 );
 
 $thumbnails: (
-  "4": 16px,
-  "6": 24px,
-  "8": 32px,
-  "16": 64px,
-  "32": 128px
+        "4": 16px,
+        "6": 24px,
+        "8": 32px,
+        "16": 64px,
+        "32": 128px
+);
+
+$z-index: (
+        "0": 0,
+        "10": 10,
+        "20": 20,
+        "30": 30,
+        "40": 40,
+        "50": 50,
+        "auto": auto,
+);
+
+$opacity: (
+        "0": 0,
+        "10": 0.1,
+        "20": 0.2,
+        "30": 0.3,
+        "40": 0.4,
+        "50": 0.5,
+        "60": 0.6,
+        "70": 0.7,
+        "80": 0.8,
+        "90": 0.9,
+        "100": 1,
 );
 
 /* GRID */
 $grid-columns: 12;
 $gutter-width: 1rem;
 $breakpoints: (
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px
+        "sm": 576px,
+        "md": 768px,
+        "lg": 992px,
+        "xl": 1200px
 );

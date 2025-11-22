@@ -7,6 +7,10 @@
 @import "boot/theme";
 @import "boot/grid";
 @import "boot/reset";
+@import "boot/utilities";
+@import "boot/typography";
+@import "boot/animations";
+@import "boot/accessibility";
 
 //COMPONENTSS
 @import "components/sidebar";
@@ -30,6 +34,16 @@
 @import "components/sliders";
 @import "components/carousels";
 @import "components/fab";
+@import "components/badge";
+@import "components/alert";
+@import "components/progress";
+@import "components/breadcrumb";
+@import "components/tooltip";
+@import "components/skeleton";
+@import "components/divider";
+@import "components/avatar";
+@import "components/stepper";
+@import "components/docs";
 
 //PAGES
 @import "pages/default";

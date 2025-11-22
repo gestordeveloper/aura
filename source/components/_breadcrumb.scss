@@ -1,0 +1,58 @@
+// Breadcrumb component
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: spacing('2') 0;
+    margin-bottom: spacing('4');
+    list-style: none;
+    font-size: fontSize('sm');
+
+    .breadcrumb-item {
+        display: flex;
+        align-items: center;
+        color: var(--muted-foreground);
+
+        a {
+            color: var(--foreground);
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+                color: var(--primary);
+                text-decoration: underline;
+            }
+        }
+
+        &.active {
+            color: var(--foreground);
+            font-weight: fontWeight('medium');
+        }
+
+        // Separator
+        &+.breadcrumb-item::before {
+            content: '/';
+            padding: 0 spacing('2');
+            color: var(--muted-foreground);
+        }
+
+        // Alternative separators
+        &[data-separator='>'] {
+            &+.breadcrumb-item::before {
+                content: '>';
+            }
+        }
+
+        &[data-separator='»'] {
+            &+.breadcrumb-item::before {
+                content: '»';
+            }
+        }
+
+        &[data-separator='·'] {
+            &+.breadcrumb-item::before {
+                content: '·';
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                                                <div class="breadcrumb-item active">
+                            Accessibility
+                        </div>
+                                                        </nav>
+
+                <div class="box_content">
+                    <h1 id="accessibility">Accessibility</h1>
+                    <p>Utilitários de acessibilidade para tornar sua
+                    aplicação mais inclusiva e acessível a todos os
+                    usuários.</p>
+                    <h2 id="screen-reader-only">Screen Reader Only</h2>
+                    <p>Oculta visualmente mas mantém acessível para
+                    leitores de tela.</p>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <button class="btn btn-aura-500">
+                    <span class="sr-only">Adicionar ao carrinho</span>
+                    <i class="bi bi-cart-plus"></i>
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb1"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-aura-500&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;sr-only&quot;</span><span class="dt">&gt;</span>Adicionar ao carrinho<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;bi bi-cart-plus&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="skip-link">Skip Link</h2>
+                    <p>Link para pular para o conteúdo principal
+                    (aparece ao focar).</p>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <a href="#main-content" class="skip-link">Pular para
+                    o conteúdo principal</a>
+                    <p id="main-content">
+                    Conteúdo principal aqui
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb2"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#main-content&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;skip-link&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  Pular para o conteúdo principal</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">main</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;main-content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Conteúdo --&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="focus-ring">Focus Ring</h2>
+                    <p>Anéis de foco para navegação por teclado.</p>
+                    <div class="docs-example">
+                    <div class="docs-example-preview flex gap-3">
+                    <button class="btn btn-aura-500 focus-ring">
+                    Focus Ring
+                    </button>
+                    <button class="btn btn-blue focus-ring focus-ring-offset-0">
+                    Offset 0
+                    </button>
+                    <button class="btn btn-green focus-ring focus-ring-offset-4">
+                    Offset 4
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb3"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-aura-500 focus-ring&quot;</span><span class="dt">&gt;</span>Focus Ring<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-blue focus-ring focus-ring-offset-0&quot;</span><span class="dt">&gt;</span>Offset 0<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-green focus-ring focus-ring-offset-4&quot;</span><span class="dt">&gt;</span>Offset 4<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="focus-visible">Focus Visible</h2>
+                    <p>Mostra foco apenas para navegação por
+                    teclado.</p>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <button class="btn btn-aura-500 focus-visible">
+                    Foco apenas com teclado (Tab)
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb4"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-aura-500 focus-visible&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  Foco apenas com teclado</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="screen-reader">Screen Reader</h3>
+                    <ul>
+                    <li><code>.sr-only</code> - Oculta visualmente,
+                    acessível para leitores de tela</li>
+                    <li><code>.not-sr-only</code> - Reverte sr-only</li>
+                    </ul>
+                    <h3 id="focus">Focus</h3>
+                    <ul>
+                    <li><code>.focus-visible</code> - Foco apenas para
+                    navegação por teclado</li>
+                    <li><code>.focus-ring</code> - Anel de foco
+                    customizado</li>
+                    <li><code>.focus-ring-offset-0</code> - Sem
+                    offset</li>
+                    <li><code>.focus-ring-offset-1</code> - Offset de
+                    1px</li>
+                    <li><code>.focus-ring-offset-2</code> - Offset de
+                    2px</li>
+                    <li><code>.focus-ring-offset-4</code> - Offset de
+                    4px</li>
+                    </ul>
+                    <h3 id="navegação">Navegação</h3>
+                    <ul>
+                    <li><code>.skip-link</code> - Link para pular
+                    conteúdo</li>
+                    </ul>
+                    <h2 id="media-queries-automáticas">Media Queries
+                    Automáticas</h2>
+                    <p>O sistema inclui suporte automático para:</p>
+                    <ul>
+                    <li><strong>prefers-contrast: high</strong> - Bordas
+                    mais grossas em modo alto contraste</li>
+                    <li><strong>prefers-reduced-motion</strong> - Reduz
+                    animações para usuários sensíveis</li>
+                    <li><strong>forced-colors</strong> - Suporte para
+                    modo de alto contraste do Windows</li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Sempre use sr-only</strong> para ícones
+                    sem texto</li>
+                    <li><strong>Skip links</strong> no topo de cada
+                    página</li>
+                    <li><strong>Focus visible</strong> para melhor UX de
+                    teclado</li>
+                    <li><strong>Teste com leitores de tela</strong>
+                    (NVDA, JAWS, VoiceOver)</li>
+                    <li><strong>Contraste adequado</strong> (WCAG AA
+                    mínimo)</li>
+                    <li><strong>Navegação por teclado</strong> funcional
+                    em todos os elementos interativos</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

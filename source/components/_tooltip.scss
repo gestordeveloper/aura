@@ -1,0 +1,79 @@
+// Tooltip component
+.tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: none;
+    padding: spacing('1') spacing('2');
+    font-size: fontSize('xs');
+    line-height: 1.4;
+    color: var(--primary-foreground);
+    background: var(--primary);
+    border-radius: radius('sm');
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+
+    &.show {
+        display: block;
+        opacity: 1;
+    }
+
+    // Arrow
+    .tooltip-arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    // Top position
+    &.tooltip-top {
+        .tooltip-arrow {
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 4px 4px 0 4px;
+            border-color: var(--primary) transparent transparent transparent;
+        }
+    }
+
+    // Bottom position
+    &.tooltip-bottom {
+        .tooltip-arrow {
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0 4px 4px 4px;
+            border-color: transparent transparent var(--primary) transparent;
+        }
+    }
+
+    // Left position
+    &.tooltip-left {
+        .tooltip-arrow {
+            right: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 4px 0 4px 4px;
+            border-color: transparent transparent transparent var(--primary);
+        }
+    }
+
+    // Right position
+    &.tooltip-right {
+        .tooltip-arrow {
+            left: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 4px 4px 4px 0;
+            border-color: transparent var(--primary) transparent transparent;
+        }
+    }
+}
+
+// Tooltip trigger
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}

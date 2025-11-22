@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                                                <div class="breadcrumb-item active">
+                            Badges
+                        </div>
+                                                        </nav>
+
+                <div class="box_content">
+                    <h1 id="badges">Badges</h1>
+                    <p>Os badges são componentes compactos usados para
+                    exibir informações de status, contadores, labels e
+                    outras informações contextuais.</p>
+                    <h2 id="variações-básicas">Variações Básicas</h2>
+                    <h3 id="badge-padrão">Badge Padrão</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <p><span class="badge">Default Badge</span> <span
+                    class="badge badge-sm">Small Badge</span> <span
+                    class="badge badge-lg">Large Badge</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb1"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge&quot;</span><span class="dt">&gt;</span>Default Badge<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm&quot;</span><span class="dt">&gt;</span>Small Badge<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-lg&quot;</span><span class="dt">&gt;</span>Large Badge<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="badges-com-cores">Badges com Cores</h2>
+                    <h3 id="cores-sólidas">Cores Sólidas</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center flex-wrap">
+                    <p><span class="badge badge-aura-500">Aura</span>
+                    <span class="badge badge-blue">Blue</span> <span
+                    class="badge badge-green">Green</span> <span
+                    class="badge badge-red">Red</span> <span
+                    class="badge badge-yellow">Yellow</span> <span
+                    class="badge badge-gray-500">Gray</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb2"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-aura-500&quot;</span><span class="dt">&gt;</span>Aura<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-blue&quot;</span><span class="dt">&gt;</span>Blue<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-green&quot;</span><span class="dt">&gt;</span>Green<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-red&quot;</span><span class="dt">&gt;</span>Red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-yellow&quot;</span><span class="dt">&gt;</span>Yellow<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-gray-500&quot;</span><span class="dt">&gt;</span>Gray<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="badges-outline">Badges Outline</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center flex-wrap">
+                    <p><span
+                    class="badge badge-outline-aura-500">Aura</span>
+                    <span class="badge badge-outline-blue">Blue</span>
+                    <span class="badge badge-outline-green">Green</span>
+                    <span class="badge badge-outline-red">Red</span>
+                    <span
+                    class="badge badge-outline-yellow">Yellow</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb3"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-outline-aura-500&quot;</span><span class="dt">&gt;</span>Aura<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-outline-blue&quot;</span><span class="dt">&gt;</span>Blue<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-outline-green&quot;</span><span class="dt">&gt;</span>Green<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-outline-red&quot;</span><span class="dt">&gt;</span>Red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-outline-yellow&quot;</span><span class="dt">&gt;</span>Yellow<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="variações-de-forma">Variações de Forma</h2>
+                    <h3 id="badge-pill-arredondado">Badge Pill
+                    (Arredondado)</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <p><span
+                    class="badge badge-pill badge-aura-500">Pill
+                    Badge</span> <span
+                    class="badge badge-pill badge-blue">99+</span> <span
+                    class="badge badge-pill badge-green">New</span>
+                    <span
+                    class="badge badge-pill badge-outline-red">Hot</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb4"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-aura-500&quot;</span><span class="dt">&gt;</span>Pill Badge<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-blue&quot;</span><span class="dt">&gt;</span>99+<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-green&quot;</span><span class="dt">&gt;</span>New<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-outline-red&quot;</span><span class="dt">&gt;</span>Hot<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="badge-com-indicador-dot">Badge com Indicador
+                    (Dot)</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center flex-wrap">
+                    <p><span
+                    class="badge badge-dot badge-green">Online</span>
+                    <span
+                    class="badge badge-dot badge-red">Offline</span>
+                    <span
+                    class="badge badge-dot badge-yellow">Away</span>
+                    <span
+                    class="badge badge-dot badge-blue">Busy</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb5"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-green&quot;</span><span class="dt">&gt;</span>Online<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-red&quot;</span><span class="dt">&gt;</span>Offline<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-yellow&quot;</span><span class="dt">&gt;</span>Away<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-dot badge-blue&quot;</span><span class="dt">&gt;</span>Busy<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="tamanhos">Tamanhos</h2>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center">
+                    <p><span
+                    class="badge badge-sm badge-aura-500">Small</span>
+                    <span class="badge badge-aura-500">Default</span>
+                    <span
+                    class="badge badge-lg badge-aura-500">Large</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb6"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-500&quot;</span><span class="dt">&gt;</span>Small<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-aura-500&quot;</span><span class="dt">&gt;</span>Default<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-lg badge-aura-500&quot;</span><span class="dt">&gt;</span>Large<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="casos-de-uso-comuns">Casos de Uso
+                    Comuns</h2>
+                    <h3 id="contadores-e-notificações">Contadores e
+                    Notificações</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-4 items-center">
+                    <button class="btn btn-outline-aura-500">
+                    Mensagens <span
+                    class="badge badge-pill badge-red">5</span>
+                    </button>
+                    <button class="btn btn-outline-blue">
+                    Notificações <span
+                    class="badge badge-pill badge-blue">12</span>
+                    </button>
+                    <button class="btn btn-outline-green">
+                    Carrinho <span
+                    class="badge badge-pill badge-green">3</span>
+                    </button>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb7"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-outline-aura-500&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  Mensagens</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-red&quot;</span><span class="dt">&gt;</span>5<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-outline-blue&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  Notificações</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-blue&quot;</span><span class="dt">&gt;</span>12<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;btn btn-outline-green&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  Carrinho</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-green&quot;</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="status-e-labels">Status e Labels</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-3 items-center flex-wrap">
+                    <p><span class="badge badge-green">Ativo</span>
+                    <span class="badge badge-red">Inativo</span> <span
+                    class="badge badge-yellow">Pendente</span> <span
+                    class="badge badge-blue">Em Progresso</span> <span
+                    class="badge badge-outline-aura-500">Rascunho</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb8"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-green&quot;</span><span class="dt">&gt;</span>Ativo<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-red&quot;</span><span class="dt">&gt;</span>Inativo<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-yellow&quot;</span><span class="dt">&gt;</span>Pendente<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-blue&quot;</span><span class="dt">&gt;</span>Em Progresso<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-outline-aura-500&quot;</span><span class="dt">&gt;</span>Rascunho<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h3 id="categorias-e-tags">Categorias e Tags</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-2 items-center flex-wrap">
+                    <p><span
+                    class="badge badge-pill badge-outline-blue">JavaScript</span>
+                    <span
+                    class="badge badge-pill badge-outline-green">CSS</span>
+                    <span
+                    class="badge badge-pill badge-outline-red">HTML</span>
+                    <span
+                    class="badge badge-pill badge-outline-yellow">SCSS</span>
+                    <span
+                    class="badge badge-pill badge-outline-aura-500">Design</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb9"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-outline-blue&quot;</span><span class="dt">&gt;</span>JavaScript<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-outline-green&quot;</span><span class="dt">&gt;</span>CSS<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-outline-red&quot;</span><span class="dt">&gt;</span>HTML<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-outline-yellow&quot;</span><span class="dt">&gt;</span>SCSS<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-pill badge-outline-aura-500&quot;</span><span class="dt">&gt;</span>Design<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="variações-de-tonalidade">Variações de
+                    Tonalidade</h2>
+                    <h3 id="aura-color-scale">Aura Color Scale</h3>
+                    <div class="docs-example">
+                    <div
+                    class="docs-example-preview flex gap-2 items-center flex-wrap">
+                    <p><span
+                    class="badge badge-sm badge-aura-50">50</span> <span
+                    class="badge badge-sm badge-aura-100">100</span>
+                    <span
+                    class="badge badge-sm badge-aura-200">200</span>
+                    <span
+                    class="badge badge-sm badge-aura-300">300</span>
+                    <span
+                    class="badge badge-sm badge-aura-400">400</span>
+                    <span
+                    class="badge badge-sm badge-aura-500">500</span>
+                    <span
+                    class="badge badge-sm badge-aura-600">600</span>
+                    <span
+                    class="badge badge-sm badge-aura-700">700</span>
+                    <span
+                    class="badge badge-sm badge-aura-800">800</span>
+                    <span
+                    class="badge badge-sm badge-aura-900">900</span></p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb10"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-50&quot;</span><span class="dt">&gt;</span>50<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-100&quot;</span><span class="dt">&gt;</span>100<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-200&quot;</span><span class="dt">&gt;</span>200<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-300&quot;</span><span class="dt">&gt;</span>300<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-400&quot;</span><span class="dt">&gt;</span>400<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-500&quot;</span><span class="dt">&gt;</span>500<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-600&quot;</span><span class="dt">&gt;</span>600<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-700&quot;</span><span class="dt">&gt;</span>700<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-800&quot;</span><span class="dt">&gt;</span>800<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;badge badge-sm badge-aura-900&quot;</span><span class="dt">&gt;</span>900<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="tamanhos-1">Tamanhos</h3>
+                    <ul>
+                    <li><code>.badge</code> - Tamanho padrão</li>
+                    <li><code>.badge-sm</code> - Tamanho pequeno</li>
+                    <li><code>.badge-lg</code> - Tamanho grande</li>
+                    </ul>
+                    <h3 id="formas">Formas</h3>
+                    <ul>
+                    <li><code>.badge-pill</code> - Badge com bordas
+                    totalmente arredondadas</li>
+                    <li><code>.badge-dot</code> - Badge com indicador de
+                    ponto</li>
+                    </ul>
+                    <h3 id="cores-sólidas-1">Cores Sólidas</h3>
+                    <ul>
+                    <li><code>.badge-aura-{50-900}</code> - Variações da
+                    cor primária Aura</li>
+                    <li><code>.badge-secondary-{50-900}</code> -
+                    Variações da cor secundária</li>
+                    <li><code>.badge-blue</code>,
+                    <code>.badge-blue-{50-900}</code> - Variações
+                    azul</li>
+                    <li><code>.badge-green</code>,
+                    <code>.badge-green-{50-900}</code> - Variações
+                    verde</li>
+                    <li><code>.badge-red</code>,
+                    <code>.badge-red-{50-900}</code> - Variações
+                    vermelho</li>
+                    <li><code>.badge-yellow</code>,
+                    <code>.badge-yellow-{50-900}</code> - Variações
+                    amarelo</li>
+                    <li><code>.badge-gray-{50-900}</code> - Variações
+                    cinza</li>
+                    </ul>
+                    <h3 id="cores-outline">Cores Outline</h3>
+                    <ul>
+                    <li><code>.badge-outline-{color}</code> - Versão
+                    outline de qualquer cor acima</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

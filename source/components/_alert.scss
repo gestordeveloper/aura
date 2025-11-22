@@ -1,0 +1,98 @@
+// Alert component
+.alert {
+    position: relative;
+    padding: spacing('4');
+    margin-bottom: spacing('4');
+    border: 1px solid var(--border);
+    border-radius: radius('md');
+    background: var(--card);
+    color: var(--card-foreground);
+
+    .alert-title {
+        font-size: fontSize('md');
+        font-weight: fontWeight('bold');
+        margin-bottom: spacing('1');
+        display: flex;
+        align-items: center;
+        gap: spacing('2');
+    }
+
+    .alert-description {
+        font-size: fontSize('sm');
+        color: var(--muted-foreground);
+    }
+
+    .alert-icon {
+        flex-shrink: 0;
+        font-size: fontSize('xl');
+    }
+
+    // Dismissible variant
+    &.alert-dismissible {
+        padding-right: spacing('12');
+
+        .alert-close {
+            position: absolute;
+            top: spacing('3');
+            right: spacing('3');
+            background: transparent;
+            border: none;
+            color: var(--foreground);
+            cursor: pointer;
+            padding: spacing('1');
+            line-height: 1;
+            font-size: fontSize('xl');
+            opacity: 0.5;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    // Success variant
+    &.alert-success {
+        background: tint-color($green, 95%);
+        border-color: $green;
+        color: shade-color($green, 40%);
+
+        .alert-icon {
+            color: $green;
+        }
+    }
+
+    // Info variant
+    &.alert-info {
+        background: tint-color($blue, 95%);
+        border-color: $blue;
+        color: shade-color($blue, 40%);
+
+        .alert-icon {
+            color: $blue;
+        }
+    }
+
+    // Warning variant
+    &.alert-warning {
+        background: tint-color($yellow, 95%);
+        border-color: $yellow;
+        color: shade-color($yellow, 40%);
+
+        .alert-icon {
+            color: $yellow;
+        }
+    }
+
+    // Error/Danger variant
+    &.alert-error,
+    &.alert-danger {
+        background: tint-color($red, 95%);
+        border-color: $red;
+        color: shade-color($red, 40%);
+
+        .alert-icon {
+            color: $red;
+        }
+    }
+}

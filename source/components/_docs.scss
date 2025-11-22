@@ -1,0 +1,62 @@
+.docs-example {
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.docs-example-preview {
+  padding: 2rem;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+.docs-example-code {
+  position: relative;
+  background: var(--muted);
+}
+
+.docs-example-code pre {
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.docs-example-code code {
+  font-family: 'Roboto Mono', monospace;
+  color: var(--foreground);
+}
+
+.copy-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 24, 137, 0.3);
+}
+
+.copy-button.copied {
+  background: var(--primary);
+}
+
+.copy-button.copied::after {
+  content: 'Copiado!';
+}

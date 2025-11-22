@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="./../dist/app.css" />
+    <link rel="stylesheet" href="./../icons/icons-dist/icons.css" />
+    <link rel="stylesheet" href="./../dist/select2.min.css" />
+</head>
+<body>
+
+    <div class="fab-container">
+        <button class="fab main-fab">+</button>
+        <div class="fab-options">
+            <a href="#" class="fab-option" title="Novo Cliente">
+                <i class="icon icon-user-6"></i>
+            </a>
+            <a href="#" class="fab-option" title="Novo Pedido">
+                <i class="icon icon-kit-6"></i>
+            </a>
+            <a href="#" class="fab-option" title="Nova Tarefa">
+                <i class="icon icon-calendar-2"></i>
+            </a>
+        </div>
+    </div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <h1 class="text-primary">Aura</h1>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Samuel <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <ul class="sidebar_navbar">
+            <div class="primary_nav">
+                <li class="navbar_li active"><a href="./index.html"><i class="icon icon-house-1"></i> Components</a></li>
+
+                <li class="navbar_li li_title">CADASTRO</li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Cliente</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Fornecedor</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Transportadora</a></li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-file-18"></i> Produto</a></li>
+
+                <li class="navbar_li li_title">VENDAS</li>
+                <li class="navbar_li"><a href="./calendar.html"><i class="icon icon-calendar-2"></i> Calendar</a></li>
+                <li class="navbar_li"><a href="./funnel.html"><i class="icon icon-kit-36"></i> Funnel</a></li>
+
+                <li class="navbar_li li_title">Ferramentas</li>
+                <li class="navbar_li"><a href="./profile.html"><i class="icon icon-user-8"></i> Profile</a></li>
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Auraflix</a></li>
+            </div>
+
+            <div class="secondary_nav">
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Configurações</a></li>
+                <li class="navbar_li"><a href="./auraflix.html"><i class="icon icon-kit-44"></i> Suporte</a></li>
+
+                <p class="sidebar_footer"><a target="_blank" href="https://agenciaebenezer.com.br">Ebenezer</a> v5.11.437</p>
+            </div>
+        </ul>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <div class="box_sidebar">
+                    <nav>
+                        <a href="index.html" class="active"><i class="icon icon-kit-67"></i> Forms</a>
+                        <a href="cards.html"><i class="icon icon-kit-16"></i> Cards</a>
+                        <a href="lists.html"><i class="icon icon-kit-68"></i> Lists</a>
+                        <a href="tables.html"><i class="icon icon-kit-17"></i> Tables</a>
+                        <a href="elements.html"><i class="icon icon-kit-71"></i> Elements</a>
+                    </nav>
+                </div>
+
+                <div class="box_content">
+                    <div class="box_header my-4">
+                        <header>
+                            <h2 class="header_title"><i class="icon icon-kit-67"></i> Forms</h2>
+                        </header>
+                    </div>
+
+                    <div class="row">
+                        <div class="span-6 span-sm-12 span-md-12">
+                            <form action="" method="post" enctype="multipart/form-data" class="app_form card column spacing-4">
+                                <div class="row">
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Nome:</span>
+                                        <input type="text" placeholder="">
+                                    </div>
+
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Sobrenome:</span>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Data vencimento:</span>
+                                        <input type="date">
+                                    </div>
+
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">Tipo de pessoa:</span>
+                                        <div class="row">
+                                            <label for="type1" class="span-sm-6 span-6">
+                                                <input type="radio" checked name="type" id="type1">
+                                                <u></u><span>Física</span>
+                                            </label>
+
+                                            <label for="type2" class="span-sm-6 span-6">
+                                                <input type="radio" name="type" id="type2">
+                                                <u></u><span>Jurídica</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label span-6 span-sm-12">
+                                        <span class="legend">O que você domina?</span>
+                                        <div class="column spacing-1">
+                                            <label for="check1">
+                                                <input type="checkbox" checked name="type" id="check1">
+                                                <u></u><span>PHP</span>
+                                            </label>
+
+                                            <label for="check2">
+                                                <input type="checkbox" name="type" id="check2">
+                                                <u></u><span>JavaScript</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="label">
+                                    <span class="legend">Foto de perfil: (600x600px)</span>
+                                    <input type="file" name="file" />
+                                </label>
+
+                                <label class="label">
+                                    <span class="legend">Multiple...</span>
+                                    <select name="" multiple="multiple" class="select-input">
+                                        <option value="2">VILLAGE CONSTRUCOES LTDA PORTAL DAS ARAUCARIAS PORTAL DAS ARAUCARIAS</option>
+                                        <option value="3">Danger!</option>
+                                        <option value="4">Warning!</option>
+                                        <option value="5">Information!</option>
+                                    </select>
+                                </label>
+
+                                <div class="row">
+                                    <label class="label span-12">
+                                        <span class="legend">Selecione...</span>
+                                        <select name="" class="select-input">
+                                            <option></option>
+                                            <option value="2">VILLAGE CONSTRUCOES LTDA PORTAL DAS ARAUCARIAS PORTAL DAS ARAUCARIAS</option>
+                                            <option value="3">Danger!</option>
+                                            <option value="4">Warning!</option>
+                                            <option value="5">Information!</option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                                <label class="label-sm">
+                                    <span class="legend">Selecione...</span>
+                                    <select name="">
+                                        <option></option>
+                                        <option value="2">Success!</option>
+                                        <option value="3">Danger!</option>
+                                        <option value="4">Warning!</option>
+                                        <option value="5">Information!</option>
+                                    </select>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="span-6 span-sm-12 column spacing-4">
+                            <form action="" class="app_form card column spacing-4">
+                                <label class="label">
+                                    <span class="legend">Nome de usuário:</span>
+                                    <div class="group">
+                                        <span>https://linnk.space/</span>
+                                        <input type="text" >
+                                    </div>
+                                </label>
+
+                                <label class="label">
+                                    <div class="group">
+                                        <span>Nome:</span>
+                                        <input type="text" >
+                                    </div>
+                                </label>
+
+                                <label class="label">
+                                    <div class="group">
+                                        <span><i class="icon icon-search-1"></i></span>
+                                        <input type="text" >
+                                    </div>
+                                </label>
+                            </form>
+
+                            <form action="" class="app_form_search card">
+                                <input type="text" placeholder="Pesquisar...">
+                                <button type="submit"><i class="icon icon-search-1"></i></button>
+                            </form>
+
+                            <form action="" class="app_form_search_filter card">
+                                <input type="text" placeholder="Pesquisar...">
+                                <button type="submit"><i class="icon icon-search-1"></i></button>
+                                <button type="button"><i class="icon icon-kit-36"></i> <span>Filtro Avançado</span></button>
+                            </form>
+                            
+                            <div class="card">
+                                <form action="" class="app_form_note">
+                                    <div class="img_thumb">
+                                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                                    </div>
+
+<!--                                    <input type="text" name="content" placeholder="Qual a sua anotação...">-->
+                                    <textarea name="note" placeholder="Qual a sua anotação..."></textarea>
+                                </form>
+                            </div>
+
+                            <div class="card">
+                                <form class="app_form_task">
+                                    <div class="label">
+                                        <input type="text" name="title" placeholder="Titulo da tarefa">
+                                        <textarea name="description" placeholder="Digite aqui os detalhes da tarefa"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card_header">
+                            <h2><i class="icon icon-box-1"></i> Produtos</h2>
+                        </div>
+
+                        <div class="card_body">
+                            <form action="" class="app_form">
+                                <div class="row">
+                                    <label class="label span-6 span-sm-12">
+                                        <span class="label-loader">
+                                            <img src="./../dist/loader-input.gif" alt="">
+                                        </span>
+
+                                        <input type="text" placeholder="Nome do produto...">
+
+                                        <div class="suggestions">
+                                            <div class="suggestion">Caneta Bic Azul</div>
+                                            <div class="suggestion">Caneca Stanley 500ml</div>
+                                            <div class="suggestion">Caneca Stanley 500ml</div>
+                                        </div>
+                                    </label>
+
+                                    <label class="label span-3 span-sm-12">
+                                        <input type="text" placeholder="0,00">
+                                    </label>
+
+                                    <label class="label span-3 span-sm-12">
+                                        <input type="text" placeholder="0,00">
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="modal_right modal_options" style="display: none;">
+    <div class="modal_right_header">
+        <h2>Opções</h2>
+        <span class="btn-sm btn-red" data-close-modal-right="nomedamodal">
+            <i class="icon icon-cancel-1"></i></span>
+    </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur dolor et illum, quam qui sequi. Ab amet dolorum enim, esse et, harum incidunt libero molestiae neque, quo sint voluptatem!
+</div>
+
+<script src="./../dist/jquery.min.js"></script>
+<script src="./../dist/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".select-input").select2({
+            placeholder: "Selecione uma opção...",
+            language: {
+                searching: function () {
+                    return "Digite para pesquisar..."
+                }
+            }
+        });
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const menuToggle = document.getElementById('menu-toggle');
+    const html = document.documentElement;
+    let isDarkMode = false;
+
+    // Verifica se o tema está armazenado em cookie
+    if (getCookie('auraTheme') === 'dark') {
+        isDarkMode = true;
+        html.dataset.auraTheme = 'dark';
+    }
+
+    // Atualiza o texto do botão
+    themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+
+    themeToggle.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        html.dataset.auraTheme = isDarkMode ? 'dark' : 'light';
+
+        // Salva o tema no cookie
+        setCookie('auraTheme', isDarkMode ? 'dark' : 'light', 365); // Expira em 1 ano
+
+        // Atualiza o texto do botão
+        themeToggle.innerHTML = isDarkMode ? '<i class="icon icon-kit-24"></i>' : '<i class="icon icon-kit-38"></i>';
+    });
+
+    // Funções para manipular cookies
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    }
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+
+    //responsavel por abrir o menu responsivo
+    menuToggle.addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+
+
+    document.querySelectorAll('.navbar_li > a').forEach(link => {
+        link.addEventListener('click', e => {
+            const parent = e.currentTarget.parentElement;
+
+            if (parent.querySelector('.navbar_li_dropdown')) {
+                e.preventDefault();
+                parent.classList.toggle('show');
+            }
+        });
+    });
+
+    const fabContainer = document.querySelector('.fab-container');
+    const mainFab = document.querySelector('.main-fab');
+
+    mainFab.addEventListener('click', () => {
+        fabContainer.classList.toggle('active');
+    });
+
+</script>
+</body>
+</html>

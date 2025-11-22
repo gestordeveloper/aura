@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                            <div class="breadcrumb-item">
+                            <a href="../componentes.html">Componentes</a>
+                        </div>
+                        <div class="breadcrumb-item active">
+                            Funnels
+                        </div>
+                                    </nav>
+
+                <div class="box_content">
+                    <h1 id="funnels">Funnels</h1>
+                    <p>O funnel é um componente tipo Kanban para
+                    gerenciar itens em diferentes estágios de um
+                    processo.</p>
+                    <h2 id="funnel-básico">Funnel Básico</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <div class="funnel_content">
+                    <div class="funnel_board" style="height: 400px;">
+                    <pre><code>&lt;div class=&quot;funnel_list&quot;&gt;
+  &lt;header&gt;
+    &lt;div class=&quot;infors&quot;&gt;
+      &lt;h3&gt;Leads&lt;/h3&gt;
+      &lt;span&gt;Novos contatos&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list_count&quot;&gt;5&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;ul class=&quot;funnel_list_stage&quot;&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;infors&quot;&gt;
+        &lt;div class=&quot;infors_body&quot;&gt;
+          &lt;div class=&quot;body_data&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Cliente A&lt;/a&gt;
+            &lt;p&gt;Interessado em produto X&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;infors&quot;&gt;
+        &lt;div class=&quot;infors_body&quot;&gt;
+          &lt;div class=&quot;body_data&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Cliente B&lt;/a&gt;
+            &lt;p&gt;Solicitou orçamento&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;funnel_list&quot;&gt;
+  &lt;header&gt;
+    &lt;div class=&quot;infors&quot;&gt;
+      &lt;h3&gt;Qualificados&lt;/h3&gt;
+      &lt;span&gt;Em análise&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list_count&quot;&gt;3&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;ul class=&quot;funnel_list_stage&quot;&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;infors&quot;&gt;
+        &lt;div class=&quot;infors_body&quot;&gt;
+          &lt;div class=&quot;body_data&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Cliente C&lt;/a&gt;
+            &lt;p&gt;Reunião agendada&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;funnel_list&quot;&gt;
+  &lt;header&gt;
+    &lt;div class=&quot;infors&quot;&gt;
+      &lt;h3&gt;Negociação&lt;/h3&gt;
+      &lt;span&gt;Proposta enviada&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list_count&quot;&gt;2&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;ul class=&quot;funnel_list_stage&quot;&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;infors&quot;&gt;
+        &lt;div class=&quot;infors_body&quot;&gt;
+          &lt;div class=&quot;body_data&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Cliente D&lt;/a&gt;
+            &lt;p&gt;Aguardando aprovação&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb2"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;funnel_content&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;funnel_board&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;funnel_list&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;infors&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>Estágio 1<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Descrição<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;list_count&quot;</span><span class="dt">&gt;</span>5<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">ul</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;funnel_list_stage&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;infors&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;infors_body&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>              <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;body_data&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#&quot;</span><span class="dt">&gt;</span>Item 1<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Descrição do item<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>              <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- Mais estágios... --&gt;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <ul>
+                    <li><code>.funnel_content</code> - Container
+                    principal</li>
+                    <li><code>.funnel_board</code> - Board
+                    horizontal</li>
+                    <li><code>.funnel_list</code> - Coluna/estágio
+                    (320px)</li>
+                    <li><code>.funnel_list_stage</code> - Lista de
+                    itens</li>
+                    <li><code>.infors</code> - Informações do item</li>
+                    <li><code>.infors_body</code> - Corpo do item</li>
+                    <li><code>.body_data</code> - Dados do item</li>
+                    <li><code>.body_actions</code> - Ações do item</li>
+                    <li><code>.list_count</code> - Contador de
+                    itens</li>
+                    </ul>
+                    <h2 id="classes-de-estado-drag-drop">Classes de
+                    Estado (Drag &amp; Drop)</h2>
+                    <ul>
+                    <li><code>.is-dragging</code> - Item sendo
+                    arrastado</li>
+                    <li><code>.over</code> - Área de drop ativa</li>
+                    <li><code>.highlight</code> - Destaque</li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Largura fixa</strong>: Cada coluna tem
+                    320px</li>
+                    <li><strong>Scroll horizontal</strong>: Board
+                    permite scroll</li>
+                    <li><strong>Drag &amp; Drop</strong>: Implemente
+                    para mover itens</li>
+                    <li><strong>Contador</strong>: Atualize
+                    <code>.list_count</code> dinamicamente</li>
+                    <li><strong>Ações</strong>: Use
+                    <code>.body_actions</code> para botões</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

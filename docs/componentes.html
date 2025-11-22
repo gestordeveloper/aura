@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <link rel="stylesheet" href="assets/styles/docs.css" />
+    <link rel="stylesheet" href="assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="index.html">Início</a>
+                    </div>
+
+                                                                <div class="breadcrumb-item active">
+                            Componentes
+                        </div>
+                                                        </nav>
+
+                <div class="box_content">
+                    <h1 id="componentes">Componentes</h1>
+                    <p>Componentes são os blocos de construção
+                    reutilizáveis do nosso Design System. Cada
+                    componente é cuidadosamente projetado, testado e
+                    documentado para garantir consistência,
+                    acessibilidade e facilidade de uso em todos os
+                    nossos produtos.</p>
+                    <h2 id="o-que-são-componentes">O que são
+                    componentes?</h2>
+                    <p>Componentes são elementos de interface
+                    independentes e reutilizáveis que encapsulam
+                    funcionalidade, comportamento e estilo. Eles podem
+                    ser tão simples quanto um botão ou tão complexos
+                    quanto um modal com múltiplas interações.</p>
+                    <p>Cada componente em nosso sistema:</p>
+                    <ul>
+                    <li>Segue nossos princípios de design e diretrizes
+                    de marca</li>
+                    <li>É totalmente acessível e testado com tecnologias
+                    assistivas</li>
+                    <li>Possui variações para diferentes contextos e
+                    necessidades</li>
+                    <li>Inclui documentação completa com exemplos de
+                    código</li>
+                    <li>É responsivo e funciona em diferentes tamanhos
+                    de tela</li>
+                    </ul>
+                    <h2 id="categorias-de-componentes">Categorias de
+                    componentes</h2>
+                    <p>Organizamos nossos componentes em categorias para
+                    facilitar a navegação:</p>
+                    <h3 id="básicos">Básicos</h3>
+                    <p>Elementos fundamentais que servem como base para
+                    construções mais complexas.</p>
+                    <ul>
+                    <li><strong>Button</strong> - Ações primárias,
+                    secundárias e terciárias<br />
+                    </li>
+                    <li><strong>Input</strong> - Campos de texto,
+                    números, senhas<br />
+                    </li>
+                    <li><strong>Checkbox</strong> - Seleções
+                    múltiplas<br />
+                    </li>
+                    <li><strong>Radio</strong> - Seleções únicas<br />
+                    </li>
+                    <li><strong>Toggle</strong> - Alternadores
+                    on/off<br />
+                    </li>
+                    <li><strong>Link</strong> - Navegação e
+                    referências</li>
+                    </ul>
+                    <h3 id="formulários">Formulários</h3>
+                    <p>Componentes especializados para coleta e
+                    validação de dados.</p>
+                    <ul>
+                    <li><strong>Select</strong> - Menus dropdown para
+                    seleção<br />
+                    </li>
+                    <li><strong>Textarea</strong> - Campos de texto
+                    multilinha<br />
+                    </li>
+                    <li><strong>Date Picker</strong> - Seleção de
+                    datas<br />
+                    </li>
+                    <li><strong>File Upload</strong> - Envio de
+                    arquivos<br />
+                    </li>
+                    <li><strong>Search</strong> - Campos de busca com
+                    autocompletar<br />
+                    </li>
+                    <li><strong>Form</strong> - Container com validação
+                    integrada</li>
+                    </ul>
+                    <h3 id="navegação">Navegação</h3>
+                    <p>Elementos que ajudam usuários a se moverem pela
+                    aplicação.</p>
+                    <ul>
+                    <li><strong>Navigation Bar</strong> - Menu principal
+                    de navegação<br />
+                    </li>
+                    <li><strong>Breadcrumb</strong> - Trilha de
+                    navegação hierárquica<br />
+                    </li>
+                    <li><strong>Tabs</strong> - Organização de conteúdo
+                    em abas<br />
+                    </li>
+                    <li><strong>Pagination</strong> - Navegação entre
+                    páginas de conteúdo<br />
+                    </li>
+                    <li><strong>Sidebar</strong> - Menu lateral para
+                    navegação secundária<br />
+                    </li>
+                    <li><strong>Steps</strong> - Indicadores de
+                    progresso em fluxos</li>
+                    </ul>
+                    <h3 id="feedback">Feedback</h3>
+                    <p>Componentes que comunicam status, confirmações e
+                    alertas.</p>
+                    <ul>
+                    <li><strong>Alert</strong> - Notificações e avisos
+                    contextuais<br />
+                    </li>
+                    <li><strong>Toast</strong> - Mensagens temporárias
+                    de feedback<br />
+                    </li>
+                    <li><strong>Badge</strong> - Indicadores de status
+                    ou contagem<br />
+                    </li>
+                    <li><strong>Progress Bar</strong> - Visualização de
+                    progresso<br />
+                    </li>
+                    <li><strong>Skeleton</strong> - Estados de
+                    carregamento<br />
+                    </li>
+                    <li><strong>Spinner</strong> - Indicadores de
+                    processamento</li>
+                    </ul>
+                    <h3 id="exibição-de-dados">Exibição de dados</h3>
+                    <p>Elementos para apresentar informações de forma
+                    estruturada.</p>
+                    <ul>
+                    <li><strong>Table</strong> - Exibição tabular de
+                    dados<br />
+                    </li>
+                    <li><strong>Card</strong> - Containers para agrupar
+                    informações<br />
+                    </li>
+                    <li><strong>List</strong> - Listas ordenadas e não
+                    ordenadas<br />
+                    </li>
+                    <li><strong>Accordion</strong> - Conteúdo
+                    expansível<br />
+                    </li>
+                    <li><strong>Stat</strong> - Métricas e estatísticas
+                    destacadas<br />
+                    </li>
+                    <li><strong>Avatar</strong> - Representações de
+                    usuários</li>
+                    </ul>
+                    <h3 id="sobreposições">Sobreposições</h3>
+                    <p>Componentes que aparecem sobre o conteúdo
+                    principal.</p>
+                    <ul>
+                    <li><strong>Modal</strong> - Diálogos que requerem
+                    atenção<br />
+                    </li>
+                    <li><strong>Drawer</strong> - Painéis laterais
+                    deslizantes<br />
+                    </li>
+                    <li><strong>Popover</strong> - Conteúdo contextual
+                    flutuante<br />
+                    </li>
+                    <li><strong>Tooltip</strong> - Dicas e informações
+                    adicionais<br />
+                    </li>
+                    <li><strong>Dropdown Menu</strong> - Menus de ações
+                    contextuais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="assets/scripts/jquery.min.js"></script>
+<script src="assets/scripts/select2.min.js"></script>
+<script src="assets/scripts/docs.js"></script>
+</body>
+</html>

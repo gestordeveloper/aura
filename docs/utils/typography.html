@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Documentação Aura</title>
+
+    <link rel="stylesheet" href="../assets/styles/app.css" />
+    <link rel="stylesheet" href="../assets/styles/docs.css" />
+    <link rel="stylesheet" href="../assets/styles/select2.min.css" />
+</head>
+<body>
+
+<div class="fab-container">
+    <button class="fab main-fab">+</button>
+    <div class="fab-options">
+        <a href="#" class="fab-option" title="Novo Cliente">
+            <i class="icon icon-user-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Novo Pedido">
+            <i class="icon icon-kit-6"></i>
+        </a>
+        <a href="#" class="fab-option" title="Nova Tarefa">
+            <i class="icon icon-calendar-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container">
+            <button id="menu-toggle" class="btn-sm"><i class="icon icon-kit-4"></i></button>
+            <div></div>
+            <div class="navbar_actions">
+                <span class="navbar_button"><i class="icon icon-kit-22"></i> <span class="badge">0</span></span>
+                <span id="theme-toggle" class="navbar_button"><i class="icon icon-kit-38"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar">
+        <div class="sidebar_logo">
+            <span class="text-5xl text-bold">Aura</span>
+        </div>
+
+        <div class="sidebar_user">
+            <div class="user_thumb">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </a>
+            </div>
+
+            <div class="user_data">
+                <a href="#">Olá! Admin <i class="icon icon-edit-1"></i></a>
+                <p>Super Admin</p>
+            </div>
+        </div>
+
+        <div class="sidebar_navbar">
+            <div class="docs-sidebar"></div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <main class="app">
+        <div class="container">
+            <div class="app_box">
+                <nav class="breadcrumb">
+                    <div class="breadcrumb-item">
+                        <a href="../index.html">Início</a>
+                    </div>
+
+                                                                <div class="breadcrumb-item active">
+                            Typography
+                        </div>
+                                                        </nav>
+
+                <div class="box_content">
+                    <h1 id="typography">Typography</h1>
+                    <p>Sistema completo de tipografia com classes
+                    semânticas e utilitários para controle preciso do
+                    texto.</p>
+                    <h2 id="headings">Headings</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <h1 class="heading-1">
+                    Heading 1
+                    </h1>
+                    <h2 class="heading-2">
+                    Heading 2
+                    </h2>
+                    <h3 class="heading-3">
+                    Heading 3
+                    </h3>
+                    <h4 class="heading-4">
+                    Heading 4
+                    </h4>
+                    <h5 class="heading-5">
+                    Heading 5
+                    </h5>
+                    <h6 class="heading-6">
+                    Heading 6
+                    </h6>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb1"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;heading-1&quot;</span><span class="dt">&gt;</span>Heading 1<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;heading-2&quot;</span><span class="dt">&gt;</span>Heading 2<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h3</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;heading-3&quot;</span><span class="dt">&gt;</span>Heading 3<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h4</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;heading-4&quot;</span><span class="dt">&gt;</span>Heading 4<span class="dt">&lt;/</span><span class="kw">h4</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h5</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;heading-5&quot;</span><span class="dt">&gt;</span>Heading 5<span class="dt">&lt;/</span><span class="kw">h5</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h6</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;heading-6&quot;</span><span class="dt">&gt;</span>Heading 6<span class="dt">&lt;/</span><span class="kw">h6</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="body-text">Body Text</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="body-1">
+                    Body 1 - Texto padrão para parágrafos e conteúdo
+                    principal.
+                    </p>
+                    <p class="body-2">
+                    Body 2 - Texto menor para conteúdo secundário.
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb2"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;body-1&quot;</span><span class="dt">&gt;</span>Body 1 - Texto padrão<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;body-2&quot;</span><span class="dt">&gt;</span>Body 2 - Texto menor<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="subtitles-e-variações">Subtitles e
+                    Variações</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="subtitle-1">
+                    Subtitle 1 - Subtítulo grande
+                    </p>
+                    <p class="subtitle-2">
+                    Subtitle 2 - Subtítulo médio
+                    </p>
+                    <p class="lead">
+                    Lead - Texto introdutório destacado
+                    </p>
+                    <p class="caption">
+                    Caption - Texto pequeno para legendas
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb3"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;subtitle-1&quot;</span><span class="dt">&gt;</span>Subtitle 1<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;subtitle-2&quot;</span><span class="dt">&gt;</span>Subtitle 2<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;lead&quot;</span><span class="dt">&gt;</span>Lead text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;caption&quot;</span><span class="dt">&gt;</span>Caption text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="text-transform">Text Transform</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="text-uppercase">
+                    Texto em maiúsculas
+                    </p>
+                    <p class="text-lowercase">
+                    TEXTO EM MINÚSCULAS
+                    </p>
+                    <p class="text-capitalize">
+                    texto capitalizado
+                    </p>
+                    <p class="text-normal-case">
+                    Texto Normal
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb4"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-uppercase&quot;</span><span class="dt">&gt;</span>Texto em maiúsculas<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-lowercase&quot;</span><span class="dt">&gt;</span>TEXTO EM MINÚSCULAS<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-capitalize&quot;</span><span class="dt">&gt;</span>texto capitalizado<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="line-clamp-truncate">Line Clamp
+                    (Truncate)</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="line-clamp-1" style="max-width: 300px;">
+                    Este texto será truncado em uma linha com
+                    reticências no final quando ultrapassar o limite.
+                    </p>
+                    <p class="line-clamp-2 mt-3" style="max-width: 300px;">
+                    Este texto será truncado em duas linhas com
+                    reticências no final quando ultrapassar o limite
+                    estabelecido.
+                    </p>
+                    <p class="line-clamp-3 mt-3" style="max-width: 300px;">
+                    Este texto será truncado em três linhas com
+                    reticências no final quando ultrapassar o limite
+                    estabelecido para o componente.
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb5"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;line-clamp-1&quot;</span><span class="dt">&gt;</span>Texto truncado em 1 linha...<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;line-clamp-2&quot;</span><span class="dt">&gt;</span>Texto truncado em 2 linhas...<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;line-clamp-3&quot;</span><span class="dt">&gt;</span>Texto truncado em 3 linhas...<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="line-height">Line Height</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="leading-none">
+                    Leading None (1.0)
+                    </p>
+                    <p class="leading-tight">
+                    Leading Tight (1.25)
+                    </p>
+                    <p class="leading-normal">
+                    Leading Normal (1.5)
+                    </p>
+                    <p class="leading-relaxed">
+                    Leading Relaxed (1.625)
+                    </p>
+                    <p class="leading-loose">
+                    Leading Loose (2.0)
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb6"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;leading-none&quot;</span><span class="dt">&gt;</span>Leading None<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;leading-tight&quot;</span><span class="dt">&gt;</span>Leading Tight<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;leading-normal&quot;</span><span class="dt">&gt;</span>Leading Normal<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;leading-relaxed&quot;</span><span class="dt">&gt;</span>Leading Relaxed<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;leading-loose&quot;</span><span class="dt">&gt;</span>Leading Loose<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="letter-spacing">Letter Spacing</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="tracking-tighter">
+                    Tracking Tighter
+                    </p>
+                    <p class="tracking-tight">
+                    Tracking Tight
+                    </p>
+                    <p class="tracking-normal">
+                    Tracking Normal
+                    </p>
+                    <p class="tracking-wide">
+                    Tracking Wide
+                    </p>
+                    <p class="tracking-wider">
+                    Tracking Wider
+                    </p>
+                    <p class="tracking-widest">
+                    Tracking Widest
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb7"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tracking-tighter&quot;</span><span class="dt">&gt;</span>Tracking Tighter<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tracking-normal&quot;</span><span class="dt">&gt;</span>Tracking Normal<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;tracking-widest&quot;</span><span class="dt">&gt;</span>Tracking Widest<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="text-decoration">Text Decoration</h2>
+                    <div class="docs-example">
+                    <div class="docs-example-preview">
+                    <p class="underline">
+                    Texto sublinhado
+                    </p>
+                    <p class="line-through">
+                    Texto riscado
+                    </p>
+                    <p class="no-underline">
+                    Sem decoração
+                    </p>
+                    </div>
+                    <div class="docs-example-code">
+                    <button class="copy-button">
+                    Copiar
+                    </button>
+                    <div class="sourceCode" id="cb8"><pre
+                    class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;underline&quot;</span><span class="dt">&gt;</span>Texto sublinhado<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;line-through&quot;</span><span class="dt">&gt;</span>Texto riscado<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;no-underline&quot;</span><span class="dt">&gt;</span>Sem decoração<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+                    </div>
+                    </div>
+                    <h2 id="classes-disponíveis">Classes
+                    Disponíveis</h2>
+                    <h3 id="headings-1">Headings</h3>
+                    <ul>
+                    <li><code>.heading-1</code> a
+                    <code>.heading-6</code> - Títulos responsivos</li>
+                    </ul>
+                    <h3 id="body">Body</h3>
+                    <ul>
+                    <li><code>.body-1</code>, <code>.body-2</code> -
+                    Texto de corpo</li>
+                    </ul>
+                    <h3 id="variações">Variações</h3>
+                    <ul>
+                    <li><code>.subtitle-1</code>,
+                    <code>.subtitle-2</code> - Subtítulos</li>
+                    <li><code>.lead</code> - Texto introdutório</li>
+                    <li><code>.caption</code> - Legendas</li>
+                    </ul>
+                    <h3 id="transform">Transform</h3>
+                    <ul>
+                    <li><code>.text-uppercase</code>,
+                    <code>.text-lowercase</code>,
+                    <code>.text-capitalize</code>,
+                    <code>.text-normal-case</code></li>
+                    </ul>
+                    <h3 id="truncate">Truncate</h3>
+                    <ul>
+                    <li><code>.text-truncate</code> - Trunca com
+                    reticências</li>
+                    <li><code>.line-clamp-1</code>,
+                    <code>.line-clamp-2</code>,
+                    <code>.line-clamp-3</code></li>
+                    </ul>
+                    <h3 id="line-height-1">Line Height</h3>
+                    <ul>
+                    <li><code>.leading-none</code>,
+                    <code>.leading-tight</code>,
+                    <code>.leading-snug</code>,
+                    <code>.leading-normal</code>,
+                    <code>.leading-relaxed</code>,
+                    <code>.leading-loose</code></li>
+                    </ul>
+                    <h3 id="letter-spacing-1">Letter Spacing</h3>
+                    <ul>
+                    <li><code>.tracking-tighter</code>,
+                    <code>.tracking-tight</code>,
+                    <code>.tracking-normal</code>,
+                    <code>.tracking-wide</code>,
+                    <code>.tracking-wider</code>,
+                    <code>.tracking-widest</code></li>
+                    </ul>
+                    <h3 id="decoration">Decoration</h3>
+                    <ul>
+                    <li><code>.underline</code>,
+                    <code>.line-through</code>,
+                    <code>.no-underline</code></li>
+                    </ul>
+                    <h3 id="white-space">White Space</h3>
+                    <ul>
+                    <li><code>.whitespace-normal</code>,
+                    <code>.whitespace-nowrap</code>,
+                    <code>.whitespace-pre</code>,
+                    <code>.whitespace-pre-line</code>,
+                    <code>.whitespace-pre-wrap</code></li>
+                    </ul>
+                    <h3 id="word-break">Word Break</h3>
+                    <ul>
+                    <li><code>.break-normal</code>,
+                    <code>.break-words</code>,
+                    <code>.break-all</code></li>
+                    </ul>
+                    <h2 id="boas-práticas">Boas Práticas</h2>
+                    <ol type="1">
+                    <li><strong>Hierarquia clara</strong>: Use headings
+                    em ordem (h1 → h2 → h3)</li>
+                    <li><strong>Legibilidade</strong>: Line-height de
+                    1.5-1.6 para texto de corpo</li>
+                    <li><strong>Contraste</strong>: Garanta contraste
+                    adequado (WCAG AA)</li>
+                    <li><strong>Responsividade</strong>: Headings
+                    ajustam automaticamente em mobile</li>
+                    <li><strong>Truncate com cuidado</strong>: Use
+                    apenas quando necessário</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="../assets/scripts/jquery.min.js"></script>
+<script src="../assets/scripts/select2.min.js"></script>
+<script src="../assets/scripts/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+// Divider component
+.divider {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: spacing('4') 0;
+    height: 0;
+
+    // Vertical divider
+    &.divider-vertical {
+        display: inline-block;
+        width: 0;
+        height: auto;
+        min-height: 1em;
+        border-top: 0;
+        border-left: 1px solid var(--border);
+        margin: 0 spacing('2');
+        vertical-align: middle;
+    }
+
+    // Divider with text
+    &.divider-text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+        border-top: 0;
+
+        &::before,
+        &::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid var(--border);
+        }
+
+        &::before {
+            margin-right: spacing('3');
+        }
+
+        &::after {
+            margin-left: spacing('3');
+        }
+
+        span {
+            color: var(--muted-foreground);
+            font-size: fontSize('sm');
+        }
+    }
+
+    // Thickness variants
+    &.divider-thick {
+        border-top-width: 2px;
+
+        &.divider-vertical {
+            border-left-width: 2px;
+        }
+    }
+
+    &.divider-dashed {
+        border-top-style: dashed;
+
+        &.divider-vertical {
+            border-left-style: dashed;
+        }
+    }
+
+    &.divider-dotted {
+        border-top-style: dotted;
+
+        &.divider-vertical {
+            border-left-style: dotted;
+        }
+    }
+}
