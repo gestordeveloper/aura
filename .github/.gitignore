@@ -1,7 +1,0 @@
-storage/
-vendor/
-node_modules/
-.idea/
-/package-lock.json
-/composer.lock
-/.env
