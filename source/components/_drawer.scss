@@ -1,0 +1,32 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 90%;
+  min-width: 500px;
+  max-width: 500px;
+  height: 100vh;
+  background: var(--background);
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+  transition: right 0.3s;
+  z-index: 1500;
+  overflow-y: auto;
+  padding: spacing("8");
+
+  &.drawer_large {
+    right: -960px;
+    min-width: 960px;
+    max-width: 960px;
+  }
+
+  &.open {
+    right: 0;
+  }
+
+  .drawer_header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: spacing("4");
+  }
+}
