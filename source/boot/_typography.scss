@@ -107,42 +107,42 @@
 }
 
 // Text transform
-.text-uppercase {
+@include hoverable(text-uppercase) {
     text-transform: uppercase !important;
 }
 
-.text-lowercase {
+@include hoverable(text-lowercase) {
     text-transform: lowercase !important;
 }
 
-.text-capitalize {
+@include hoverable(text-capitalize) {
     text-transform: capitalize !important;
 }
 
-.text-normal-case {
+@include hoverable(text-normal-case) {
     text-transform: none !important;
 }
 
 // Text truncate
-.text-truncate {
+@include hoverable(text-truncate) {
     @include truncate;
 }
 
-.line-clamp-1 {
+@include hoverable(line-clamp-1) {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-.line-clamp-2 {
+@include hoverable(line-clamp-2) {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-.line-clamp-3 {
+@include hoverable(line-clamp-3) {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -150,99 +150,99 @@
 }
 
 // Line height
-.leading-none {
+@include hoverable(leading-none) {
     line-height: 1 !important;
 }
 
-.leading-tight {
+@include hoverable(leading-tight) {
     line-height: 1.25 !important;
 }
 
-.leading-snug {
+@include hoverable(leading-snug) {
     line-height: 1.375 !important;
 }
 
-.leading-normal {
+@include hoverable(leading-normal) {
     line-height: 1.5 !important;
 }
 
-.leading-relaxed {
+@include hoverable(leading-relaxed) {
     line-height: 1.625 !important;
 }
 
-.leading-loose {
+@include hoverable(leading-loose) {
     line-height: 2 !important;
 }
 
 // Letter spacing
-.tracking-tighter {
+@include hoverable(tracking-tighter) {
     letter-spacing: -0.05em !important;
 }
 
-.tracking-tight {
+@include hoverable(tracking-tight) {
     letter-spacing: -0.025em !important;
 }
 
-.tracking-normal {
+@include hoverable(tracking-normal) {
     letter-spacing: 0 !important;
 }
 
-.tracking-wide {
+@include hoverable(tracking-wide) {
     letter-spacing: 0.025em !important;
 }
 
-.tracking-wider {
+@include hoverable(tracking-wider) {
     letter-spacing: 0.05em !important;
 }
 
-.tracking-widest {
+@include hoverable(tracking-widest) {
     letter-spacing: 0.1em !important;
 }
 
 // Text decoration
-.underline {
+@include hoverable(underline) {
     text-decoration: underline !important;
 }
 
-.line-through {
+@include hoverable(line-through) {
     text-decoration: line-through !important;
 }
 
-.no-underline {
+@include hoverable(no-underline) {
     text-decoration: none !important;
 }
 
 // White space
-.whitespace-normal {
+@include hoverable(whitespace-normal) {
     white-space: normal !important;
 }
 
-.whitespace-nowrap {
+@include hoverable(whitespace-nowrap) {
     white-space: nowrap !important;
 }
 
-.whitespace-pre {
+@include hoverable(whitespace-pre) {
     white-space: pre !important;
 }
 
-.whitespace-pre-line {
+@include hoverable(whitespace-pre-line) {
     white-space: pre-line !important;
 }
 
-.whitespace-pre-wrap {
+@include hoverable(whitespace-pre-wrap) {
     white-space: pre-wrap !important;
 }
 
 // Word break
-.break-normal {
+@include hoverable(break-normal) {
     word-break: normal !important;
     overflow-wrap: normal !important;
 }
 
-.break-words {
+@include hoverable(break-words) {
     overflow-wrap: break-word !important;
 }
 
-.break-all {
+@include hoverable(break-all) {
     word-break: break-all !important;
 }

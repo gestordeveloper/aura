@@ -55,3 +55,16 @@
 @mixin transition($property: all) {
   transition: $property 0.3s ease;
 }
+
+// Mixin para gerar classes com hover (estilo Tailwind)
+// Exemplo de uso: @include hoverable(bg-red) { background-color: red; }
+// Gera: .bg-red { ... } e .hover\:bg-red:hover { ... }
+@mixin hoverable($classname) {
+  .#{$classname} {
+    @content;
+  }
+
+  .hover\:#{$classname}:hover {
+    @content;
+  }
+}

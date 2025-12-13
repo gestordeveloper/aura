@@ -28,105 +28,105 @@
 }
 
 //Magins and Paddings
-.m-0 {
+@include hoverable(m-0) {
   margin: 0 !important;
 }
 
-.mx-auto {
+@include hoverable(mx-auto) {
   margin: 0 auto !important;
 }
 
-.my-auto {
+@include hoverable(my-auto) {
   margin: auto 0 !important;
 }
 
-.ml-auto {
+@include hoverable(ml-auto) {
   margin-left: auto !important;
 }
 
-.mr-auto {
+@include hoverable(mr-auto) {
   margin-right: auto !important;
 }
 
 @each $spacing, $value in $spaces {
-  .m-#{$spacing} {
+  @include hoverable(m-#{$spacing}) {
     margin: #{$value} !important;
   }
 
-  .mx-#{$spacing} {
+  @include hoverable(mx-#{$spacing}) {
     margin: 0 #{$value} !important;
   }
 
-  .my-#{$spacing} {
+  @include hoverable(my-#{$spacing}) {
     margin: #{$value} 0 !important;
   }
 
-  .mt-#{$spacing} {
+  @include hoverable(mt-#{$spacing}) {
     margin-top: #{$value} !important;
   }
 
-  .mb-#{$spacing} {
+  @include hoverable(mb-#{$spacing}) {
     margin-bottom: #{$value} !important;
   }
 
-  .ml-#{$spacing} {
+  @include hoverable(ml-#{$spacing}) {
     margin-left: #{$value} !important;
   }
 
-  .mr-#{$spacing} {
+  @include hoverable(mr-#{$spacing}) {
     margin-right: #{$value} !important;
   }
 }
 
-.p-0 {
+@include hoverable(p-0) {
   padding: 0 !important;
 }
 
 @each $spacing, $value in $spaces {
-  .p-#{$spacing} {
+  @include hoverable(p-#{$spacing}) {
     padding: #{$value} !important;
   }
 
-  .px-#{$spacing} {
+  @include hoverable(px-#{$spacing}) {
     padding: 0 #{$value} !important;
   }
 
-  .py-#{$spacing} {
+  @include hoverable(py-#{$spacing}) {
     padding: #{$value} 0 !important;
   }
 
-  .pt-#{$spacing} {
+  @include hoverable(pt-#{$spacing}) {
     padding-top: #{$value} !important;
   }
 
-  .pb-#{$spacing} {
+  @include hoverable(pb-#{$spacing}) {
     padding-bottom: #{$value} !important;
   }
 
-  .pl-#{$spacing} {
+  @include hoverable(pl-#{$spacing}) {
     padding-left: #{$value} !important;
   }
 
-  .pr-#{$spacing} {
+  @include hoverable(pr-#{$spacing}) {
     padding-right: #{$value} !important;
   }
 }
 
 //Texts Sizing, Weights and align
 @each $sizing, $value in $fontSizes {
-  .text-#{$sizing} {
+  @include hoverable(text-#{$sizing}) {
     font-size: #{$value} !important;
   }
 }
 
 @each $weight, $value in $fontWeights {
-  .text-#{$weight} {
+  @include hoverable(text-#{$weight}) {
     font-weight: #{$value} !important;
   }
 }
 
 @each $color, $value in $colors {
-  .text-#{$color} {
+  @include hoverable(text-#{$color}) {
     color: #{$value} !important;
   }
 
@@ -140,28 +140,28 @@
   }
 }
 
-.text-center {
+@include hoverable(text-center) {
   text-align: center !important;
 }
 
-.text-left {
+@include hoverable(text-left) {
   text-align: left !important;
 }
 
-.text-right {
+@include hoverable(text-right) {
   text-align: right !important;
 }
 
 //radius
 @each $radio, $value in $radius {
-  .radius-#{$radio} {
+  @include hoverable(radius-#{$radio}) {
     border-radius: #{$value} !important;
   }
 }
 
 //shadows
 @each $shadow, $value in $shadows {
-  .shadow-#{$shadow} {
+  @include hoverable(shadow-#{$shadow}) {
     box-shadow: #{$value} !important;
   }
 }
@@ -199,7 +199,7 @@
     display: flex;
     align-items: center;
 
-    & > * {
+    &>* {
       margin-right: -($value / 3);
     }
 
