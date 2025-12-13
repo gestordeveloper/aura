@@ -173,7 +173,11 @@
   }
 }
 
-.bg-transparent {
+@include hoverable(bg-card) {
+  background-color: var(--card) !important;
+}
+
+@include hoverable(bg-transparent) {
   background-color: transparent !important;
 }
 

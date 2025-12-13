@@ -234,9 +234,15 @@
 
 // Width percentages
 @for $i from 1 through 12 {
-    @include hoverable(w-#{$i}\/12) {
+    @include hoverable(wp-#{$i}\/12) {
         width: percentage($i / 12) !important;
     }
+}
+
+@each $spacing, $value in $spaces {
+  @include hoverable(w-#{$spacing}) {
+    width: #{$value} !important;
+  }
 }
 
 @include hoverable(w-1\/2) {
@@ -411,3 +417,4 @@
 @include hoverable(object-scale-down) {
     object-fit: scale-down !important;
 }
+
