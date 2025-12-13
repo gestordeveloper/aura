@@ -166,6 +166,17 @@
   }
 }
 
+//Backgrounds
+@each $color, $value in $colors {
+  @include hoverable(bg-#{$color}) {
+    background-color: #{$value} !important;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
 //Thumbnails
 .thumbnails-container {
   display: flex;
