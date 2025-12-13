@@ -140,6 +140,23 @@
     flex-shrink: 0 !important;
 }
 
+// Flex shorthand
+@include hoverable(flex-1) {
+  flex: 1 1 0% !important;
+}
+
+@include hoverable(flex-auto) {
+  flex: 1 1 auto !important;
+}
+
+@include hoverable(flex-initial) {
+  flex: 0 1 auto !important;
+}
+
+@include hoverable(flex-none) {
+  flex: none !important;
+}
+
 // Gap utilities
 @each $spacing, $value in $spaces {
     @include hoverable(gap-#{$spacing}) {
