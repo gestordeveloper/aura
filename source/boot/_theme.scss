@@ -289,6 +289,10 @@
   }
 }
 
+@include hoverable(border-default) {
+  border-color: var(--border) !important;
+}
+
 @include hoverable(border-transparent) {
   border-color: transparent !important;
 }
