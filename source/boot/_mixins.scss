@@ -58,13 +58,17 @@
 
 // Mixin para gerar classes com hover (estilo Tailwind)
 // Exemplo de uso: @include hoverable(bg-red) { background-color: red; }
-// Gera: .bg-red { ... } e .hover\:bg-red:hover { ... }
+// Gera: .bg-red { ... }, .hover\:bg-red:hover { ... } e .group:hover .group-hover\:bg-red { ... }
 @mixin hoverable($classname) {
   .#{$classname} {
     @content;
   }
 
   .hover\:#{$classname}:hover {
+    @content;
+  }
+
+  .group:hover .group-hover\:#{$classname} {
     @content;
   }
 }
