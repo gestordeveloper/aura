@@ -181,6 +181,139 @@
   background-color: transparent !important;
 }
 
+// Borders
+@include hoverable(border) {
+  border-width: 1px !important;
+}
+
+@include hoverable(border-0) {
+  border-width: 0px !important;
+}
+
+@include hoverable(border-2) {
+  border-width: 2px !important;
+}
+
+@include hoverable(border-4) {
+  border-width: 4px !important;
+}
+
+@include hoverable(border-8) {
+  border-width: 8px !important;
+}
+
+@include hoverable(border-t) {
+  border-top-width: 1px !important;
+}
+
+@include hoverable(border-r) {
+  border-right-width: 1px !important;
+}
+
+@include hoverable(border-b) {
+  border-bottom-width: 1px !important;
+}
+
+@include hoverable(border-l) {
+  border-left-width: 1px !important;
+}
+
+@include hoverable(border-t-0) {
+  border-top-width: 0px !important;
+}
+
+@include hoverable(border-r-0) {
+  border-right-width: 0px !important;
+}
+
+@include hoverable(border-b-0) {
+  border-bottom-width: 0px !important;
+}
+
+@include hoverable(border-l-0) {
+  border-left-width: 0px !important;
+}
+
+@include hoverable(border-t-2) {
+  border-top-width: 2px !important;
+}
+
+@include hoverable(border-r-2) {
+  border-right-width: 2px !important;
+}
+
+@include hoverable(border-b-2) {
+  border-bottom-width: 2px !important;
+}
+
+@include hoverable(border-l-2) {
+  border-left-width: 2px !important;
+}
+
+@include hoverable(border-t-4) {
+  border-top-width: 4px !important;
+}
+
+@include hoverable(border-r-4) {
+  border-right-width: 4px !important;
+}
+
+@include hoverable(border-b-4) {
+  border-bottom-width: 4px !important;
+}
+
+@include hoverable(border-l-4) {
+  border-left-width: 4px !important;
+}
+
+@include hoverable(border-t-8) {
+  border-top-width: 8px !important;
+}
+
+@include hoverable(border-r-8) {
+  border-right-width: 8px !important;
+}
+
+@include hoverable(border-b-8) {
+  border-bottom-width: 8px !important;
+}
+
+@include hoverable(border-l-8) {
+  border-left-width: 8px !important;
+}
+
+// Border Colors
+@each $color, $value in $colors {
+  @include hoverable(border-#{$color}) {
+    border-color: #{$value} !important;
+  }
+}
+
+@include hoverable(border-transparent) {
+  border-color: transparent !important;
+}
+
+// Border Styles
+@include hoverable(border-solid) {
+  border-style: solid !important;
+}
+
+@include hoverable(border-dashed) {
+  border-style: dashed !important;
+}
+
+@include hoverable(border-dotted) {
+  border-style: dotted !important;
+}
+
+@include hoverable(border-double) {
+  border-style: double !important;
+}
+
+@include hoverable(border-none) {
+  border-style: none !important;
+}
+
 //Thumbnails
 .thumbnails-container {
   display: flex;
