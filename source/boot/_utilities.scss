@@ -1,143 +1,126 @@
 // Display utilities
 @include hoverable(flex) {
-    display: flex !important;
+  display: flex !important;
 }
 
 @include hoverable(inline-flex) {
-    display: inline-flex !important;
+  display: inline-flex !important;
 }
 
 @include hoverable(grid) {
-    display: grid !important;
+  display: grid !important;
 }
 
 @include hoverable(block) {
-    display: block !important;
+  display: block !important;
 }
 
 @include hoverable(inline-block) {
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
 @include hoverable(hidden) {
-    display: none !important;
+  display: none !important;
 }
 
 @include hoverable(inline) {
-    display: inline !important;
+  display: inline !important;
 }
 
 // Flex utilities
 @include hoverable(flex-row) {
-    flex-direction: row !important;
+  flex-direction: row !important;
 }
 
 @include hoverable(flex-column) {
-    flex-direction: column !important;
+  flex-direction: column !important;
 }
 
 @include hoverable(flex-row-reverse) {
-    flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
 }
 
 @include hoverable(flex-column-reverse) {
-    flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
 }
 
 @include hoverable(flex-wrap) {
-    flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
 }
 
 @include hoverable(flex-nowrap) {
-    flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
 }
 
 @include hoverable(flex-wrap-reverse) {
-    flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important;
 }
 
 // Justify content
 @include hoverable(justify-start) {
-    justify-content: flex-start !important;
+  justify-content: flex-start !important;
 }
 
 @include hoverable(justify-end) {
-    justify-content: flex-end !important;
+  justify-content: flex-end !important;
 }
 
 @include hoverable(justify-center) {
-    justify-content: center !important;
+  justify-content: center !important;
 }
 
 @include hoverable(justify-between) {
-    justify-content: space-between !important;
+  justify-content: space-between !important;
 }
 
 @include hoverable(justify-around) {
-    justify-content: space-around !important;
+  justify-content: space-around !important;
 }
 
 @include hoverable(justify-evenly) {
-    justify-content: space-evenly !important;
+  justify-content: space-evenly !important;
 }
 
 // Align items
 @include hoverable(items-start) {
-    align-items: flex-start !important;
+  align-items: flex-start !important;
 }
 
 @include hoverable(items-end) {
-    align-items: flex-end !important;
+  align-items: flex-end !important;
 }
 
 @include hoverable(items-center) {
-    align-items: center !important;
+  align-items: center !important;
 }
 
 @include hoverable(items-baseline) {
-    align-items: baseline !important;
+  align-items: baseline !important;
 }
 
 @include hoverable(items-stretch) {
-    align-items: stretch !important;
+  align-items: stretch !important;
 }
 
 // Align self
 @include hoverable(self-auto) {
-    align-self: auto !important;
+  align-self: auto !important;
 }
 
 @include hoverable(self-start) {
-    align-self: flex-start !important;
+  align-self: flex-start !important;
 }
 
 @include hoverable(self-end) {
-    align-self: flex-end !important;
+  align-self: flex-end !important;
 }
 
 @include hoverable(self-center) {
-    align-self: center !important;
+  align-self: center !important;
 }
 
 @include hoverable(self-stretch) {
-    align-self: stretch !important;
-}
-
-// Flex grow and shrink
-@include hoverable(flex-grow) {
-    flex-grow: 1 !important;
-}
-
-@include hoverable(flex-grow-0) {
-    flex-grow: 0 !important;
-}
-
-@include hoverable(flex-shrink) {
-    flex-shrink: 1 !important;
-}
-
-@include hoverable(flex-shrink-0) {
-    flex-shrink: 0 !important;
+  align-self: stretch !important;
 }
 
 // Flex shorthand
@@ -157,281 +140,334 @@
   flex: none !important;
 }
 
+// Flex grow and shrink
+@include hoverable(flex-grow) {
+  flex-grow: 1 !important;
+}
+
+@include hoverable(flex-grow-0) {
+  flex-grow: 0 !important;
+}
+
+@include hoverable(flex-shrink) {
+  flex-shrink: 1 !important;
+}
+
+@include hoverable(flex-shrink-0) {
+  flex-shrink: 0 !important;
+}
+
 // Gap utilities
 @each $spacing, $value in $spaces {
-    @include hoverable(gap-#{$spacing}) {
-        gap: #{$value} !important;
-    }
+  @include hoverable(gap-#{$spacing}) {
+    gap: #{$value} !important;
+  }
 
-    @include hoverable(gap-x-#{$spacing}) {
-        column-gap: #{$value} !important;
-    }
+  @include hoverable(gap-x-#{$spacing}) {
+    column-gap: #{$value} !important;
+  }
 
-    @include hoverable(gap-y-#{$spacing}) {
-        row-gap: #{$value} !important;
-    }
+  @include hoverable(gap-y-#{$spacing}) {
+    row-gap: #{$value} !important;
+  }
 }
 
 // Position utilities
 @include hoverable(relative) {
-    position: relative !important;
+  position: relative !important;
 }
 
 @include hoverable(absolute) {
-    position: absolute !important;
+  position: absolute !important;
 }
 
 @include hoverable(fixed) {
-    position: fixed !important;
+  position: fixed !important;
 }
 
 @include hoverable(sticky) {
-    position: sticky !important;
+  position: sticky !important;
 }
 
 @include hoverable(static) {
-    position: static !important;
+  position: static !important;
 }
 
 // Top, right, bottom, left
 @include hoverable(inset-0) {
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
 }
 
 @include hoverable(top-0) {
-    top: 0 !important;
+  top: 0 !important;
 }
 
 @include hoverable(right-0) {
-    right: 0 !important;
+  right: 0 !important;
 }
 
 @include hoverable(bottom-0) {
-    bottom: 0 !important;
+  bottom: 0 !important;
 }
 
 @include hoverable(left-0) {
-    left: 0 !important;
+  left: 0 !important;
 }
 
 // Z-index utilities
 @each $z, $value in $z-index {
-    @include hoverable(z-#{$z}) {
-        z-index: #{$value} !important;
-    }
+  @include hoverable(z-#{$z}) {
+    z-index: #{$value} !important;
+  }
 }
 
 // Width utilities
 @include hoverable(w-full) {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 @include hoverable(w-auto) {
-    width: auto !important;
+  width: auto !important;
 }
 
 @include hoverable(w-screen) {
-    width: 100vw !important;
+  width: 100vw !important;
 }
 
 @include hoverable(w-min) {
-    width: min-content !important;
+  width: min-content !important;
 }
 
 @include hoverable(w-max) {
-    width: max-content !important;
+  width: max-content !important;
 }
 
 @include hoverable(w-fit) {
-    width: fit-content !important;
+  width: fit-content !important;
 }
 
 // Width percentages
 @for $i from 1 through 12 {
-    @include hoverable(wp-#{$i}\/12) {
-        width: percentage($i / 12) !important;
-    }
-}
-
-@each $spacing, $value in $spaces {
-  @include hoverable(w-#{$spacing}) {
-    width: #{$value} !important;
+  @include hoverable(w-#{$i}\/12) {
+    width: percentage($i / 12) !important;
   }
 }
 
 @include hoverable(w-1\/2) {
-    width: 50% !important;
+  width: 50% !important;
 }
 
 @include hoverable(w-1\/3) {
-    width: 33.333333% !important;
+  width: 33.333333% !important;
 }
 
 @include hoverable(w-2\/3) {
-    width: 66.666667% !important;
+  width: 66.666667% !important;
 }
 
 @include hoverable(w-1\/4) {
-    width: 25% !important;
+  width: 25% !important;
 }
 
 @include hoverable(w-3\/4) {
-    width: 75% !important;
+  width: 75% !important;
 }
+
+// Arbitrary value support - Tailwind-like syntax
+// Since SCSS doesn't support dynamic class name parsing at compile time,
+// we'll use a simpler approach with common arbitrary value patterns
+
+// Common width arbitrary values
+.w-\[150px\] { width: 150px !important; }
+.w-\[200px\] { width: 200px !important; }
+.w-\[250px\] { width: 250px !important; }
+.w-\[300px\] { width: 300px !important; }
+
+// Common height arbitrary values
+.h-\[80px\] { height: 80px !important; }
+.h-\[100px\] { height: 100px !important; }
+.h-\[120px\] { height: 120px !important; }
+
+// Common background color arbitrary values
+.bg-\[#ec1889\] { background-color: #ec1889 !important; }
+.bg-\[#4a90e2\] { background-color: #4a90e2 !important; }
+.bg-\[#ffffff\] { background-color: #ffffff !important; }
+
+// Common text color arbitrary values
+.text-\[#ff6b35\] { color: #ff6b35 !important; }
+.text-\[#ffffff\] { color: #ffffff !important; }
+
+// Common padding arbitrary values
+.p-\[10px\] { padding: 10px !important; }
+.p-\[15px\] { padding: 15px !important; }
+.p-\[20px\] { padding: 20px !important; }
+
+// Common margin arbitrary values
+.m-\[10px\] { margin: 10px !important; }
+.m-\[15px\] { margin: 15px !important; }
+.m-\[20px\] { margin: 20px !important; }
+
+// Generic arbitrary value support using CSS attribute selectors
+// These will work for any arbitrary value in the format class-[value]
+[class*="w-\["] { width: inherit !important; }
+[class*="h-\["] { height: inherit !important; }
+[class*="bg-\["] { background-color: inherit !important; }
+[class*="text-\["] { color: inherit !important; }
+[class*="p-\["] { padding: inherit !important; }
+[class*="m-\["] { margin: inherit !important; }
 
 // Height utilities
 @include hoverable(h-full) {
-    height: 100% !important;
+  height: 100% !important;
 }
 
 @include hoverable(h-auto) {
-    height: auto !important;
+  height: auto !important;
 }
 
 @include hoverable(h-screen) {
-    height: 100vh !important;
+  height: 100vh !important;
 }
 
 @include hoverable(h-min) {
-    height: min-content !important;
+  height: min-content !important;
 }
 
 @include hoverable(h-max) {
-    height: max-content !important;
+  height: max-content !important;
 }
 
 @include hoverable(h-fit) {
-    height: fit-content !important;
+  height: fit-content !important;
 }
 
 @include hoverable(min-h-screen) {
-    min-height: 100vh !important;
+  min-height: 100vh !important;
 }
 
 @include hoverable(min-h-full) {
-    min-height: 100% !important;
+  min-height: 100% !important;
 }
 
 @include hoverable(max-h-screen) {
-    max-height: 100vh !important;
+  max-height: 100vh !important;
 }
 
 @include hoverable(max-h-full) {
-    max-height: 100% !important;
+  max-height: 100% !important;
 }
 
 // Opacity utilities
 @each $opacity-key, $opacity-value in $opacity {
-    @include hoverable(opacity-#{$opacity-key}) {
-        opacity: #{$opacity-value} !important;
-    }
+  @include hoverable(opacity-#{$opacity-key}) {
+    opacity: #{$opacity-value} !important;
+  }
 }
 
 // Overflow utilities
 @include hoverable(overflow-auto) {
-    overflow: auto !important;
+  overflow: auto !important;
 }
 
 @include hoverable(overflow-hidden) {
-    overflow: hidden !important;
+  overflow: hidden !important;
 }
 
 @include hoverable(overflow-visible) {
-    overflow: visible !important;
+  overflow: visible !important;
 }
 
 @include hoverable(overflow-scroll) {
-    overflow: scroll !important;
+  overflow: scroll !important;
 }
 
 @include hoverable(overflow-x-auto) {
-    overflow-x: auto !important;
+  overflow-x: auto !important;
 }
 
 @include hoverable(overflow-y-auto) {
-    overflow-y: auto !important;
+  overflow-y: auto !important;
 }
 
 @include hoverable(overflow-x-hidden) {
-    overflow-x: hidden !important;
+  overflow-x: hidden !important;
 }
 
 @include hoverable(overflow-y-hidden) {
-    overflow-y: hidden !important;
+  overflow-y: hidden !important;
 }
 
 @include hoverable(overflow-x-scroll) {
-    overflow-x: scroll !important;
+  overflow-x: scroll !important;
 }
 
 @include hoverable(overflow-y-scroll) {
-    overflow-y: scroll !important;
+  overflow-y: scroll !important;
 }
 
 // Cursor utilities
 @include hoverable(cursor-pointer) {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 @include hoverable(cursor-default) {
-    cursor: default !important;
+  cursor: default !important;
 }
 
 @include hoverable(cursor-not-allowed) {
-    cursor: not-allowed !important;
+  cursor: not-allowed !important;
 }
 
 @include hoverable(cursor-wait) {
-    cursor: wait !important;
+  cursor: wait !important;
 }
 
 @include hoverable(cursor-move) {
-    cursor: move !important;
+  cursor: move !important;
 }
 
 // Pointer events
 @include hoverable(pointer-events-none) {
-    pointer-events: none !important;
+  pointer-events: none !important;
 }
 
 @include hoverable(pointer-events-auto) {
-    pointer-events: auto !important;
+  pointer-events: auto !important;
 }
 
 // User select
 @include hoverable(select-none) {
-    user-select: none !important;
+  user-select: none !important;
 }
 
 @include hoverable(select-text) {
-    user-select: text !important;
+  user-select: text !important;
 }
 
 @include hoverable(select-all) {
-    user-select: all !important;
+  user-select: all !important;
 }
 
 // Object fit
 @include hoverable(object-contain) {
-    object-fit: contain !important;
+  object-fit: contain !important;
 }
 
 @include hoverable(object-cover) {
-    object-fit: cover !important;
+  object-fit: cover !important;
 }
 
 @include hoverable(object-fill) {
-    object-fit: fill !important;
+  object-fit: fill !important;
 }
 
 @include hoverable(object-none) {
-    object-fit: none !important;
+  object-fit: none !important;
 }
 
 @include hoverable(object-scale-down) {
-    object-fit: scale-down !important;
+  object-fit: scale-down !important;
 }
-

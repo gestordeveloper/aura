@@ -173,17 +173,14 @@
   }
 }
 
-@include hoverable(bg-card) {
-  background-color: var(--card) !important;
-}
-
-@include hoverable(bg-transparent) {
+.bg-transparent {
   background-color: transparent !important;
 }
 
 // Borders
 @include hoverable(border) {
   border-width: 1px !important;
+  border-style: solid !important;
 }
 
 @include hoverable(border-0) {
@@ -192,30 +189,37 @@
 
 @include hoverable(border-2) {
   border-width: 2px !important;
+  border-style: solid !important;
 }
 
 @include hoverable(border-4) {
   border-width: 4px !important;
+  border-style: solid !important;
 }
 
 @include hoverable(border-8) {
   border-width: 8px !important;
+  border-style: solid !important;
 }
 
 @include hoverable(border-t) {
   border-top-width: 1px !important;
+  border-top-style: solid !important;
 }
 
 @include hoverable(border-r) {
   border-right-width: 1px !important;
+  border-right-style: solid !important;
 }
 
 @include hoverable(border-b) {
   border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
 }
 
 @include hoverable(border-l) {
   border-left-width: 1px !important;
+  border-left-style: solid !important;
 }
 
 @include hoverable(border-t-0) {
@@ -236,50 +240,62 @@
 
 @include hoverable(border-t-2) {
   border-top-width: 2px !important;
+  border-top-style: solid !important;
 }
 
 @include hoverable(border-r-2) {
   border-right-width: 2px !important;
+  border-right-style: solid !important;
 }
 
 @include hoverable(border-b-2) {
   border-bottom-width: 2px !important;
+  border-bottom-style: solid !important;
 }
 
 @include hoverable(border-l-2) {
   border-left-width: 2px !important;
+  border-left-style: solid !important;
 }
 
 @include hoverable(border-t-4) {
   border-top-width: 4px !important;
+  border-top-style: solid !important;
 }
 
 @include hoverable(border-r-4) {
   border-right-width: 4px !important;
+  border-right-style: solid !important;
 }
 
 @include hoverable(border-b-4) {
   border-bottom-width: 4px !important;
+  border-bottom-style: solid !important;
 }
 
 @include hoverable(border-l-4) {
   border-left-width: 4px !important;
+  border-left-style: solid !important;
 }
 
 @include hoverable(border-t-8) {
   border-top-width: 8px !important;
+  border-top-style: solid !important;
 }
 
 @include hoverable(border-r-8) {
   border-right-width: 8px !important;
+  border-right-style: solid !important;
 }
 
 @include hoverable(border-b-8) {
   border-bottom-width: 8px !important;
+  border-bottom-style: solid !important;
 }
 
 @include hoverable(border-l-8) {
   border-left-width: 8px !important;
+  border-left-style: solid !important;
 }
 
 // Border Colors
@@ -287,10 +303,6 @@
   @include hoverable(border-#{$color}) {
     border-color: #{$value} !important;
   }
-}
-
-@include hoverable(border-default) {
-  border-color: var(--border) !important;
 }
 
 @include hoverable(border-transparent) {
