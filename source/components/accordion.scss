@@ -1,32 +1,53 @@
 .accordion {
     .accordion-tab {
         label {
-            background: var(--gray-200);
-            border: 1px solid transparent;
+            background: var(--sidebar);
+            color: var(--foreground);
+            border: 1px solid var(--border);
             border-radius: radius("sm");
-            padding: spacing("3") spacing("4");
-            display: flex;
+            padding: spacing("3") spacing("4"); 
+            display: flex; 
             align-items: center;
             justify-content: space-between;
             cursor: pointer;
             font-weight: fontWeight("bold");
+            transition: border-radius 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+
+            .icon {
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                border-color: var(--aura-500);
+            }
         }
 
         input:checked ~ label {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom-width: 1px;
-            border-color: var(--text);
+            border-color: var(--border);
+            background: var(--card);
+            color: var(--foreground);
 
             .icon {
                 transform: rotate(180deg);
+                color: var(--aura-500);
             }
         }
 
         .content {
             overflow: hidden;
-            background: var(--gray-200);
+            background: var(--card);
+            color: var(--foreground);
             border-radius: 0 0 radius("sm") radius("sm");
+
+            max-height: 0;
+            opacity: 0;
+            padding: 0 spacing("4");
+            border: 1px solid var(--border);
+            border-top: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
 
             p {
                 margin: 0;
@@ -34,24 +55,27 @@
         }
 
         input:checked ~ .content {
-            border: 1px solid var(--text);
-            border-top: 0;
-            padding: spacing("2");
+            border-color: var(--border);
+            padding: spacing("4");
+            opacity: 1;
         }
     }
 
-    input[type="radio"] {
+    input[type="radio"],
+    input[type="checkbox"] {
         display: none;
     }
 }
 
 @each $color, $value in $colors {
-    .accordion-#{$color} {
+    .accordion-#{$color},
+    .accordion-tab-#{$color} {
         .accordion-tab {
-            label:hover,
-            input:checked ~ label,
-            input:checked ~ .content {
-                border-color: #{$value};
+            input:checked ~ label {
+                border-top-color: #{$value};
+                 .icon {
+                    color: #{$value};
+                 }
             }
         }
     }
