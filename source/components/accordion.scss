@@ -1,8 +1,8 @@
 .accordion {
     .accordion-tab {
         label {
-            background: var(--secondary);
-            color: var(--secondary-foreground);
+            background: var(--sidebar);
+            color: var(--foreground);
             border: 1px solid var(--border);
             border-radius: radius("sm");
             padding: spacing("3") spacing("4");
@@ -18,7 +18,7 @@
             }
 
             &:hover {
-                border-color: var(--primary);
+                border-color: var(--aura-500);
             }
         }
 
@@ -28,17 +28,17 @@
             border-bottom-width: 1px;
             border-color: var(--border);
             background: var(--card);
-            color: var(--card-foreground);
+            color: var(--foreground);
 
             .icon {
                 transform: rotate(180deg);
-                color: var(--primary);
-            } 
+                color: var(--aura-500);
+            }
         }
 
         .content {
             background: var(--card);
-            color: var(--card-foreground);
+            color: var(--foreground);
             border-radius: 0 0 radius("sm") radius("sm");
             border: 1px solid var(--border);
             border-top: 0;
