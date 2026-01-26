@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo Sidebar com Submenus</title>
+    <!-- Usando o CSS compilado -->
+    <link rel="stylesheet" href="../dist/app.css" />
+    <!-- Ionicons para ícones (opcional, mas recomendado no design system) -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <style>
+      body {
+          background-color: #f4f4f9;
+          display: flex;
+          height: 100vh;
+          overflow: hidden;
+          margin: 0;
+          font-family: 'Inter', sans-serif; // Assumindo fonte do sistema
+      }
+
+      .main-content {
+          flex: 1;
+          padding: 2rem;
+          overflow-y: auto;
+      }
+
+      .showcase-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          max-width: 800px;
+          margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar Component -->
+    <div class="sidebar">
+      <div class="sidebar_logo">
+        <h2
+          style="font-weight: 800; color: var(--aura-500); letter-spacing: -1px"
+        >
+          AURA
+        </h2>
+      </div>
+
+      <div class="sidebar_user">
+        <div class="user_thumb">
+          <img
+            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            alt="User"
+          />
+        </div>
+        <div class="user_data">
+          <a href="#">Samuel Fogaça</a>
+          <p>Desenvolvedor</p>
+        </div>
+      </div>
+
+      <div class="sidebar_navbar">
+        <ul>
+          <!-- Item Simples -->
+          <li class="navbar_li active-primary">
+            <a href="#">
+              <i class="icon"><ion-icon name="grid-outline"></ion-icon></i>
+              Dashboard
+            </a>
+          </li>
+
+          <!-- Item Accordion (Dropdown) 1 -->
+          <li class="navbar_li li_title">Gestão</li>
+
+          <li class="navbar_li li_dropdown">
+            <a href="javascript:void(0)">
+              <i class="icon"><ion-icon name="people-outline"></ion-icon></i>
+              Usuários
+            </a>
+            <ul class="navbar_li_dropdown">
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Todos os Usuários</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Adicionar Novo</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Permissões</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Grupos</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="navbar_li li_dropdown">
+            <a href="javascript:void(0)">
+              <i class="icon"><ion-icon name="cube-outline"></ion-icon></i>
+              Produtos
+            </a>
+            <ul class="navbar_li_dropdown">
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Catálogo</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Categorias</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Estoque</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="navbar_li li_title">Configurações</li>
+
+          <!-- Item Accordion (Dropdown) 2 -->
+          <li class="navbar_li li_dropdown">
+            <a href="javascript:void(0)">
+              <i class="icon"><ion-icon name="settings-outline"></ion-icon></i>
+              Sistema
+            </a>
+            <ul class="navbar_li_dropdown">
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Geral</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Integrações</a>
+              </li>
+              <li class="navbar_li_dropdown_li">
+                <a href="#">Logs</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar_footer">
+        <p>Aura Design System v2.0</p>
+        <a href="#">Sair do Sistema</a>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="showcase-card">
+        <h1>Exemplo de Sidebar com Submenus</h1>
+        <p>Este exemplo demonstra a nova interação dos submenus na sidebar.</p>
+        <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid #eee" />
+        <h3>O que mudou?</h3>
+        <ul
+          style="
+            line-height: 1.8;
+            margin-top: 1rem;
+            list-style-position: inside;
+          "
+        >
+          <li>
+            ✨ <strong>Animação Suave:</strong> Agora os menus deslizam
+            suavemente ao abrir/fechar.
+          </li>
+          <li>
+            🎯 <strong>Hierarquia Visual:</strong> Submenus possuem recuo e
+            fundo sutil para melhor distinção.
+          </li>
+          <li>
+            🔽 <strong>Ícones Chevron:</strong> Setas animadas indicam o estado
+            (aberto/fechado).
+          </li>
+          <li>
+            👆 <strong>Interação:</strong> Clique nos itens "Usuários",
+            "Produtos" ou "Sistema" na lateral para testar.
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Script para funcionalidade do Dropdown -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const dropdowns = document.querySelectorAll(".li_dropdown > a");
+
+        dropdowns.forEach((trigger) => {
+          trigger.addEventListener("click", (e) => {
+            const parent = trigger.parentElement;
+            const submenu = parent.querySelector(".navbar_li_dropdown");
+
+            // Toggle a classe 'show' no pai
+            parent.classList.toggle("show");
+
+            // Em implementações avançadas, poderíamos fechar outros abertos aqui (Accordion behavior)
+            // Mas manteremos comportamento múltiplo por enquanto.
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
