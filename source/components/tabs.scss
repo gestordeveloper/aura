@@ -43,7 +43,10 @@
   #tab-4:checked ~ nav label.tab-4,
   #tab-5:checked ~ nav label.tab-5,
   #tab-6:checked ~ nav label.tab-6,
-  #tab-7:checked ~ nav label.tab-7 {
+  #tab-7:checked ~ nav label.tab-7,
+  #tab-8:checked ~ nav label.tab-8,
+  #tab-9:checked ~ nav label.tab-9,
+  #tab-10:checked ~ nav label.tab-10 {
     background: var(--card);
     border-color: var(--border);
     color: var(--card-foreground);
@@ -55,7 +58,10 @@
   #tab-4:checked ~ section .content-4,
   #tab-5:checked ~ section .content-5,
   #tab-6:checked ~ section .content-6,
-  #tab-7:checked ~ section .content-7 {
+  #tab-7:checked ~ section .content-7,
+  #tab-8:checked ~ section .content-8,
+  #tab-9:checked ~ section .content-9,
+  #tab-10:checked ~ section .content-10 {
     display: block !important;
   }
 }
