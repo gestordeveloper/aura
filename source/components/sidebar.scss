@@ -125,8 +125,82 @@
       }
     }
 
+    .navbar_li.li_dropdown {
+        > a {
+          position: relative;
+          padding-right: spacing("8");
+
+          &::after {
+            content: "";
+            position: absolute;
+            right: spacing("4");
+            top: 50%;
+            width: 6px;
+            height: 6px;
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            transform: translateY(-50%) rotate(45deg);
+            transition: transform 0.3s ease;
+            opacity: 0.5;
+          }
+        }
+
+        &.show {
+          > a::after {
+            transform: translateY(-50%) rotate(225deg);
+            opacity: 1;
+          }
+
+          .navbar_li_dropdown {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: spacing("1");
+            margin-bottom: spacing("2");
+          }
+        }
+      }
+
+ 
     .navbar_li_dropdown {
       list-style: none !important;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      
+      // Tree Line Structure
+      position: relative;
+      margin-left: spacing("6"); // Align with parent text
+      padding-left: spacing("4"); // Gap between line and text
+      border-left: 1px solid var(--border);
+
+      .navbar_li_dropdown_li {
+        a {
+          display: flex;
+          align-items: center;
+          padding: spacing("2") spacing("3");
+          font-size: 0.9em;
+          color: var(--sidebar-foreground);
+          border-radius: radius("md");
+          text-decoration: none;
+          transition: all 0.2s;
+          opacity: 0.8;
+
+          &:hover {
+            opacity: 1;
+            color: var(--aura-500);
+            background: transparent;
+          }
+        }
+
+        // Active State (Background bubble)
+        &.active a {
+          background: var(--sidebar-accent);
+          color: var(--sidebar-foreground);
+          opacity: 1;
+          font-weight: fontWeight("bold");
+        }
+      }
     }
   }
 
