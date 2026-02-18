@@ -125,42 +125,43 @@
       }
     }
 
-    .navbar_li.li_dropdown {
-        > a {
-          position: relative;
-          padding-right: spacing("8");
+    // Generic Dropdown Trigger Logic (Applies to any level)
+    .li_dropdown {
+      > a {
+        position: relative;
+        padding-right: spacing("8");
 
-          &::after {
-            content: "";
-            position: absolute;
-            right: spacing("4");
-            top: 50%;
-            width: 6px;
-            height: 6px;
-            border-right: 2px solid currentColor;
-            border-bottom: 2px solid currentColor;
-            transform: translateY(-50%) rotate(45deg);
-            transition: transform 0.3s ease;
-            opacity: 0.5;
-          }
-        }
-
-        &.show {
-          > a::after {
-            transform: translateY(-50%) rotate(225deg);
-            opacity: 1;
-          }
-
-          .navbar_li_dropdown {
-            max-height: 500px;
-            opacity: 1;
-            margin-top: spacing("1");
-            margin-bottom: spacing("2");
-          }
+        &::after {
+          content: "";
+          position: absolute;
+          right: spacing("4");
+          top: 50%;
+          width: 6px;
+          height: 6px;
+          border-right: 2px solid currentColor;
+          border-bottom: 2px solid currentColor;
+          transform: translateY(-50%) rotate(45deg);
+          transition: transform 0.3s ease;
+          opacity: 0.5;
         }
       }
 
- 
+      &.show {
+        > a::after {
+          transform: translateY(-50%) rotate(225deg);
+          opacity: 1;
+        }
+
+        > .navbar_li_dropdown {
+          max-height: 1000px; // Larger max-height for nested content
+          opacity: 1;
+          margin-top: spacing("1");
+          margin-bottom: spacing("2");
+        }
+      }
+    }
+
+    // Dropdown Container (Recursive)
     .navbar_li_dropdown {
       list-style: none !important;
       overflow: hidden;
@@ -194,12 +195,18 @@
         }
 
         // Active State (Background bubble)
-        &.active a {
+        &.active > a {
           background: var(--sidebar-accent);
           color: var(--sidebar-foreground);
           opacity: 1;
           font-weight: fontWeight("bold");
         }
+      }
+
+      // Nested Dropdowns (Level 3+)
+      .navbar_li_dropdown {
+        margin-left: spacing("3"); // Slight indent for deeper levels
+        border-left: 1px solid var(--border); // Another line for the nested level
       }
     }
   }

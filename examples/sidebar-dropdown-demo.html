@@ -62,14 +62,30 @@
               <li class="navbar_li_dropdown_li">
                 <a href="#">Todos os Usuários</a>
               </li>
+              
+              <!-- 3rd Level Nesting Example -->
+              <li class="navbar_li_dropdown_li li_dropdown">
+                 <a href="javascript:void(0)">
+                   Grupos
+                 </a>
+                 <ul class="navbar_li_dropdown">
+                    <li class="navbar_li_dropdown_li">
+                      <a href="#">Administradores</a>
+                    </li>
+                    <li class="navbar_li_dropdown_li">
+                      <a href="#">Editores</a>
+                    </li>
+                    <li class="navbar_li_dropdown_li">
+                      <a href="#">Leitores</a>
+                    </li>
+                 </ul>
+              </li>
+
               <li class="navbar_li_dropdown_li">
                 <a href="#">Adicionar Novo</a>
               </li>
               <li class="navbar_li_dropdown_li">
                 <a href="#">Permissões</a>
-              </li>
-              <li class="navbar_li_dropdown_li">
-                <a href="#">Grupos</a>
               </li>
             </ul>
           </li>
@@ -162,14 +178,12 @@
 
         dropdowns.forEach((trigger) => {
           trigger.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation(); // Prevent bubbling to parent dropdowns
+            
             const parent = trigger.parentElement;
-            const submenu = parent.querySelector(".navbar_li_dropdown");
-
-            // Toggle a classe 'show' no pai
+            // Toggle only the immediate parent
             parent.classList.toggle("show");
-
-            // Em implementações avançadas, poderíamos fechar outros abertos aqui (Accordion behavior)
-            // Mas manteremos comportamento múltiplo por enquanto.
           });
         });
       });
