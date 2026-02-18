@@ -123,67 +123,10 @@
           color: var(--sidebar-foreground);
         }
       }
-
-      .navbar_li_dropdown {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin 0.3s ease;
-        background: rgba(0, 0, 0, 0.05);
-        border-radius: radius("md");
-        margin-top: 0; // Start with 0 margin
-
-        .navbar_li_dropdown_li {
-          a {
-            color: var(--sidebar-foreground);
-            padding-left: spacing("10");
-            font-size: 0.9em;
-            height: 32px;
-
-            &:hover {
-              color: var(--aura-500);
-              background: transparent;
-              padding-left: calc(#{spacing("10")} + 5px);
-            }
-          }
-        }
-      }
-
-      &.show > .navbar_li_dropdown {
-        max-height: 500px;
-        opacity: 1;
-        margin-top: spacing("1"); // Apply margin when open
-        margin-bottom: spacing("2");
-      }
     }
 
-    .li_dropdown {
-      > a {
-        position: relative;
-        padding-right: spacing("8"); // Space for arrow
-
-        &::after {
-          content: "";
-          position: absolute;
-          right: spacing("4");
-          top: 50%;
-          width: 6px;
-          height: 6px;
-          border-right: 2px solid currentColor;
-          border-bottom: 2px solid currentColor;
-          transform: translateY(-70%) rotate(45deg); // Chevron down
-          transition: transform 0.3s ease;
-          opacity: 0.7;
-        }
-      }
-
-      &:hover > a::after {
-        opacity: 1;
-      }
-
-      &.show > a::after {
-        transform: translateY(-30%) rotate(225deg); // Chevron up
-      }
+    .navbar_li_dropdown {
+      list-style: none !important;
     }
   }
 
