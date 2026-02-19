@@ -90,7 +90,6 @@
 
       &.active {
         a {
-          background: var(--sidebar-accent);
           color: var(--sidebar-foreground);
         }
       }
@@ -195,7 +194,6 @@
 
         // Active State (Background bubble)
         &.active > a {
-          background: var(--sidebar-accent);
           color: var(--sidebar-foreground);
           opacity: 1;
           font-weight: fontWeight("bold");
