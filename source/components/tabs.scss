@@ -35,34 +35,19 @@
 
   input[type="radio"] {
     display: none;
-  }
 
-  #tab-1:checked ~ nav label.tab-1,
-  #tab-2:checked ~ nav label.tab-2,
-  #tab-3:checked ~ nav label.tab-3,
-  #tab-4:checked ~ nav label.tab-4,
-  #tab-5:checked ~ nav label.tab-5,
-  #tab-6:checked ~ nav label.tab-6,
-  #tab-7:checked ~ nav label.tab-7,
-  #tab-8:checked ~ nav label.tab-8,
-  #tab-9:checked ~ nav label.tab-9,
-  #tab-10:checked ~ nav label.tab-10 {
-    background: var(--card);
-    border-color: var(--border);
-    color: var(--card-foreground);
-  }
-
-  #tab-1:checked ~ section .content-1,
-  #tab-2:checked ~ section .content-2,
-  #tab-3:checked ~ section .content-3,
-  #tab-4:checked ~ section .content-4,
-  #tab-5:checked ~ section .content-5,
-  #tab-6:checked ~ section .content-6,
-  #tab-7:checked ~ section .content-7,
-  #tab-8:checked ~ section .content-8,
-  #tab-9:checked ~ section .content-9,
-  #tab-10:checked ~ section .content-10 {
-    display: block !important;
+    @for $i from 1 through 10 {
+      &:nth-of-type(#{$i}):checked {
+        ~ nav label.tab-#{$i} {
+          background: var(--card);
+          border-color: var(--border);
+          color: var(--card-foreground);
+        }
+        ~ section .content-#{$i} {
+          display: block !important;
+        }
+      }
+    }
   }
 }
 
@@ -80,16 +65,16 @@
       }
     }
 
-    #tab-1:checked ~ nav label.tab-1,
-    #tab-2:checked ~ nav label.tab-2,
-    #tab-3:checked ~ nav label.tab-3,
-    #tab-4:checked ~ nav label.tab-4,
-    #tab-5:checked ~ nav label.tab-5,
-    #tab-6:checked ~ nav label.tab-6,
-    #tab-7:checked ~ nav label.tab-7 {
-      color: $white;
-      background: $value;
-      border-color: shade-color($value, 30%);
+    input[type="radio"] {
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}):checked {
+          ~ nav label.tab-#{$i} {
+            color: $white;
+            background: $value;
+            border-color: shade-color($value, 30%);
+          }
+        }
+      }
     }
   }
 }
